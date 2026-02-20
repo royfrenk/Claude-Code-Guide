@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="900" height="520" fill="#fafafa" rx="12"/>
+
+  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">The AI Building Tool Landscape</text>
+
+  <!-- Chat Interfaces section -->
+  <rect x="20" y="55" width="270" height="440" rx="12" fill="#F3E8F9" stroke="#8E44AD" stroke-width="2"/>
+  <text x="155" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#6C3483">Chat Interfaces</text>
+  <text x="155" y="100" text-anchor="middle" font-size="11" fill="#9B59B6">Talk to the model, copy-paste output</text>
+
+  <!-- ChatGPT -->
+  <rect x="38" y="120" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="55" y="143" font-size="13" font-weight="bold" fill="#6C3483">ChatGPT</text>
+  <text x="55" y="160" font-size="11" fill="#666">OpenAI's chat. Most popular.</text>
+
+  <!-- Claude.ai -->
+  <rect x="38" y="188" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="55" y="211" font-size="13" font-weight="bold" fill="#6C3483">Claude.ai</text>
+  <text x="55" y="228" font-size="11" fill="#666">Anthropic's chat. Strong at code.</text>
+
+  <!-- Gemini -->
+  <rect x="38" y="256" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="55" y="279" font-size="13" font-weight="bold" fill="#6C3483">Gemini</text>
+  <text x="55" y="296" font-size="11" fill="#666">Google's chat. Free tier available.</text>
+
+  <!-- Chat characteristics -->
+  <rect x="38" y="395" width="234" height="85" rx="6" fill="#E8D5F5" stroke="none"/>
+  <text x="53" y="415" font-size="11" fill="#6C3483" font-weight="600">You handle everything:</text>
+  <text x="53" y="433" font-size="11" fill="#555">- Copy code into your own files</text>
+  <text x="53" y="449" font-size="11" fill="#555">- Set up your own project</text>
+  <text x="53" y="465" font-size="11" fill="#555">- No automation, manual control</text>
+
+  <!-- All-in-one Platforms section -->
+  <rect x="310" y="55" width="270" height="440" rx="12" fill="#FEF9E7" stroke="#F39C12" stroke-width="2"/>
+  <text x="445" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#7D6608">All-in-one Platforms</text>
+  <text x="445" y="100" text-anchor="middle" font-size="11" fill="#B7950B">You describe, it builds and hosts</text>
+
+  <!-- Replit -->
+  <rect x="328" y="120" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="345" y="143" font-size="13" font-weight="bold" fill="#7D6608">Replit</text>
+  <text x="345" y="160" font-size="11" fill="#666">Browser dev environment + hosting.</text>
+
+  <!-- Lovable -->
+  <rect x="328" y="188" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="345" y="211" font-size="13" font-weight="bold" fill="#7D6608">Lovable</text>
+  <text x="345" y="228" font-size="11" fill="#666">Describe in words, it builds + deploys.</text>
+
+  <!-- v0 -->
+  <rect x="328" y="256" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="345" y="279" font-size="13" font-weight="bold" fill="#7D6608">v0 (Vercel)</text>
+  <text x="345" y="296" font-size="11" fill="#666">UI focused. Describe, design, deploy.</text>
+
+  <!-- Base44 -->
+  <rect x="328" y="324" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="345" y="347" font-size="13" font-weight="bold" fill="#7D6608">Base44</text>
+  <text x="345" y="364" font-size="11" fill="#666">All-in-one: describe, build, host.</text>
+
+  <!-- All-in-one characteristics -->
+  <rect x="328" y="395" width="234" height="85" rx="6" fill="#FCF3CF" stroke="none"/>
+  <text x="343" y="415" font-size="11" fill="#7D6608" font-weight="600">Platform handles:</text>
+  <text x="343" y="433" font-size="11" fill="#555">- Hosting, deployment, servers</text>
+  <text x="343" y="449" font-size="11" fill="#555">- Project structure and setup</text>
+  <text x="343" y="465" font-size="11" fill="#555">- Less control, faster start</text>
+
+  <!-- Agent-assisted Tools section -->
+  <rect x="600" y="55" width="280" height="440" rx="12" fill="#EBF5FB" stroke="#2E86C1" stroke-width="2"/>
+  <text x="740" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#21618C">Agent-assisted Tools</text>
+  <text x="740" y="100" text-anchor="middle" font-size="11" fill="#5499C7">Your files, your machine, AI writes code</text>
+
+  <!-- Claude Code -->
+  <rect x="618" y="120" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="635" y="143" font-size="13" font-weight="bold" fill="#1B4F72">Claude Code</text>
+  <text x="635" y="160" font-size="11" fill="#666">CLI + VS Code. Most autonomous agent.</text>
+
+  <!-- Cursor -->
+  <rect x="618" y="188" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="635" y="211" font-size="13" font-weight="bold" fill="#1B4F72">Cursor</text>
+  <text x="635" y="228" font-size="11" fill="#666">AI-powered IDE. Choose your model.</text>
+
+  <!-- Windsurf -->
+  <rect x="618" y="256" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="635" y="279" font-size="13" font-weight="bold" fill="#1B4F72">Windsurf</text>
+  <text x="635" y="296" font-size="11" fill="#666">Agent IDE. Similar to Cursor.</text>
+
+  <!-- Antigravity -->
+  <rect x="618" y="324" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="635" y="347" font-size="13" font-weight="bold" fill="#1B4F72">Antigravity</text>
+  <text x="635" y="364" font-size="11" fill="#666">Google's IDE. Multi-agent views.</text>
+
+  <!-- Agent-assisted characteristics -->
+  <rect x="618" y="395" width="244" height="85" rx="6" fill="#D4E6F1" stroke="none"/>
+  <text x="633" y="415" font-size="11" fill="#1B4F72" font-weight="600">You handle:</text>
+  <text x="633" y="433" font-size="11" fill="#555">- Hosting and deployment</text>
+  <text x="633" y="449" font-size="11" fill="#555">- Project structure and setup</text>
+  <text x="633" y="465" font-size="11" fill="#555">- Full control and ownership</text>
+</svg>

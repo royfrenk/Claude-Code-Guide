@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="700" height="420" fill="#fafafa" rx="12"/>
+
+  <text x="350" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">The Agent's Memory System</text>
+  <text x="350" y="55" text-anchor="middle" font-size="12" fill="#888">Three layers of external memory, from permanent to temporary</text>
+
+  <!-- Layer 1: Instruction Files -->
+  <rect x="40" y="80" width="200" height="280" rx="10" fill="#F5EEF8" stroke="#8E44AD" stroke-width="2"/>
+  <text x="140" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#6C3483">Instruction Files</text>
+  <text x="140" y="126" text-anchor="middle" font-size="11" fill="#8E44AD">Permanent, always visible</text>
+  <line x1="60" y1="138" x2="220" y2="138" stroke="#D2B4DE" stroke-width="1"/>
+
+  <text x="140" y="162" text-anchor="middle" font-size="12" fill="#4A235A" font-weight="600">CLAUDE.md</text>
+  <text x="140" y="182" text-anchor="middle" font-size="11" fill="#666">Standing instructions the</text>
+  <text x="140" y="197" text-anchor="middle" font-size="11" fill="#666">agent reads automatically</text>
+  <text x="140" y="212" text-anchor="middle" font-size="11" fill="#666">at session start</text>
+
+  <rect x="60" y="230" width="160" height="70" rx="6" fill="white" stroke="#D2B4DE" stroke-width="1"/>
+  <text x="70" y="250" font-size="10" fill="#555" font-family="monospace">"This is a bakery site.</text>
+  <text x="70" y="264" font-size="10" fill="#555" font-family="monospace"> Colors: blue + white.</text>
+  <text x="70" y="278" font-size="10" fill="#555" font-family="monospace"> Never delete payments."</text>
+
+  <text x="140" y="330" text-anchor="middle" font-size="11" fill="#8E44AD" font-style="italic">Survives across</text>
+  <text x="140" y="345" text-anchor="middle" font-size="11" fill="#8E44AD" font-style="italic">all sessions</text>
+
+  <!-- Layer 2: Project Structure -->
+  <rect x="255" y="80" width="200" height="280" rx="10" fill="#EBF5FB" stroke="#2E86C1" stroke-width="2"/>
+  <text x="355" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#21618C">Project Structure</text>
+  <text x="355" y="126" text-anchor="middle" font-size="11" fill="#2E86C1">Files, code, and comments</text>
+  <line x1="275" y1="138" x2="435" y2="138" stroke="#AED6F1" stroke-width="1"/>
+
+  <text x="355" y="162" text-anchor="middle" font-size="12" fill="#1B4F72" font-weight="600">Your project artifacts</text>
+  <text x="355" y="182" text-anchor="middle" font-size="11" fill="#666">Well-named files,</text>
+  <text x="355" y="197" text-anchor="middle" font-size="11" fill="#666">comments in code,</text>
+  <text x="355" y="212" text-anchor="middle" font-size="11" fill="#666">clear folder organization</text>
+
+  <rect x="275" y="230" width="160" height="70" rx="6" fill="white" stroke="#AED6F1" stroke-width="1"/>
+  <text x="285" y="250" font-size="10" fill="#555" font-family="monospace">/src/checkout.js</text>
+  <text x="285" y="264" font-size="10" fill="#555" font-family="monospace">/src/homepage.js</text>
+  <text x="285" y="278" font-size="10" fill="#555" font-family="monospace">/TODO.md</text>
+
+  <text x="355" y="330" text-anchor="middle" font-size="11" fill="#2E86C1" font-style="italic">Persists in your</text>
+  <text x="355" y="345" text-anchor="middle" font-size="11" fill="#2E86C1" font-style="italic">project folder</text>
+
+  <!-- Layer 3: Session Briefing -->
+  <rect x="470" y="80" width="200" height="280" rx="10" fill="#FEF9E7" stroke="#F39C12" stroke-width="2"/>
+  <text x="570" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#7D6608">Session Briefing</text>
+  <text x="570" y="126" text-anchor="middle" font-size="11" fill="#B7950B">Your opening message</text>
+  <line x1="490" y1="138" x2="650" y2="138" stroke="#F9E79F" stroke-width="1"/>
+
+  <text x="570" y="162" text-anchor="middle" font-size="12" fill="#7D6608" font-weight="600">What you tell the agent</text>
+  <text x="570" y="182" text-anchor="middle" font-size="11" fill="#666">What you did last time,</text>
+  <text x="570" y="197" text-anchor="middle" font-size="11" fill="#666">what to do now,</text>
+  <text x="570" y="212" text-anchor="middle" font-size="11" fill="#666">specific context</text>
+
+  <rect x="490" y="230" width="160" height="70" rx="6" fill="white" stroke="#F9E79F" stroke-width="1"/>
+  <text x="500" y="250" font-size="10" fill="#555" font-family="monospace">"Yesterday we finished</text>
+  <text x="500" y="264" font-size="10" fill="#555" font-family="monospace"> the homepage. Today:</text>
+  <text x="500" y="278" font-size="10" fill="#555" font-family="monospace"> build checkout page."</text>
+
+  <text x="570" y="330" text-anchor="middle" font-size="11" fill="#B7950B" font-style="italic">Only exists in this</text>
+  <text x="570" y="345" text-anchor="middle" font-size="11" fill="#B7950B" font-style="italic">session</text>
+
+  <!-- Duration indicators -->
+  <rect x="60" y="375" width="160" height="24" rx="12" fill="#8E44AD"/>
+  <text x="140" y="392" text-anchor="middle" font-size="11" fill="white" font-weight="600">PERMANENT</text>
+
+  <rect x="275" y="375" width="160" height="24" rx="12" fill="#2E86C1"/>
+  <text x="355" y="392" text-anchor="middle" font-size="11" fill="white" font-weight="600">PROJECT LIFETIME</text>
+
+  <rect x="490" y="375" width="160" height="24" rx="12" fill="#F39C12"/>
+  <text x="570" y="392" text-anchor="middle" font-size="11" fill="white" font-weight="600">ONE SESSION</text>
+</svg>
