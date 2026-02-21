@@ -20,13 +20,13 @@ interface SearchEntry {
 
 interface GuideLayoutProps {
   chapters: SidebarChapter[];
-  searchData: SearchEntry[];
+  searchData?: SearchEntry[];
   children: React.ReactNode;
 }
 
 export function GuideLayout({
   chapters,
-  searchData,
+  searchData = [],
   children,
 }: GuideLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);

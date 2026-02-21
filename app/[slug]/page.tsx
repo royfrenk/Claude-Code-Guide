@@ -4,6 +4,7 @@ import {
   getChapterContent,
   getChapterBySlug,
   getAdjacentChapters,
+  getSearchData,
 } from "@/lib/chapters";
 import { GuideLayout } from "@/components/guide-layout";
 import { ChapterPage } from "@/components/chapter-page";
@@ -46,11 +47,12 @@ export default async function ChapterRoute({ params }: PageProps) {
 
   const content = getChapterContent(slug);
   const { prev, next } = getAdjacentChapters(slug);
+  const searchData = getSearchData();
 
   return (
-    <GuideLayout chapters={chapters} currentSlug={slug}>
+    <GuideLayout chapters={chapters} searchData={searchData}>
       <ChapterPage
-        title={chapter.title}
+        slug={slug}
         content={content}
         prev={prev}
         next={next}

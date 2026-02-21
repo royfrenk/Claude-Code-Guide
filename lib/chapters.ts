@@ -122,6 +122,19 @@ export function getChapterBySlug(slug: string): Chapter | undefined {
   return chapters.find((c) => c.slug === slug);
 }
 
+export function getChapterContent(slug: string): string {
+  const chapter = getChapterBySlug(slug);
+  return chapter?.content ?? "";
+}
+
+export function getSearchData(): { slug: string; title: string; content: string }[] {
+  return getAllChapters().map((c) => ({
+    slug: c.slug,
+    title: c.title,
+    content: c.content,
+  }));
+}
+
 export function getChapterSlugs(): string[] {
   return chapterFiles.map(({ file }) => getSlug(file));
 }

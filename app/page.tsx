@@ -1,4 +1,4 @@
-import { getAllChapters, getChapterContent, getAdjacentChapters } from "@/lib/chapters";
+import { getAllChapters, getChapterContent, getAdjacentChapters, getSearchData } from "@/lib/chapters";
 import { GuideLayout } from "@/components/guide-layout";
 import { ChapterPage } from "@/components/chapter-page";
 
@@ -6,6 +6,7 @@ export default function HomePage() {
   const chapters = getAllChapters();
   const introChapter = chapters.find((c) => c.slug === "00-introduction");
   const { prev, next } = getAdjacentChapters("00-introduction");
+  const searchData = getSearchData();
 
   if (!introChapter) {
     return (
@@ -18,9 +19,9 @@ export default function HomePage() {
   const content = getChapterContent("00-introduction");
 
   return (
-    <GuideLayout chapters={chapters} currentSlug="00-introduction">
+    <GuideLayout chapters={chapters} searchData={searchData}>
       <ChapterPage
-        title={introChapter.title}
+        slug="00-introduction"
         content={content}
         prev={prev}
         next={next}
