@@ -227,7 +227,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return <>{children}</>;
           },
           img: ({ src, alt }) => {
-            if (!src) return null;
+            if (!src || typeof src !== "string") return null;
             const isJpg =
               src.endsWith(".jpg") ||
               src.endsWith(".jpeg") ||
