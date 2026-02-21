@@ -46,7 +46,7 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
     return () => window.removeEventListener("progress-updated", handler);
   }, []);
 
-  const currentSlug = pathname === "/" ? "00-introduction" : pathname.slice(1);
+  const currentSlug = pathname.slice(1);
 
   return (
     <>
@@ -95,10 +95,7 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
         >
           <ul className="space-y-0.5">
             {chapters.map((chapter) => {
-              const href =
-                chapter.slug === "00-introduction"
-                  ? "/"
-                  : `/${chapter.slug}`;
+              const href = `/${chapter.slug}`;
               const isActive = currentSlug === chapter.slug;
               const progress = readChapters[chapter.slug] || 0;
 

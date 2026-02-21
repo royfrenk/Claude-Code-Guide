@@ -15,11 +15,9 @@ interface PageProps {
 
 export async function generateStaticParams() {
   const chapters = getAllChapters();
-  return chapters
-    .filter((c) => c.slug !== "00-introduction")
-    .map((chapter) => ({
-      slug: chapter.slug,
-    }));
+  return chapters.map((chapter) => ({
+    slug: chapter.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
