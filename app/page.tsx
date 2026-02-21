@@ -134,57 +134,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Learning curve section */}
-      <section className="border-t border-border py-20 sm:py-24">
-        <div className="mx-auto max-w-3xl px-6">
-          <h2 className="text-center text-2xl font-bold text-foreground sm:text-3xl">
-            The learning curve
-          </h2>
-          <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
-            Working with an AI agent is a new skill. Here{"'"}s what the
-            progression typically looks like.
-          </p>
-          <div className="mt-12 space-y-6">
-            {[
-              {
-                period: "Week 1",
-                text: "You ask for small things and review everything carefully. It feels slow \u2014 like the agent is doing work you could do yourself, just differently.",
-              },
-              {
-                period: "Weeks 2\u20133",
-                text: "You start trusting the agent with bigger tasks. You learn what kinds of instructions produce good results. Sessions get more productive.",
-              },
-              {
-                period: "Month 2+",
-                text: "You think in terms of outcomes, not steps. Instead of telling the agent exactly what to do, you describe what you want and let it figure out the path.",
-              },
-            ].map((step, i) => (
-              <div
-                key={step.period}
-                className="flex gap-5"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
-                    {i + 1}
-                  </div>
-                  {i < 2 && (
-                    <div className="mt-2 flex-1 w-px bg-border" />
-                  )}
-                </div>
-                <div className="pb-2">
-                  <h3 className="text-sm font-semibold text-foreground">
-                    {step.period}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    {step.text}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="border-t border-border bg-muted/50 py-20 sm:py-24">
         <div className="mx-auto max-w-2xl px-6 text-center">
