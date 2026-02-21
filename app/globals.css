@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #1a1a1a;
+  --color-muted: #fafafa;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #4a86c8;
+  --color-accent-foreground: #ffffff;
+  --color-accent-muted: #f0f4fa;
+  --color-green: #16a34a;
+  --color-green-muted: #f0fdf4;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a1a;
+  --color-sidebar: #fafafa;
+  --color-sidebar-foreground: #1a1a1a;
+  --color-sidebar-muted: #6b7280;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Content fade-in animation */
+.prose-guide {
+  animation: fadeIn 200ms ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent-muted);
+  color: var(--color-foreground);
+}

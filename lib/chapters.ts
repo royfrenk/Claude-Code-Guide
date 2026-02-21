@@ -1,0 +1,140 @@
+import fs from "fs";
+import path from "path";
+
+export interface Chapter {
+  slug: string;
+  number: number | null;
+  title: string;
+  shortTitle: string;
+  content: string;
+  sections: { id: string; title: string }[];
+}
+
+const chapterFiles = [
+  {
+    file: "00-introduction.md",
+    number: null,
+    title: "Working With AI Agents: A Guide for Non-Technical People",
+    shortTitle: "Introduction",
+  },
+  {
+    file: "01-what-ai-agents-are.md",
+    number: 1,
+    title: "What AI Agents Are (and Aren't)",
+    shortTitle: "What AI Agents Are",
+  },
+  {
+    file: "02-memory-and-context.md",
+    number: 2,
+    title: "Memory and Context",
+    shortTitle: "Memory and Context",
+  },
+  {
+    file: "03-tools-of-the-trade.md",
+    number: 3,
+    title: "Tools of the Trade",
+    shortTitle: "Tools of the Trade",
+  },
+  {
+    file: "04-setting-up.md",
+    number: 4,
+    title: "Setting Up",
+    shortTitle: "Setting Up",
+  },
+  {
+    file: "05-configuring-your-agent.md",
+    number: 5,
+    title: "Configuring Your Agent",
+    shortTitle: "Configuring Your Agent",
+  },
+  {
+    file: "06-your-first-project.md",
+    number: 6,
+    title: "Your First Project",
+    shortTitle: "Your First Project",
+  },
+  {
+    file: "07-working-with-files-and-code.md",
+    number: 7,
+    title: "Git and GitHub",
+    shortTitle: "Git and GitHub",
+  },
+  {
+    file: "08-servers-hosting-deployment.md",
+    number: 8,
+    title: "Servers, Hosting, and Deployment",
+    shortTitle: "Servers & Deployment",
+  },
+  {
+    file: "09-glossary.md",
+    number: null,
+    title: "Glossary",
+    shortTitle: "Glossary",
+  },
+];
+
+function extractSections(content: string): { id: string; title: string }[] {
+  const sections: { id: string; title: string }[] = [];
+  const lines = content.split("\n");
+
+  for (const line of lines) {
+    const match = line.match(/^### (.+)$/);
+    if (match) {
+      const title = match[1].trim();
+      const id = title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "");
+      sections.push({ id, title });
+    }
+  }
+
+  return sections;
+}
+
+function getSlug(file: string): string {
+  return file.replace(".md", "");
+}
+
+export function getAllChapters(): Chapter[] {
+  const srcDir = path.join(process.cwd(), "src");
+
+  return chapterFiles.map(({ file, number, title, shortTitle }) => {
+    const filePath = path.join(srcDir, file);
+    const content = fs.readFileSync(filePath, "utf-8");
+    const sections = extractSections(content);
+
+    return {
+      slug: getSlug(file),
+      number,
+      title,
+      shortTitle,
+      content,
+      sections,
+    };
+  });
+}
+
+export function getChapterBySlug(slug: string): Chapter | undefined {
+  const chapters = getAllChapters();
+  return chapters.find((c) => c.slug === slug);
+}
+
+export function getChapterSlugs(): string[] {
+  return chapterFiles.map(({ file }) => getSlug(file));
+}
+
+export function getAdjacentChapters(slug: string): {
+  prev: Chapter | null;
+  next: Chapter | null;
+} {
+  const chapters = getAllChapters();
+  const index = chapters.findIndex((c) => c.slug === slug);
+
+  return {
+    prev: index > 0 ? chapters[index - 1] : null,
+    next: index < chapters.length - 1 ? chapters[index + 1] : null,
+  };
+}
