@@ -1,1 +1,195 @@
-Non-image binary files cannot be read directly. It is available at the following URL: https://v0chat-agent-data-prod.s3.us-east-1.amazonaws.com/vm-binary/3AwaIBkbzyR/2392aaa4b23a773e88a090e720866885111a2fce9a5fa59c9d03d71f7f7c28c4.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA52KF4VHQDTZ5RDMT%2F20260221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260221T011308Z&X-Amz-Expires=3600&X-Amz-Signature=a6a6dd0284d72a8038e2d203b51f2ecc24b603287f30cb84629e4ab3acd2ffe2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Window frame -->
+  <rect width="880" height="520" rx="10" fill="#1e1e1e"/>
+
+  <!-- Title bar -->
+  <rect width="880" height="36" rx="10" fill="#2d2d2d"/>
+  <rect y="26" width="880" height="10" fill="#2d2d2d"/>
+
+  <!-- Traffic lights -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+
+  <!-- Title -->
+  <text x="440" y="23" text-anchor="middle" font-size="13" fill="#999">VS Code — my-first-project</text>
+
+  <!-- ====== ACTIVITY BAR (far left icons) ====== -->
+  <rect x="0" y="36" width="48" height="474" fill="#252526"/>
+
+  <!-- File explorer icon (active, white) -->
+  <rect x="14" y="52" width="20" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <line x1="19" y1="57" x2="29" y2="57" stroke="#fff" stroke-width="1"/>
+  <line x1="19" y1="62" x2="26" y2="62" stroke="#fff" stroke-width="1"/>
+
+  <!-- Search icon -->
+  <circle cx="24" cy="92" r="7" fill="none" stroke="#858585" stroke-width="1.5"/>
+  <line x1="30" y1="98" x2="34" y2="102" stroke="#858585" stroke-width="1.5"/>
+
+  <!-- Source control icon -->
+  <circle cx="24" cy="128" r="3" fill="none" stroke="#858585" stroke-width="1.5"/>
+  <circle cx="24" cy="144" r="3" fill="none" stroke="#858585" stroke-width="1.5"/>
+  <line x1="24" y1="131" x2="24" y2="141" stroke="#858585" stroke-width="1.5"/>
+
+  <!-- Extensions icon -->
+  <rect x="16" y="166" width="7" height="7" rx="1" fill="none" stroke="#858585" stroke-width="1.2"/>
+  <rect x="25" y="166" width="7" height="7" rx="1" fill="none" stroke="#858585" stroke-width="1.2"/>
+  <rect x="16" y="175" width="7" height="7" rx="1" fill="none" stroke="#858585" stroke-width="1.2"/>
+  <rect x="25" y="175" width="7" height="7" rx="1" fill="none" stroke="#858585" stroke-width="1.2"/>
+
+  <!-- Claude icon (bottom of activity bar) -->
+  <circle cx="24" cy="470" r="10" fill="#D97706" opacity="0.9"/>
+  <text x="24" y="475" text-anchor="middle" font-size="12" fill="white" font-weight="bold">C</text>
+
+  <!-- ====== SIDEBAR (file explorer) ====== -->
+  <rect x="48" y="36" width="170" height="474" fill="#252526"/>
+
+  <text x="60" y="56" font-size="11" font-weight="600" fill="#999" letter-spacing="1">EXPLORER</text>
+
+  <text x="60" y="80" font-size="12" fill="#C5C5C5" font-weight="600">v MY-FIRST-PROJECT</text>
+  <text x="76" y="100" font-size="12" fill="#E8AB53">index.html</text>
+  <text x="76" y="120" font-size="12" fill="#519ABA">styles.css</text>
+  <text x="76" y="140" font-size="12" fill="#CBCB41">app.js</text>
+  <text x="76" y="160" font-size="12" fill="#A9B7C6">CLAUDE.md</text>
+  <text x="76" y="180" font-size="12" fill="#999">hello.txt</text>
+
+  <!-- ====== EDITOR AREA (center) ====== -->
+  <rect x="218" y="36" width="360" height="340" fill="#1e1e1e"/>
+
+  <!-- Tab bar -->
+  <rect x="218" y="36" width="110" height="28" fill="#1e1e1e"/>
+  <rect x="328" y="36" width="110" height="28" fill="#2d2d2d"/>
+  <text x="234" y="54" font-size="12" fill="#fff">index.html</text>
+  <text x="344" y="54" font-size="12" fill="#888">styles.css</text>
+
+  <!-- Code content -->
+  <text x="232" y="86" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 1</text>
+  <text x="258" y="86" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&lt;!</text>
+  <text x="276" y="86" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">DOCTYPE</text>
+  <text x="340" y="86" font-size="12" fill="#9CDCFE" font-family="'SF Mono', monospace">html</text>
+  <text x="370" y="86" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="106" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 2</text>
+  <text x="258" y="106" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&lt;</text>
+  <text x="266" y="106" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">html</text>
+  <text x="296" y="106" font-size="12" fill="#9CDCFE" font-family="'SF Mono', monospace"> lang</text>
+  <text x="330" y="106" font-size="12" fill="#808080" font-family="'SF Mono', monospace">=</text>
+  <text x="338" y="106" font-size="12" fill="#CE9178" font-family="'SF Mono', monospace">"en"</text>
+  <text x="368" y="106" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="126" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 3</text>
+  <text x="258" y="126" font-size="12" fill="#808080" font-family="'SF Mono', monospace">  &lt;</text>
+  <text x="278" y="126" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">head</text>
+  <text x="308" y="126" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="146" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 4</text>
+  <text x="258" y="146" font-size="12" fill="#808080" font-family="'SF Mono', monospace">    &lt;</text>
+  <text x="288" y="146" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">title</text>
+  <text x="326" y="146" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+  <text x="334" y="146" font-size="12" fill="#D4D4D4" font-family="'SF Mono', monospace">My Project</text>
+  <text x="416" y="146" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&lt;/</text>
+  <text x="432" y="146" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">title</text>
+  <text x="470" y="146" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="166" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 5</text>
+  <text x="258" y="166" font-size="12" fill="#808080" font-family="'SF Mono', monospace">  &lt;/</text>
+  <text x="284" y="166" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">head</text>
+  <text x="314" y="166" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="186" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 6</text>
+  <text x="258" y="186" font-size="12" fill="#808080" font-family="'SF Mono', monospace">  &lt;</text>
+  <text x="278" y="186" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">body</text>
+  <text x="308" y="186" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <text x="232" y="206" font-size="12" fill="#636363" font-family="'SF Mono', monospace"> 7</text>
+  <text x="258" y="206" font-size="12" fill="#808080" font-family="'SF Mono', monospace">    &lt;</text>
+  <text x="288" y="206" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">h1</text>
+  <text x="304" y="206" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+  <text x="312" y="206" font-size="12" fill="#D4D4D4" font-family="'SF Mono', monospace">Hello World</text>
+  <text x="402" y="206" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&lt;/</text>
+  <text x="418" y="206" font-size="12" fill="#569CD6" font-family="'SF Mono', monospace">h1</text>
+  <text x="434" y="206" font-size="12" fill="#808080" font-family="'SF Mono', monospace">&gt;</text>
+
+  <!-- ====== TERMINAL (bottom panel) ====== -->
+  <line x1="218" y1="376" x2="578" y2="376" stroke="#2d2d2d" stroke-width="1"/>
+  <rect x="218" y="376" width="360" height="134" fill="#1e1e1e"/>
+
+  <!-- Terminal tabs -->
+  <text x="234" y="394" font-size="11" fill="#666">PROBLEMS</text>
+  <text x="304" y="394" font-size="11" fill="#666">OUTPUT</text>
+  <text x="354" y="394" font-size="11" font-weight="600" fill="#ccc">TERMINAL</text>
+
+  <!-- Terminal content -->
+  <text x="234" y="420" font-size="11" fill="#4EC9B0" font-family="'SF Mono', monospace">user@mac</text>
+  <text x="300" y="420" font-size="11" fill="#808080" font-family="'SF Mono', monospace">:</text>
+  <text x="308" y="420" font-size="11" fill="#569CD6" font-family="'SF Mono', monospace">~/my-first-project</text>
+  <text x="452" y="420" font-size="11" fill="#808080" font-family="'SF Mono', monospace">$</text>
+  <rect x="466" y="408" width="7" height="14" fill="#D4D4D4" opacity="0.7"/>
+
+  <!-- ====== CLAUDE CODE PANEL (right side, parallel to editor) ====== -->
+  <rect x="578" y="36" width="302" height="474" fill="#1a1a2e"/>
+
+  <!-- Panel header -->
+  <rect x="578" y="36" width="302" height="28" fill="#1f1f3a"/>
+  <text x="594" y="54" font-size="12" font-weight="600" fill="#569CD6">CLAUDE CODE</text>
+
+  <!-- Agent conversation -->
+  <text x="594" y="86" font-size="11" fill="#4EC9B0" font-family="'SF Mono', monospace">Claude</text>
+  <text x="648" y="86" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">I created hello.txt</text>
+  <text x="594" y="102" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">with the text "Hello from</text>
+  <text x="594" y="118" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">Claude Code".</text>
+
+  <text x="594" y="148" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">What would you like to</text>
+  <text x="594" y="164" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">do next?</text>
+
+  <!-- File change indicator -->
+  <rect x="594" y="186" width="270" height="36" rx="6" fill="#2a2a4a"/>
+  <text x="610" y="200" font-size="10" fill="#4EC9B0" font-family="'SF Mono', monospace">+ Created</text>
+  <text x="610" y="214" font-size="10" fill="#999" font-family="'SF Mono', monospace">  hello.txt</text>
+
+  <!-- Input area at bottom of panel -->
+  <rect x="590" y="472" width="278" height="26" rx="4" fill="#2d2d2d" stroke="#3d3d3d" stroke-width="1"/>
+  <text x="602" y="490" font-size="11" fill="#666" font-family="'SF Mono', monospace">Type instructions...</text>
+
+  <!-- ====== STATUS BAR ====== -->
+  <rect x="0" y="510" width="880" height="10" rx="0" fill="#007ACC"/>
+  <text x="234" y="518" font-size="8" fill="#fff">main</text>
+
+  <!-- ====== ANNOTATION LABELS ====== -->
+
+  <!-- Activity bar border + label -->
+  <rect x="0" y="36" width="48" height="474" fill="none" stroke="#FF6B6B" stroke-width="2.5" stroke-dasharray="5,3" rx="2"/>
+
+  <!-- File Explorer border + label -->
+  <rect x="48" y="36" width="170" height="474" fill="none" stroke="#4ECDC4" stroke-width="2.5" stroke-dasharray="5,3" rx="2"/>
+
+  <!-- Editor border + label -->
+  <rect x="218" y="36" width="360" height="340" fill="none" stroke="#E8A838" stroke-width="2.5" stroke-dasharray="5,3" rx="2"/>
+
+  <!-- Terminal border + label -->
+  <rect x="218" y="376" width="360" height="134" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="5,3" rx="2"/>
+
+  <!-- Claude Code panel border + label -->
+  <rect x="578" y="36" width="302" height="474" fill="none" stroke="#8B5CF6" stroke-width="2.5" stroke-dasharray="5,3" rx="2"/>
+
+  <!-- Label: Activity Bar -->
+  <rect x="2" y="238" width="44" height="50" rx="4" fill="#FF6B6B"/>
+  <text x="24" y="258" text-anchor="middle" font-size="9" fill="white" font-weight="700">Activity</text>
+  <text x="24" y="272" text-anchor="middle" font-size="9" fill="white" font-weight="700">Bar</text>
+
+  <!-- Label: File Explorer -->
+  <rect x="63" y="210" width="140" height="24" rx="6" fill="#4ECDC4"/>
+  <text x="133" y="226" text-anchor="middle" font-size="12" fill="white" font-weight="700">File Explorer</text>
+
+  <!-- Label: Editor -->
+  <rect x="340" y="252" width="118" height="24" rx="6" fill="#E8A838"/>
+  <text x="399" y="268" text-anchor="middle" font-size="12" fill="white" font-weight="700">Editor Area</text>
+
+  <!-- Label: Terminal -->
+  <rect x="348" y="440" width="100" height="24" rx="6" fill="#94A3B8"/>
+  <text x="398" y="456" text-anchor="middle" font-size="12" fill="white" font-weight="700">Terminal</text>
+
+  <!-- Label: Agent Panel -->
+  <rect x="668" y="240" width="140" height="24" rx="6" fill="#8B5CF6"/>
+  <text x="738" y="256" text-anchor="middle" font-size="12" fill="white" font-weight="700">Agent Panel</text>
+</svg>

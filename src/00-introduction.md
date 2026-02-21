@@ -16,15 +16,3 @@ Here's what each chapter covers:
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 
 **Glossary** — Every technical term introduced in this guide, collected in one place. Not a chapter — an addendum you can flip to anytime.
-
-### The learning curve
-
-Working with an AI agent is a new skill. Like any skill, you'll get better with practice. Here's what the progression typically looks like:
-
-**Week 1:** You ask for small things and review everything carefully. It feels slow — like the agent is doing work you could do yourself, just differently.
-
-**Week 2-3:** You start trusting the agent with bigger tasks. You learn what kinds of instructions produce good results. Sessions get more productive.
-
-**Month 2+:** You think in terms of outcomes, not steps. Instead of telling the agent exactly what to do, you describe what you want and let it figure out the path. You catch problems faster and give better feedback.
-
-The key is to stay engaged. The agent is a powerful tool, but it works best with a human who understands the project, reviews the work, and makes the decisions. That's you.

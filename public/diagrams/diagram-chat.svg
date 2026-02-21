@@ -1,1 +1,48 @@
-Non-image binary files cannot be read directly. It is available at the following URL: https://v0chat-agent-data-prod.s3.us-east-1.amazonaws.com/vm-binary/3AwaIBkbzyR/83843cbff447567d85dd9055f5a6225a00e85b3357f455a03b2166880d4f39f3.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA52KF4VHQDTZ5RDMT%2F20260221%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260221T011304Z&X-Amz-Expires=3600&X-Amz-Signature=8b8e3eb307aa8cdc83daae4873f9c5180f650822007c9b217af655965b13647f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Browser window -->
+  <rect width="520" height="340" rx="10" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="520" height="36" rx="10" fill="#e8e8e8"/>
+  <rect y="26" width="520" height="10" fill="#e8e8e8"/>
+
+  <!-- Traffic lights -->
+  <circle cx="18" cy="18" r="5" fill="#ff5f57"/>
+  <circle cx="36" cy="18" r="5" fill="#febc2e"/>
+  <circle cx="54" cy="18" r="5" fill="#28c840"/>
+
+  <!-- URL bar -->
+  <rect x="80" y="8" width="360" height="20" rx="4" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="96" y="22" font-size="11" fill="#666">claude.ai</text>
+
+  <!-- Chat area -->
+  <rect x="0" y="36" width="520" height="304" fill="white"/>
+
+  <!-- User message -->
+  <rect x="180" y="55" width="320" height="50" rx="12" fill="#f0e6f6"/>
+  <text x="196" y="75" font-size="12" fill="#333">Write me a function that validates</text>
+  <text x="196" y="92" font-size="12" fill="#333">email addresses in JavaScript</text>
+
+  <!-- AI response -->
+  <rect x="20" y="120" width="380" height="150" rx="12" fill="#f7f7f8"/>
+  <text x="36" y="142" font-size="12" fill="#333">Here's a simple email validation function:</text>
+
+  <!-- Code block inside response -->
+  <rect x="36" y="152" width="348" height="70" rx="6" fill="#1e1e1e"/>
+  <text x="48" y="170" font-size="11" fill="#569CD6" font-family="'SF Mono', monospace">function</text>
+  <text x="104" y="170" font-size="11" fill="#DCDCAA" font-family="'SF Mono', monospace">validateEmail</text>
+  <text x="200" y="170" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">(email) {</text>
+  <text x="60" y="188" font-size="11" fill="#C586C0" font-family="'SF Mono', monospace">const</text>
+  <text x="96" y="188" font-size="11" fill="#9CDCFE" font-family="'SF Mono', monospace">regex</text>
+  <text x="132" y="188" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">= /^[^\s@]+@[^\s@]+$/</text>
+  <text x="60" y="206" font-size="11" fill="#C586C0" font-family="'SF Mono', monospace">return</text>
+  <text x="104" y="206" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">regex.test(email)</text>
+  <text x="48" y="216" font-size="11" fill="#D4D4D4" font-family="'SF Mono', monospace">}</text>
+
+  <text x="36" y="252" font-size="12" fill="#333">You can copy this into your project and use</text>
+  <text x="36" y="268" font-size="12" fill="#333">it like: validateEmail("test@example.com")</text>
+
+  <!-- Input bar -->
+  <rect x="20" y="290" width="480" height="34" rx="17" fill="white" stroke="#ddd" stroke-width="1"/>
+  <text x="40" y="312" font-size="12" fill="#999">Reply to Claude...</text>
+</svg>
