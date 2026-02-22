@@ -3,7 +3,9 @@
 import { MarkdownRenderer } from "./markdown-renderer";
 import { ChapterNav } from "./chapter-nav";
 import { ReadingProgress } from "./reading-progress";
-import { useEffect } from "react";
+import { TtsControls } from "./tts-controls";
+import { extractPlainText } from "@/lib/extract-plain-text";
+import { useEffect, useMemo } from "react";
 
 interface ChapterLink {
   slug: string;
@@ -19,6 +21,8 @@ interface ChapterPageProps {
 }
 
 export function ChapterPage({ slug, content, prev, next }: ChapterPageProps) {
+  const plainText = useMemo(() => extractPlainText(content), [content]);
+
   // Handle keyboard navigation: left/right arrows
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -47,6 +51,7 @@ export function ChapterPage({ slug, content, prev, next }: ChapterPageProps) {
   return (
     <article>
       <ReadingProgress slug={slug} />
+      <TtsControls text={plainText} />
       <MarkdownRenderer content={content} />
       <ChapterNav prev={prev} next={next} />
     </article>
