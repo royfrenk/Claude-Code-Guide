@@ -83,13 +83,23 @@ That's it. You have a working agent.
 
 ### Working with the terminal
 
-VS Code has a built-in terminal — that text-based command line we described in Chapter 3. You don't need to open a separate app. It lives right inside VS Code, in the same bottom panel area as Claude Code.
+If you grew up with computers in the 80s or 90s, you might remember DOS — that black screen with a blinking cursor where you typed commands like `dir` to see your files. The terminal is the same idea, just modern. It's a text-based way to talk to your computer: you type a command, press Enter, and the computer responds with text.
 
-To open it: go to **Terminal → New Terminal** in the menu bar, or press `` Ctrl+` `` (that's the backtick key, usually above Tab).
+On a Mac, it's called Terminal. On Windows, it's Command Prompt or PowerShell. But you don't need to open any of those — VS Code has one built in. To open it: go to **Terminal → New Terminal** in the menu bar, or press `` Ctrl+` `` (that's the backtick key, usually above Tab). A panel appears at the bottom of VS Code with a blinking cursor, waiting for input.
 
-You won't need the terminal much at the start. Claude Code handles most commands for you — when it needs to run something, it does it automatically. But as your projects grow, you'll occasionally want to run commands yourself: installing a package, starting a local server, or checking the status of your files in Git.
+Try typing this and pressing Enter:
 
-The terminal is always there when you need it. For now, just know where it is.
+```
+ls
+```
+
+You'll see a list of files and folders in your current project. That's it. `ls` means "list" — it shows you what's in the current directory. On Windows, the equivalent is `dir` (just like DOS). Nothing scary happened. You just asked the computer a question and it answered.
+
+You don't need to memorize commands or understand what's happening under the hood. Claude Code runs terminal commands for you constantly — installing packages, starting servers, checking files. When the agent shows you a command it wants to run, you'll see it in the Claude Code panel and can approve it. The agent does the typing.
+
+But there's one command you absolutely need to know: **Ctrl+C**. This is the universal "stop what's running" shortcut. If you start a server and want to stop it, Ctrl+C. If a command is taking forever, Ctrl+C. If something looks stuck, Ctrl+C. It's the emergency brake, and you'll use it often. On Mac, it's still Ctrl+C (not Cmd+C — that's copy).
+
+**One thing the terminal can't do well: edit text.** The terminal is great for running commands, but it's a terrible text editor. If a command ever drops you into a text editor inside the terminal (you'll know because the cursor starts behaving strangely and nothing you type seems right), press `Esc`, then type `:q!` and press Enter. That exits the most common terminal text editor (called Vim). It's a rite of passage — even experienced developers get trapped in Vim. Don't worry about it. You have VS Code for editing files.
 
 ### Recommended extensions
 
