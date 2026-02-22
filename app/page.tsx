@@ -3,7 +3,6 @@ import { getAllChapters } from "@/lib/chapters";
 import {
   BookOpen,
   ArrowRight,
-  Download,
   Brain,
   Terminal,
   Rocket,
@@ -36,14 +35,6 @@ export default function LandingPage() {
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href="/guide.pdf"
-              download
-              className="hidden items-center gap-2 rounded-lg border border-border px-3.5 py-2 text-sm text-foreground transition-colors hover:bg-muted sm:flex"
-            >
-              <Download className="h-3.5 w-3.5" />
-              PDF
-            </a>
             <Link
               href="/00-introduction"
               className="flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
@@ -81,14 +72,6 @@ export default function LandingPage() {
               Start Reading
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <a
-              href="/guide.pdf"
-              download
-              className="flex w-full items-center justify-center gap-2.5 rounded-xl border border-border px-7 py-3.5 text-base font-medium text-foreground transition-colors hover:bg-muted sm:w-auto"
-            >
-              <Download className="h-4 w-4" />
-              Download PDF
-            </a>
           </div>
         </div>
       </section>
