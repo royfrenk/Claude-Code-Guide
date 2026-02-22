@@ -64,22 +64,36 @@ When you first open VS Code, it can look overwhelming — buttons everywhere, pa
 
 **The basic workflow:** Click a file in the sidebar to see it in the editor. Type instructions in the agent panel on the right. The agent edits the file, and you see the changes appear in the editor on the left. That's the loop.
 
-### Step 5: Your first command
+### Step 5: Open a practice project
 
-Let's make sure everything works. First, create a project folder:
+Let's give you something real to work with. We've created a small starter project — three files: an HTML page, a CSS stylesheet, and a README.
 
-1. Create a new folder on your computer (anywhere — Desktop is fine). Call it something like **my-first-project**
-2. In VS Code, go to **File → Open Folder** and select that folder
+1. Go to [github.com/royfrenk/my-first-project](https://github.com/royfrenk/my-first-project)
+2. Click the green **Code** button, then **Download ZIP**
+3. Unzip the file somewhere on your computer (Desktop is fine)
+4. In VS Code, go to **File → Open Folder** and select the `my-first-project` folder
+
+You should see three files in the sidebar: `index.html`, `style.css`, and `README.md`. Click `index.html` to open it in the editor. You'll see HTML — the code that makes web pages. You don't need to understand it.
 
 Now, in the Claude Code panel, type:
 
 ```
-Create a file called hello.txt with the text "Hello from Claude Code"
+Change the heading to say "Hello from Claude Code"
 ```
 
-The agent will create the file. You'll see it appear in the VS Code file explorer on the left. Click it — the text should be there.
+The agent will edit `index.html` for you. You'll see the change appear in the editor. To see it in a browser, right-click `index.html` in the sidebar and select **Open with Live Server** (if you have the Live Server extension) or just double-click the file in Finder/File Explorer to open it.
 
-That's it. You have a working agent.
+Try a few more things:
+
+```
+Add a button that says "Click me" and make it change the background color when clicked
+```
+
+```
+Make the whole page dark mode — dark background, light text
+```
+
+This is your sandbox. Experiment freely — you can always download a fresh copy.
 
 ### Working with the terminal
 
@@ -108,8 +122,10 @@ While you're in the Extensions panel, there are a few other extensions worth ins
 | Extension | What it does | Why you'd want it |
 |---|---|---|
 | **Markdown Preview Enhanced** | Shows a live preview of markdown files side by side with the raw text | Useful for reading and editing CLAUDE.md and other documentation files. You'll be writing these in Chapter 5. |
-| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 7) — makes version history visual instead of text-based. |
+| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 6) — makes version history visual instead of text-based. |
 | **Error Lens** | Shows error messages directly in your code, right next to the line that caused them | Catches problems as you type instead of making you hunt through a separate panel. |
+| **GitHub Copilot** | AI code suggestions that appear as you type, like autocomplete on steroids | A second AI perspective alongside Claude Code. Free tier available. |
+| **Gemini Code Assist** | Google's AI coding assistant — similar to Copilot, different model | Another option for inline suggestions. Free tier available. Good to have a second opinion. |
 
 To install any of these: search for the name in the Extensions panel, find the right one, click Install. Same process as Claude Code.
 

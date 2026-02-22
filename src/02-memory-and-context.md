@@ -73,7 +73,7 @@ Same content, two views. Markdown files are everywhere in software projects beca
 
 #### Getting the agent to take its own notes
 
-You can *tell* the agent to leave notes for its future self. Ask it to update the project documentation, write clear **commit messages** (a commit message is a short note that gets saved every time you save a version of your code — more on this in Chapter 7), or maintain a to-do list file that tracks what's done and what's left.
+You can *tell* the agent to leave notes for its future self. Ask it to update the project documentation, write clear **commit messages** (a commit message is a short note that gets saved every time you save a version of your code — more on this in Chapter 6), or maintain a to-do list file that tracks what's done and what's left.
 
 This turns the agent into an active participant in its own memory system. It still won't *remember* — but the next session's agent will find better clues.
 

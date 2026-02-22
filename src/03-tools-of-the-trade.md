@@ -119,7 +119,7 @@ Same agent, same capabilities, same model underneath. The difference is purely h
 #### What all agent-assisted tools share
 
 - Your files stay on your computer
-- You can use **Git** (a version control system — think of it as an infinite undo button that also lets multiple people work on the same project) to track changes (we'll cover Git and GitHub in Chapter 7)
+- You can use **Git** (a version control system — think of it as an infinite undo button that also lets multiple people work on the same project) to track changes (we'll cover Git and GitHub in Chapter 6)
 - You choose where and how to deploy your project when it's ready
 - You need to understand at least the basics of your project's structure
 
