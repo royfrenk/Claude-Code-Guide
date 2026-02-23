@@ -6,9 +6,10 @@ import { Menu, Search, Download, Home, Mail, MessageSquare } from "lucide-react"
 interface TopBarProps {
   onMenuClick: () => void;
   onSearchClick: () => void;
+  onFeedbackClick: () => void;
 }
 
-export function TopBar({ onMenuClick, onSearchClick }: TopBarProps) {
+export function TopBar({ onMenuClick, onSearchClick, onFeedbackClick }: TopBarProps) {
   return (
     <header className="sticky top-0 z-30 flex h-14 items-center border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 px-4 lg:pl-[296px]">
       {/* Mobile menu button */}
@@ -57,14 +58,14 @@ export function TopBar({ onMenuClick, onSearchClick }: TopBarProps) {
       </a>
 
       {/* Feedback */}
-      <a
-        href="mailto:royfrenk@gmail.com?subject=Guide%20Feedback"
+      <button
+        onClick={onFeedbackClick}
         className="ml-3 flex items-center gap-2 rounded-lg border border-border px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:border-accent/30 transition-all"
         aria-label="Send feedback"
       >
         <MessageSquare className="h-4 w-4" />
         <span className="hidden sm:inline">Feedback</span>
-      </a>
+      </button>
     </header>
   );
 }

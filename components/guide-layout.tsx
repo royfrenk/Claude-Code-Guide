@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import { Sidebar } from "./sidebar";
 import { TopBar } from "./top-bar";
 import { SearchModal } from "./search-modal";
+import { FeedbackModal } from "./feedback-modal";
 
 interface SidebarChapter {
   slug: string;
@@ -31,6 +32,7 @@ export function GuideLayout({
 }: GuideLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   const handleMenuClick = useCallback(() => {
     setSidebarOpen((prev) => !prev);
@@ -38,6 +40,10 @@ export function GuideLayout({
 
   const handleSearchClick = useCallback(() => {
     setSearchOpen(true);
+  }, []);
+
+  const handleFeedbackClick = useCallback(() => {
+    setFeedbackOpen(true);
   }, []);
 
   // Keyboard shortcut: Ctrl+K / Cmd+K
@@ -59,7 +65,7 @@ export function GuideLayout({
         isOpen={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
       />
-      <TopBar onMenuClick={handleMenuClick} onSearchClick={handleSearchClick} />
+      <TopBar onMenuClick={handleMenuClick} onSearchClick={handleSearchClick} onFeedbackClick={handleFeedbackClick} />
       <main className="lg:pl-[280px]">
         <div className="mx-auto max-w-[720px] px-5 py-10 sm:px-8 lg:px-10">
           {children}
@@ -69,6 +75,10 @@ export function GuideLayout({
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
         searchData={searchData}
+      />
+      <FeedbackModal
+        isOpen={feedbackOpen}
+        onClose={() => setFeedbackOpen(false)}
       />
     </div>
   );
