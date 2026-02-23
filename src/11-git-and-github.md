@@ -10,9 +10,9 @@ Imagine writing a 20-page document with no undo button. Every change is permanen
 
 That's what building software is like without **version control** — a system that tracks every change you make, lets you undo any of them, and keeps a complete history of your project.
 
-**Git** is the version control system used by almost every software project in the world. It's not a product or a service — it's a tool that runs on your computer.
+**GitHub** is the easiest way to think about this. It's like Google Drive for code — a free website where you upload your project files, keep track of every version, and share or collaborate with others. Most IDEs (including VS Code) connect to it natively, so uploading and downloading projects is built right in.
 
-**GitHub** is a website where you store your Git projects online. Think of Git as the engine and GitHub as the garage — Git tracks changes locally, GitHub stores them in the cloud where they're safe and shareable.
+Behind GitHub is **Git** — the version control engine that actually tracks your changes. Git runs on your computer and records every save point. GitHub stores those save points online where they're safe, shareable, and accessible from any machine. You'll mostly interact with GitHub through your agent or your IDE — Git does the work under the hood.
 
 ### The core concepts
 
