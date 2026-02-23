@@ -243,7 +243,7 @@ Steps:
 
 You invoke this by typing `/content-manager Poland`. The agent reads the steps and follows them — dispatching the researcher and writer agents, each of which loads its own skills.
 
-**The difference between skills, commands, and agents:** A skill is knowledge ("here's what good research looks like"). A command is a workflow ("do research, then write, then review"). An agent is a role ("you are the researcher — here's how you work"). Commands dispatch agents; agents load skills; everyone follows the rules.
+> **The difference between skills, commands, and agents:** A skill is knowledge ("here's what good research looks like"). A command is a workflow ("do research, then write, then review"). An agent is a role ("you are the researcher — here's how you work"). Commands dispatch agents; agents load skills; everyone follows the rules.
 
 **To create one:** Ask Claude — "Create a command for writing new blog posts" — and it will set it up.
 
