@@ -13,13 +13,6 @@ export function ContactSection() {
           <h2 className="text-xl font-bold text-foreground sm:text-2xl">
             Contact Me
           </h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Product leader turned AI builder. After years leading product at
-            startups and enterprise companies, I started building with AI
-            agents and realized the gap between what these tools can do and
-            what most people know about them. This guide is everything I wish
-            someone had told me when I started.
-          </p>
           <div className="mt-6 flex items-center justify-center gap-4">
             <button
               onClick={() => setFeedbackOpen(true)}
