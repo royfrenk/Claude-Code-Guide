@@ -87,7 +87,7 @@ This is the difference between "do research" and "here's what interesting resear
 
 ### Step 4: Build the command
 
-The command file (`.claude/commands/hadaglan.md`) is the orchestrator — the recipe that chains everything together. It's not code. It's a plain-text checklist:
+The command file (`.claude/commands/content-manager.md`) is the orchestrator — the recipe that chains everything together. It's not code. It's a plain-text checklist:
 
 ```markdown
 Write a new blog post about: $ARGUMENTS
@@ -95,13 +95,13 @@ Write a new blog post about: $ARGUMENTS
 Steps:
 1. Read .claude/skills/blog-post.md for research categories.
 2. Search the web for information about this flag, organized by those categories.
-3. Check hadaglan_full_archive.md — has this flag been covered before?
+3. Check archive.md — has this flag been covered before?
    If yes, note what exists and focus on new angles.
 4. Write the post using the voice skill (.claude/skills/shay-voice.md).
 5. Save to posts/ and present the draft for review.
 ```
 
-That's it. The command references two skills (research playbook and voice), one reference file (the archive), and defines the order. When the author types `/hadaglan Poland`, the agent follows this checklist top to bottom.
+That's it. The command references two skills (research playbook and voice), one reference file (the archive), and defines the order. When the author types `/content-manager Poland`, the agent follows this checklist top to bottom.
 
 ### Step 5: Run it, review, improve
 
@@ -117,10 +117,10 @@ After a few posts, the author noticed the agent kept missing adoption dates. He 
 
 | File | What it does | Config layer (Ch5) |
 |------|-------------|-------------------|
-| `.claude/commands/hadaglan.md` | The command — triggers the workflow, defines the steps | Command |
+| `.claude/commands/content-manager.md` | The command — triggers the workflow, defines the steps | Command |
 | `.claude/skills/blog-post.md` | The research playbook — 10 categories of trivia to look for | Skill |
 | `.claude/skills/shay-voice.md` | The voice — how the author writes (generated from old posts) | Skill |
-| `hadaglan_full_archive.md` | The archive — 89 previous posts for context and dedup | Reference data |
+| `archive.md` | The archive — 89 previous posts for context and dedup | Reference data |
 | `posts/` | Output directory — where drafts get saved | Project structure |
 
 One command. Two skills. An archive. Five files total. The author types a single command and gets a draft in his voice, informed by his research standards, that doesn't repeat what he's already written. The hard part wasn't any individual piece — it was knowing which pieces to create and how they connect.
