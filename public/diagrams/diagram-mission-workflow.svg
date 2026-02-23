@@ -1,83 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="system-ui, -apple-system, sans-serif">
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
-    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#8E44AD"/>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E74C3C"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27AE60"/>
     </marker>
   </defs>
 
-  <rect width="800" height="400" fill="#fafafa" rx="12"/>
+  <rect width="800" height="420" fill="#fafafa" rx="12"/>
 
-  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">How a Mission Works</text>
-  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#888">The stages of a task, from brief to done</text>
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">The Agent Mission Process</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#888">Every agent task follows this shape</text>
 
-  <!-- You -->
-  <rect x="20" y="110" width="90" height="55" rx="8" fill="#E8D5F5" stroke="#9B59B6" stroke-width="2"/>
-  <text x="65" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#6C3483">YOU</text>
-  <text x="65" y="150" text-anchor="middle" font-size="10" fill="#6C3483">(direct)</text>
+  <!-- 1. User Input -->
+  <rect x="30" y="120" width="110" height="60" rx="8" fill="#E8D5F5" stroke="#9B59B6" stroke-width="2"/>
+  <text x="85" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#6C3483">User Input</text>
+  <text x="85" y="162" text-anchor="middle" font-size="10" fill="#6C3483">spec, prompt, brief</text>
 
-  <!-- 1. Brief -->
-  <rect x="140" y="110" width="100" height="55" rx="8" fill="#D4EFDF" stroke="#27AE60" stroke-width="1.5"/>
-  <text x="190" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#1E8449">1. Brief</text>
-  <text x="190" y="148" text-anchor="middle" font-size="10" fill="#1E8449">spec or prompt</text>
+  <!-- Arrow: User → Orchestrator -->
+  <line x1="140" y1="150" x2="170" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <!-- 2. Explore -->
-  <rect x="270" y="110" width="100" height="55" rx="8" fill="#D6EAF8" stroke="#2E86C1" stroke-width="1.5"/>
-  <text x="320" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#21618C">2. Explore</text>
-  <text x="320" y="148" text-anchor="middle" font-size="10" fill="#21618C">gather context</text>
+  <!-- 2. Orchestrator -->
+  <rect x="175" y="120" width="110" height="60" rx="8" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="230" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E8449">Orchestrator</text>
+  <text x="230" y="162" text-anchor="middle" font-size="10" fill="#1E8449">command / manager</text>
 
-  <!-- 3. Work -->
-  <rect x="400" y="110" width="100" height="55" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="1.5"/>
-  <text x="450" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#A04000">3. Work</text>
-  <text x="450" y="148" text-anchor="middle" font-size="10" fill="#A04000">build or write</text>
+  <!-- Arrow: Orchestrator → Explorer -->
+  <line x1="285" y1="150" x2="315" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <!-- 4. Review -->
-  <rect x="530" y="110" width="100" height="55" rx="8" fill="#F9E79F" stroke="#F1C40F" stroke-width="1.5"/>
-  <text x="580" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#7D6608">4. Review</text>
-  <text x="580" y="148" text-anchor="middle" font-size="10" fill="#7D6608">you check</text>
+  <!-- 3. Explorer -->
+  <rect x="320" y="120" width="110" height="60" rx="8" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+  <text x="375" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#21618C">Explorer</text>
+  <text x="375" y="162" text-anchor="middle" font-size="10" fill="#21618C">research, context</text>
 
-  <!-- 5. Iterate -->
-  <ellipse cx="690" cy="137" rx="55" ry="28" fill="#FADBD8" stroke="#E74C3C" stroke-width="1.5"/>
-  <text x="690" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#922B21">5. Iterate</text>
-  <text x="690" y="148" text-anchor="middle" font-size="10" fill="#922B21">feedback</text>
+  <!-- Arrow: Explorer → Actor -->
+  <line x1="430" y1="150" x2="460" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <!-- Arrows between stages -->
-  <line x1="110" y1="137" x2="135" y2="137" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="240" y1="137" x2="265" y2="137" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="370" y1="137" x2="395" y2="137" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="137" x2="525" y2="137" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="630" y1="137" x2="632" y2="137" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- 4. Actor (Developer / Writer) -->
+  <rect x="465" y="120" width="110" height="60" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="2"/>
+  <text x="520" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#A04000">Actor</text>
+  <text x="520" y="162" text-anchor="middle" font-size="10" fill="#A04000">build, write, do</text>
 
-  <!-- Iterate loop back to Work -->
-  <path d="M 690 109 C 690 75, 450 75, 450 107" fill="none" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
-  <text x="570" y="82" text-anchor="middle" font-size="10" fill="#E74C3C">not right yet</text>
+  <!-- Arrow: Actor → Reviewer -->
+  <line x1="575" y1="150" x2="605" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
 
-  <!-- Done arrow from Review down -->
-  <path d="M 580 165 L 580 185" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="580" y="207" text-anchor="middle" font-size="11" fill="#27AE60" font-weight="600">Done</text>
+  <!-- 5. Reviewer -->
+  <rect x="610" y="120" width="110" height="60" rx="8" fill="#F9E79F" stroke="#F1C40F" stroke-width="2"/>
+  <text x="665" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#7D6608">Reviewer</text>
+  <text x="665" y="162" text-anchor="middle" font-size="10" fill="#7D6608">check, approve</text>
 
-  <!-- Dotted lines from stages down to MD File bar -->
-  <line x1="190" y1="165" x2="190" y2="270" stroke="#8E44AD" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="320" y1="165" x2="320" y2="270" stroke="#8E44AD" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="450" y1="165" x2="450" y2="270" stroke="#8E44AD" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="580" y1="215" x2="580" y2="270" stroke="#8E44AD" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="690" y1="165" x2="690" y2="270" stroke="#8E44AD" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Iteration loop: Reviewer back to Actor -->
+  <path d="M 665 180 C 665 220, 520 220, 520 183" fill="none" stroke="#E74C3C" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowRed)"/>
+  <text x="593" y="215" text-anchor="middle" font-size="11" font-weight="600" fill="#E74C3C">Iterate</text>
+  <text x="593" y="228" text-anchor="middle" font-size="10" fill="#E74C3C">feedback loop</text>
 
-  <!-- MD File: Living Memory bar -->
-  <rect x="100" y="270" width="650" height="65" rx="10" fill="#F5EEF8" stroke="#8E44AD" stroke-width="2"/>
+  <!-- Arrow: Reviewer → Done -->
+  <path d="M 665 180 L 665 270" fill="none" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <text x="680" y="248" font-size="10" fill="#27AE60" font-weight="600">Done</text>
 
-  <!-- Document icon -->
-  <rect x="120" y="284" width="24" height="30" rx="3" fill="none" stroke="#8E44AD" stroke-width="1.5"/>
-  <path d="M 120 284 L 133 284 L 144 295 L 144 314" fill="none" stroke="#8E44AD" stroke-width="1.5"/>
-  <line x1="126" y1="296" x2="138" y2="296" stroke="#8E44AD" stroke-width="1" opacity="0.5"/>
-  <line x1="126" y1="302" x2="138" y2="302" stroke="#8E44AD" stroke-width="1" opacity="0.5"/>
-  <line x1="126" y1="308" x2="138" y2="308" stroke="#8E44AD" stroke-width="1" opacity="0.5"/>
+  <!-- 6. Post-Mortem -->
+  <rect x="520" y="275" width="130" height="55" rx="8" fill="#FADBD8" stroke="#E74C3C" stroke-width="1.5"/>
+  <text x="585" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#922B21">Post-Mortem</text>
+  <text x="585" y="314" text-anchor="middle" font-size="10" fill="#922B21">what worked, what didn't</text>
 
-  <text x="158" y="296" font-size="14" font-weight="bold" fill="#6C3483">Tracking File: Living Memory</text>
-  <text x="158" y="316" font-size="11" fill="#7D3C98">Records decisions, progress, and context throughout the mission</text>
+  <!-- Arrow: Done → Post-Mortem -->
+  <path d="M 655 280 L 655 302 L 650 302" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- 7. Change Process -->
+  <rect x="350" y="275" width="140" height="55" rx="8" fill="#F5EEF8" stroke="#8E44AD" stroke-width="1.5"/>
+  <text x="420" y="298" text-anchor="middle" font-size="12" font-weight="600" fill="#6C3483">Change Process</text>
+  <text x="420" y="314" text-anchor="middle" font-size="10" fill="#6C3483">update rules, commands</text>
+
+  <!-- Arrow: Post-Mortem → Change Process -->
+  <line x1="520" y1="302" x2="495" y2="302" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow: Change Process loops back up to Orchestrator -->
+  <path d="M 350 302 L 230 302 L 230 183" fill="none" stroke="#8E44AD" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowhead)"/>
+  <text x="270" y="260" text-anchor="middle" font-size="10" fill="#8E44AD">next mission</text>
+  <text x="270" y="273" text-anchor="middle" font-size="10" fill="#8E44AD">is better</text>
 
   <!-- Bottom label -->
-  <text x="400" y="375" text-anchor="middle" font-size="11" fill="#999" font-style="italic">The tracking file captures what happened at every stage — your mission's stenographer</text>
+  <text x="400" y="400" text-anchor="middle" font-size="11" fill="#999" font-style="italic">The iteration loop runs until the reviewer approves. Learnings feed back into the process.</text>
 </svg>

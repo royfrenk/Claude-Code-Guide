@@ -54,13 +54,13 @@ const chapterFiles = [
     shortTitle: "How It All Comes Together",
   },
   {
-    file: "07-agents-beyond-code.md",
+    file: "07-non-technical-uses.md",
     number: 7,
     title: "Non-Technical Uses for Agents",
     shortTitle: "Non-Technical Uses",
   },
   {
-    file: "08-working-with-files-and-code.md",
+    file: "08-git-and-github.md",
     number: 8,
     title: "Git and GitHub",
     shortTitle: "Git and GitHub",
