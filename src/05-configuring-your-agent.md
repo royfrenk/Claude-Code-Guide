@@ -26,9 +26,9 @@ The `~` symbol means your home folder — `/Users/yourname` on Mac, `C:\Users\yo
 This is important: **you can ask Claude to set up any of this configuration for you.** You don't need to know the exact folder structure or file format. Just tell the agent what you want:
 
 - "Create a CLAUDE.md for this project"
-- "Add a rule that all code should use TypeScript"
-- "Set up a custom agent for code review"
-- "Create a skill for deploying to production"
+- "Add a rule that all posts should follow AP style"
+- "Set up a custom agent for editing my drafts"
+- "Create a skill for publishing a new blog post"
 
 Claude knows where these files go and how to format them. As you get more comfortable, you might want to edit them directly — but you never have to.
 
@@ -53,40 +53,44 @@ This is the most important configuration you'll make. CLAUDE.md is a text file t
 Think of CLAUDE.md as a brief for a new team member who joins the project every morning with no memory of yesterday. What would you tell them?
 
 - What this project is and who it's for
-- What technologies it uses
-- What commands to run (build, test, deploy)
+- What tools or technologies it uses
+- How to run things (preview, publish, export)
 - What files or folders to never touch
-- Coding style and naming conventions
+- Style preferences and conventions
 - Known issues or quirks
 
 #### A real example
 
 ```markdown
-# Project: Clean Paws Website
+# Project: Flag Stories Blog
 
-A single-page website for a dog grooming business.
+A blog about flags — their history, symbolism, and design.
 
-## Tech stack
-- HTML, CSS, vanilla JavaScript
-- No frameworks, no build tools
-- Hosted on Vercel
+## What this project is
+A personal blog covering vexillology (flag study). Posts cover individual flags,
+regional comparisons, and design analysis. Target audience: history and design
+enthusiasts.
 
-## Commands
-- Preview locally: open index.html in browser
-- Deploy: push to main branch (Vercel auto-deploys)
+## Key files
+- archive.md — complete archive of all previous posts (do not modify)
+- editorial-guide.md — what makes a good post, what to research, what to include
+- /drafts — work in progress, one file per post
+- /published — final posts, do not modify without asking
 
 ## Rules
-- Never delete or modify /assets/images — these are client-provided
-- Use plain CSS, not Tailwind or Bootstrap
-- All text content is in English
-- Keep the design minimal: white background, dark text, blue accents (#2563EB)
+- Always check archive.md before writing — don't repeat topics already covered
+- Follow the editorial guide for structure and depth
+- Use the voice skill (/voice) for tone and style
+- All posts must include: history, symbolism, design analysis, adoption date
+- Never publish directly — always present drafts for review first
 
-## File structure
-- index.html — main page
-- styles.css — all styles
-- script.js — form validation and booking logic
-- /assets/images — client photos (do not modify)
+## Workflow
+- New post: /write-post [country name]
+- Review: read draft, give feedback, iterate
+- Publish: move from /drafts to /published
 ```
+
+This works the same way for software projects — you'd list your tech stack, build commands, and coding conventions instead. The structure is identical; only the content changes.
 
 #### How to create it
 
@@ -118,11 +122,13 @@ As your CLAUDE.md grows, you might want to organize it. Instead of one giant fil
 
 ```
 my-project/.claude/rules/
-├── code-style.md      — naming conventions, formatting
-├── testing.md         — how to write and run tests
-├── security.md        — input validation, secret handling
-└── deployment.md      — how to deploy, what to check
+├── voice.md           — tone, sentence style, vocabulary
+├── editorial.md       — what to include, research standards
+├── formatting.md      — headings, image placement, post structure
+└── publishing.md      — review checklist before publishing
 ```
+
+For a software project, these might be `code-style.md`, `testing.md`, `security.md`, and `deployment.md` instead. Same concept, different domain.
 
 Each rule is a plain markdown file. Claude reads all of them automatically, just like CLAUDE.md. The advantage is organization — when you want to update your testing rules, you edit one focused file instead of hunting through a giant instruction document.
 
@@ -137,9 +143,9 @@ Remember Chapter 2 — the memory problem? Memory is one of the solutions.
 Claude Code has an **auto memory** system. As you work, it can save notes to a file called `MEMORY.md` that persists across sessions. Next time you start a new session, Claude reads this file and remembers what it learned.
 
 What goes in memory:
-- Patterns it discovered about your project ("this codebase uses Tailwind for styling")
-- Debugging insights ("the auth system requires a restart after config changes")
-- Your preferences ("user prefers concise commit messages")
+- Patterns it discovered about your project ("this blog always includes a 'Design Analysis' section")
+- Workflow insights ("the editorial guide was updated — posts now require source citations")
+- Your preferences ("user prefers short paragraphs and avoids passive voice")
 
 Memory lives at `~/.claude/projects/<your-project>/memory/MEMORY.md`. You can also ask Claude to remember things explicitly:
 
@@ -161,26 +167,26 @@ Each agent is a markdown file with a name, description, and instructions:
 
 ```markdown
 ---
-name: code-reviewer
-description: Reviews code for quality and security issues
+name: editor
+description: Reviews drafts for quality, voice consistency, and editorial standards
 ---
 
-You are a code review specialist. When reviewing code:
-1. Check for security issues first
-2. Check for logic errors
-3. Verify naming conventions match the project style
+You are an editorial reviewer. When reviewing a draft:
+1. Check that it follows the voice guide (tone, sentence length, vocabulary)
+2. Verify all required sections are present per the editorial guide
+3. Flag any factual claims that need source citations
 4. Summarize findings in a clear table
 ```
 
 Custom agents live in `.claude/agents/` (project) or `~/.claude/agents/` (global). When Claude Code needs to handle a task that matches an agent's description, it can dispatch that agent — or you can invoke one directly.
 
-**To create one:** Ask Claude — "Create a custom agent for code review" — and it will set it up.
+**To create one:** Ask Claude — "Create a custom agent for editing my drafts" — and it will set it up.
 
 #### Why use custom agents?
 
 The main agent can do everything. But custom agents are useful when:
-- You want consistent behavior for a specific task (always review code the same way)
-- You want to run tasks in parallel (one agent researches while another writes code)
+- You want consistent behavior for a specific task (always review drafts the same way)
+- You want to run tasks in parallel (one agent researches while another writes)
 - You want a restricted agent that can only read files, not modify them
 
 ### 5. Skills
@@ -191,20 +197,20 @@ Skills are markdown files that live in `.claude/skills/<skill-name>/SKILL.md`:
 
 ```markdown
 ---
-name: deploy
-description: Deploy the project to production
+name: write-post
+description: Research and draft a new blog post about a flag
 ---
 
-# Deployment Steps
+# Write a Blog Post
 
-1. Run all tests — stop if any fail
-2. Build the project
-3. Push to the main branch
-4. Verify the deployment URL responds
-5. Report the result
+1. Check archive.md — has this topic been covered before?
+2. Read editorial-guide.md for structure and standards
+3. Search the web for current information
+4. Write the draft using the voice skill for tone
+5. Present the draft for review — do not publish directly
 ```
 
-Once created, you invoke a skill by typing its name with a slash: `/deploy`. The agent reads the instructions and follows them.
+Once created, you invoke a skill by typing its name with a slash: `/write-post Poland`. The agent reads the instructions and follows them.
 
 **Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you find yourself giving the agent the same instructions repeatedly.
 
@@ -271,10 +277,10 @@ claude mcp add --transport http github https://mcp.github.com
 | It references project files or structure | It's about how *you* work, not the project |
 
 **Examples:**
-- "Use Tailwind for styling" → project rule (specific to this project)
+- "All posts must include an adoption date" → project rule (specific to the flag blog)
 - "Always explain your changes before making them" → global rule (your preference everywhere)
-- A deploy skill for this project → project skill
-- A code review agent you use everywhere → global agent
+- A `/write-post` skill for the flag blog → project skill
+- An editorial review agent you use across all writing projects → global agent
 
 ---
 

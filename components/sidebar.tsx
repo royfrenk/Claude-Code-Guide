@@ -94,13 +94,33 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
           aria-label="Guide chapters"
         >
           <ul className="space-y-0.5">
-            {chapters.map((chapter) => {
+            {chapters.map((chapter, index) => {
               const href = `/${chapter.slug}`;
               const isActive = currentSlug === chapter.slug;
               const progress = readChapters[chapter.slug] || 0;
 
+              // Section headers for the three parts
+              const sectionLabel =
+                chapter.number === 1
+                  ? "Part A: Understanding Agents"
+                  : chapter.number === 6
+                    ? "Part B: Agents Beyond Code"
+                    : chapter.number === 7
+                      ? "Part C: Building Software"
+                      : null;
+
               return (
                 <li key={chapter.slug}>
+                  {sectionLabel && (
+                    <div
+                      className={cn(
+                        "px-3 pt-4 pb-1.5 text-[10px] font-semibold uppercase tracking-widest text-sidebar-muted",
+                        chapter.number === 1 && index > 0 && "pt-4"
+                      )}
+                    >
+                      {sectionLabel}
+                    </div>
+                  )}
                   <Link
                     href={href}
                     onClick={onClose}

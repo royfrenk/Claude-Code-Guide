@@ -79,6 +79,7 @@ The key distinction: a CLI is text commands, an IDE is a visual application. Som
 | **Claude Code** | CLI + VS Code extension | Claude (Anthropic). Can also call other models via API for specific tasks. | Can spawn **sub-agents** — smaller agents that run tasks in parallel (e.g., one researches while another codes). Also supports tool use: reading files, running commands, browsing the web. The most autonomous of the group. | Included with Claude Pro (\$20/mo) or Max (\$100–200/mo); also API-based |
 | **Cursor** | IDE (standalone app) | Claude, GPT, Gemini, and others — you switch models freely, even mid-conversation | Single agent, but you can choose the best model for each task. Strong at inline suggestions and code refactoring within the visual editor. Less autonomous than Claude Code — more of a copilot than an independent agent. | Free tier; Pro \$20/mo |
 | **Windsurf** | IDE (standalone app) | Multiple models | Single agent that can make changes across multiple files and understand broader project context. Similar to Cursor in capability. | Free tier; Pro \$15/mo |
+| **Codex** (OpenAI) | VS Code extension + cloud | OpenAI's models (GPT, o-series). | OpenAI's autonomous coding agent. You give it a task and it works independently in a cloud sandbox — reading files, writing code, running tests — then presents the result. Less real-time interaction than Claude Code; more of a "send it off and review when done" workflow. | Requires OpenAI API key; usage-based pricing |
 | **Antigravity** (Google) | IDE (standalone app) | Gemini 3, Claude, GPT (you choose) | **Manager View** lets you dispatch multiple agents to work on different tasks simultaneously — closest to true orchestration in an IDE. Agents generate verifiable artifacts (plans, task lists) so you can review their logic. Still in public preview. | Free during preview; expected ~\$20/mo Pro |
 
 #### VS Code: the foundation
@@ -119,7 +120,7 @@ Same agent, same capabilities, same model underneath. The difference is purely h
 #### What all agent-assisted tools share
 
 - Your files stay on your computer
-- You can use **Git** (a version control system — think of it as an infinite undo button that also lets multiple people work on the same project) to track changes (we'll cover Git and GitHub in Chapter 6)
+- You can use **Git** (a version control system — think of it as an infinite undo button that also lets multiple people work on the same project) to track changes (we'll cover Git and GitHub in Chapter 7)
 - You choose where and how to deploy your project when it's ready
 - You need to understand at least the basics of your project's structure
 
@@ -131,7 +132,11 @@ VS Code is free and has a massive ecosystem of extensions. The Claude Code exten
 
 **What about Cursor?** Cursor is a strong alternative. Since it's built on VS Code, it looks and feels similar — but it ships with its own AI agent baked in rather than using an extension. Two advantages: it lets you switch between AI models mid-conversation (Claude today, GPT tomorrow, Gemini for a quick cheap task), and its inline code suggestions are polished. The tradeoff: it costs \$20/mo on top of whatever you pay for the AI model, and its agent is less autonomous than Claude Code — it's more of a copilot that works alongside you than an independent agent you dispatch.
 
+**What about Codex?** OpenAI's Codex is Claude Code's closest competitor in terms of autonomy. You give it a task and it works in a cloud sandbox — reading files, writing code, running tests. The key difference: Codex runs in the cloud and presents results when done, while Claude Code runs on your machine in real time so you can watch and intervene. Codex requires an OpenAI API key with usage-based pricing. If you're already in the OpenAI ecosystem, it's worth trying alongside Claude Code.
+
 Both are solid choices. This guide uses Claude Code because it teaches you the most about how agents actually work — and because you can start with a tool you already have access to through a Claude subscription.
+
+**One more tool worth mentioning: Wispr Flow.** [Wispr Flow](https://wisprflow.com) isn't an agent — it's a voice-to-text tool that runs system-wide on your computer. You speak, it transcribes. Why mention it here? Because a huge part of working with agents is *telling them what to do*, and talking is faster than typing. Wispr Flow works anywhere — in the Claude Code panel, in a chat, in a document. Especially useful when you're iterating on feedback ("make the heading bigger, move the image left, change the tone in paragraph three") where speaking is more natural than typing.
 
 ### Comparison at a glance
 
