@@ -34,15 +34,16 @@ Claude knows where these files go and how to format them. As you get more comfor
 
 ### The configuration layers
 
-There are seven layers, from most essential to most advanced. You only need the first one to start:
+There are eight layers, from most essential to most advanced. You only need the first one to start:
 
 1. **The instruction file (CLAUDE.md)** — Standing orders for every session
 2. **Rules** — Organized instructions by topic
 3. **Memory** — Notes the agent keeps across sessions
-4. **Custom agents** — Specialized agents for specific tasks
-5. **Skills** — Reusable commands you can invoke
-6. **Hooks** — Automated actions at specific moments
-7. **MCP servers** — Connections to external tools
+4. **Custom agents** — Specialized roles for specific tasks
+5. **Skills** — Domain knowledge and expertise
+6. **Commands** — Workflow recipes you trigger by name
+7. **Hooks** — Automated actions at specific moments
+8. **MCP servers** — Connections to external tools
 
 ### 1. The instruction file (CLAUDE.md)
 
@@ -191,30 +192,62 @@ The main agent can do everything. But custom agents are useful when:
 
 ### 5. Skills
 
-A **skill** is a reusable command that teaches the agent how to do a specific type of task. Think of it as a recipe card you can invoke by name.
+A **skill** is a knowledge file that teaches an agent about a specific domain. Think of it as expertise in a bottle — what good writing sounds like, what thorough research includes, what your brand guidelines require.
 
 Skills are markdown files that live in `.claude/skills/<skill-name>/SKILL.md`:
 
 ```markdown
----
-name: write-post
-description: Research and draft a new blog post about a flag
----
+# Voice Guide
 
-# Write a Blog Post
+## Tone
+"Expert-Casual" — two enthusiastic flag-nerd
+friends telling stories in a pub.
 
-1. Check archive.md — has this topic been covered before?
-2. Read editorial-guide.md for structure and standards
-3. Search the web for current information
-4. Write the draft using the voice skill for tone
-5. Present the draft for review — do not publish directly
+## Sentence patterns
+- Short dramatic sentences mixed with longer
+  narrative ones
+- Fragments are fine: "Cool, right?"
+
+## What NOT to do
+- No academic language
+- No condescension
+- Never a fact-list — always a narrative
 ```
 
-Once created, you invoke a skill by typing its name with a slash: `/write-post Poland`. The agent reads the instructions and follows them.
+Skills don't run on their own — they provide context that agents and commands load when they need it. The voice skill above gets loaded by the writer agent when drafting a post. A research playbook skill gets loaded by the researcher agent when gathering material.
 
-**Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you find yourself giving the agent the same instructions repeatedly.
+**Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you have domain expertise worth codifying — your writing voice, your research standards, your brand guidelines.
 
-### 6. Hooks
+**To create one:** Ask Claude — "Create a skill that describes my writing voice" — and it will set it up.
+
+### 6. Commands
+
+A **command** is a workflow recipe you trigger by typing a slash. Think of it as a checklist that the agent follows step by step — often dispatching agents and loading skills along the way.
+
+Commands are markdown files that live in `.claude/commands/<command-name>.md`:
+
+```markdown
+Write a new blog post about: $ARGUMENTS
+
+Steps:
+1. Run the researcher agent
+   - Use the blog-post skill for categories
+   - Check archive.md for previous coverage
+   - Save findings to research-notes.md
+2. Run the writer agent
+   - Read research-notes.md
+   - Use the voice skill for tone
+   - Save draft to posts/
+3. Present the draft for review
+```
+
+You invoke this by typing `/content-manager Poland`. The agent reads the steps and follows them — dispatching the researcher and writer agents, each of which loads its own skills.
+
+**The difference between skills, commands, and agents:** A skill is knowledge ("here's what good research looks like"). A command is a workflow ("do research, then write, then review"). An agent is a role ("you are the researcher — here's how you work"). Commands dispatch agents; agents load skills; everyone follows the rules.
+
+**To create one:** Ask Claude — "Create a command for writing new blog posts" — and it will set it up.
+
+### 7. Hooks
 
 **Hooks** are automated actions that run at specific moments in the agent's workflow — like tripwires. You set them up once, and they fire every time that moment occurs.
 
@@ -231,7 +264,7 @@ You can set up hooks by typing `/hooks` inside Claude Code — it opens an inter
 
 **Who needs hooks?** Not beginners. Hooks are a power feature for when you're running agents more autonomously and want automated guardrails. Come back to this when you need it.
 
-### 7. MCP servers
+### 8. MCP servers
 
 **MCP** stands for **Model Context Protocol**. An MCP server is a bridge that connects Claude Code to an external tool or service — like GitHub, Slack, a database, or a project management tool.
 
@@ -258,15 +291,16 @@ claude mcp add --transport http github https://mcp.github.com
 
 ### The configuration stack at a glance
 
-| Layer | What it does | When to set it up | How to create it |
-|---|---|---|---|
-| **CLAUDE.md** | Standing instructions for every session | Day one — before your first real task | Ask Claude or run `/init` |
-| **Rules** | Organized instructions by topic | When your CLAUDE.md gets too long | Ask Claude to create a rule |
-| **Memory** | Notes that persist across sessions | Automatic — Claude learns as you work | Ask Claude to remember something |
-| **Custom agents** | Specialized agents for specific tasks | When you want consistent behavior for a task type | Ask Claude to create an agent |
-| **Skills** | Reusable commands you invoke by name | When you repeat the same instructions | Ask Claude to create a skill |
-| **Hooks** | Automated checks and actions | When you want automated guardrails | Type `/hooks` in Claude Code |
-| **MCP servers** | Connections to external tools | When your project uses external services | Ask Claude to connect a service |
+| Layer | What it does | How it's invoked | When to set it up | How to create it |
+|---|---|---|---|---|
+| **CLAUDE.md** | Standing instructions: what the project is, how it works, what to avoid | Read automatically at every session start | Day one — before your first real task | Ask Claude or run `/init` |
+| **Rules** | Focused instructions by topic: coding style, testing, security, voice | Read automatically alongside CLAUDE.md | When your CLAUDE.md gets too long | Ask Claude to create a rule |
+| **Memory** | Notes about your preferences and patterns that persist across sessions | Read automatically; updated as you work | Automatic — Claude learns as you work | Ask Claude to remember something |
+| **Custom agents** | Specialized roles: a researcher, a writer, a reviewer — each with defined expertise | Dispatched by commands or other agents, or invoked directly | When you want consistent behavior for a task type | Ask Claude to create an agent |
+| **Skills** | Domain knowledge: your voice, research standards, brand guidelines | Loaded by agents and commands that need the expertise | When you have domain knowledge worth codifying | Ask Claude to create a skill |
+| **Commands** | Workflow recipes: step-by-step processes that dispatch agents and load skills | You type `/command-name` with optional arguments | When you repeat the same multi-step workflow | Ask Claude to create a command |
+| **Hooks** | Automated actions that fire at specific moments: format code, run tests, block commands | Fire automatically when their trigger event occurs | When you want automated guardrails | Type `/hooks` in Claude Code |
+| **MCP servers** | Bridges to external services: GitHub, databases, Slack, project management tools | Connected at session start after one-time setup | When your project uses external services | Ask Claude to connect a service |
 
 ### Global vs. project: what goes where
 
@@ -279,7 +313,8 @@ claude mcp add --transport http github https://mcp.github.com
 **Examples:**
 - "All posts must include an adoption date" → project rule (specific to the flag blog)
 - "Always explain your changes before making them" → global rule (your preference everywhere)
-- A `/write-post` skill for the flag blog → project skill
+- A voice skill for the flag blog's writing style → project skill
+- A `/content-manager` command for the blog workflow → project command
 - An editorial review agent you use across all writing projects → global agent
 
 ---
