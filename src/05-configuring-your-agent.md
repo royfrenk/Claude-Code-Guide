@@ -1,6 +1,6 @@
 ## Chapter 5: Configuring Your Agent
 
-> **TL;DR:** Claude Code reads configuration files to know how to behave. The instruction file (CLAUDE.md) is where you start. Rules, custom agents, skills, hooks, memory, and MCP servers add more power as you need it. The best part: you don't have to create any of these files by hand — just ask Claude to set them up for you.
+> **TL;DR:** Claude Code reads configuration files to know how to behave. The instruction file (CLAUDE.md) is where you start. Rules, memory, and skills give it context. Agents, commands, hooks, and MCP servers give it capabilities. You don't have to create any of these files by hand — just ask Claude to set them up for you.
 
 ---
 
@@ -39,8 +39,8 @@ There are eight layers, from most essential to most advanced. You only need the 
 1. **The instruction file (CLAUDE.md)** — Standing orders for every session
 2. **Rules** — Organized instructions by topic
 3. **Memory** — Notes the agent keeps across sessions
-4. **Custom agents** — Specialized roles for specific tasks
-5. **Skills** — Domain knowledge and expertise
+4. **Skills** — Domain knowledge and expertise
+5. **Custom agents** — Specialized roles for specific tasks
 6. **Commands** — Workflow recipes you trigger by name
 7. **Hooks** — Automated actions at specific moments
 8. **MCP servers** — Connections to external tools
@@ -160,37 +160,7 @@ And it will save that to its memory file. You can also tell it to forget things:
 Stop remembering the thing about Tailwind — we switched to plain CSS
 ```
 
-### 4. Custom agents
-
-A **custom agent** is a specialized version of Claude that you define for a specific type of task. Think of it as creating a team member with a specific role: one agent for code review, another for writing tests, another for planning.
-
-Each agent is a markdown file with a name, description, and instructions:
-
-```markdown
----
-name: editor
-description: Reviews drafts for quality, voice consistency, and editorial standards
----
-
-You are an editorial reviewer. When reviewing a draft:
-1. Check that it follows the voice guide (tone, sentence length, vocabulary)
-2. Verify all required sections are present per the editorial guide
-3. Flag any factual claims that need source citations
-4. Summarize findings in a clear table
-```
-
-Custom agents live in `.claude/agents/` (project) or `~/.claude/agents/` (global). When Claude Code needs to handle a task that matches an agent's description, it can dispatch that agent — or you can invoke one directly.
-
-**To create one:** Ask Claude — "Create a custom agent for editing my drafts" — and it will set it up.
-
-#### Why use custom agents?
-
-The main agent can do everything. But custom agents are useful when:
-- You want consistent behavior for a specific task (always review drafts the same way)
-- You want to run tasks in parallel (one agent researches while another writes)
-- You want a restricted agent that can only read files, not modify them
-
-### 5. Skills
+### 4. Skills
 
 A **skill** is a knowledge file that teaches an agent about a specific domain. Think of it as expertise in a bottle — what good writing sounds like, what thorough research includes, what your brand guidelines require.
 
@@ -219,6 +189,38 @@ Skills don't run on their own — they provide context that agents and commands 
 **Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you have domain expertise worth codifying — your writing voice, your research standards, your brand guidelines.
 
 **To create one:** Ask Claude — "Create a skill that describes my writing voice" — and it will set it up.
+
+> **The difference between rules, memory, and skills:** Rules are instructions you write — always loaded, never changing unless you edit them. Memory is notes the agent keeps for itself — always loaded, updated as it learns. Skills are deep domain knowledge — loaded only when an agent or command needs them. Rules and memory are always in the context window. Skills are pulled in on demand.
+
+### 5. Custom agents
+
+A **custom agent** is a specialized version of Claude that you define for a specific type of task. Think of it as creating a team member with a specific role: one agent for code review, another for writing tests, another for planning.
+
+Each agent is a markdown file with a name, description, and instructions:
+
+```markdown
+---
+name: editor
+description: Reviews drafts for quality, voice consistency, and editorial standards
+---
+
+You are an editorial reviewer. When reviewing a draft:
+1. Check that it follows the voice guide (tone, sentence length, vocabulary)
+2. Verify all required sections are present per the editorial guide
+3. Flag any factual claims that need source citations
+4. Summarize findings in a clear table
+```
+
+Custom agents live in `.claude/agents/` (project) or `~/.claude/agents/` (global). When Claude Code needs to handle a task that matches an agent's description, it can dispatch that agent — or you can invoke one directly.
+
+**To create one:** Ask Claude — "Create a custom agent for editing my drafts" — and it will set it up.
+
+#### Why use custom agents?
+
+The main agent can do everything. But custom agents are useful when:
+- You want consistent behavior for a specific task (always review drafts the same way)
+- You want to run tasks in parallel (one agent researches while another writes)
+- You want a restricted agent that can only read files, not modify them
 
 ### 6. Commands
 
@@ -296,8 +298,8 @@ claude mcp add --transport http github https://mcp.github.com
 | **CLAUDE.md** | Standing instructions: what the project is, how it works, what to avoid | Read automatically at every session start | Day one — before your first real task | Ask Claude or run `/init` |
 | **Rules** | Focused instructions by topic: coding style, testing, security, voice | Read automatically alongside CLAUDE.md | When your CLAUDE.md gets too long | Ask Claude to create a rule |
 | **Memory** | Notes about your preferences and patterns that persist across sessions | Read automatically; updated as you work | Automatic — Claude learns as you work | Ask Claude to remember something |
-| **Custom agents** | Specialized roles: a researcher, a writer, a reviewer — each with defined expertise | Dispatched by commands or other agents, or invoked directly | When you want consistent behavior for a task type | Ask Claude to create an agent |
 | **Skills** | Domain knowledge: your voice, research standards, brand guidelines | Loaded by agents and commands that need the expertise | When you have domain knowledge worth codifying | Ask Claude to create a skill |
+| **Custom agents** | Specialized roles: a researcher, a writer, a reviewer — each with defined expertise | Dispatched by commands or other agents, or invoked directly | When you want consistent behavior for a task type | Ask Claude to create an agent |
 | **Commands** | Workflow recipes: step-by-step processes that dispatch agents and load skills | You type `/command-name` with optional arguments | When you repeat the same multi-step workflow | Ask Claude to create a command |
 | **Hooks** | Automated actions that fire at specific moments: format code, run tests, block commands | Fire automatically when their trigger event occurs | When you want automated guardrails | Type `/hooks` in Claude Code |
 | **MCP servers** | Bridges to external services: GitHub, databases, Slack, project management tools | Connected at session start after one-time setup | When your project uses external services | Ask Claude to connect a service |
