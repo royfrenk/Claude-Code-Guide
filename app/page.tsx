@@ -48,7 +48,13 @@ export default function LandingPage() {
               AI Agents Guide
             </span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-6">
+            <a
+              href="#chapters"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Chapters
+            </a>
             <a
               href="#about"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -97,7 +103,7 @@ export default function LandingPage() {
       </section>
 
       {/* What you'll learn */}
-      <section className="border-t border-border bg-muted/50 py-20 sm:py-24">
+      <section id="chapters" className="border-t border-border bg-muted/50 py-20 sm:py-24 scroll-mt-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
@@ -159,20 +165,27 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* About */}
+      {/* About / Contact */}
       <section id="about" className="border-t border-border py-16 sm:py-20 scroll-mt-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-xl font-bold text-foreground sm:text-2xl">
-            About the author
+            Contact Me
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Written by Roy Frenkiel — product leader turned AI builder.
-            After years leading product at startups and enterprise companies,
-            I started building with AI agents and realized the gap between
-            what these tools can do and what most people know about them.
-            This guide is everything I wish someone had told me when I started.
+            Product leader turned AI builder. After years leading product at
+            startups and enterprise companies, I started building with AI
+            agents and realized the gap between what these tools can do and
+            what most people know about them. This guide is everything I wish
+            someone had told me when I started.
           </p>
           <div className="mt-6 flex items-center justify-center gap-4">
+            <a
+              href="mailto:royfrenk@gmail.com"
+              className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+            >
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
             <a
               href="https://www.linkedin.com/in/royfrenk/"
               target="_blank"
