@@ -6,6 +6,12 @@
 
 Chapters 6 and 7 showed the recommended process and how to build a system for it — using a blog as the example. This chapter shows what happens when the same process scales up to building software. The shape is the same. The number of agents changes.
 
+### Before you jump in
+
+If you haven't built software before, don't start here. Start with an all-in-one platform like **v0** or **Lovable** (Chapter 3) and a simple project — a personal website, a landing page, a basic tool. Those platforms handle the complexity for you: hosting, deployment, version control, all wired together. You'll learn how software works by hitting walls — things that break, features that don't behave, layouts that look wrong on mobile. That experience teaches you more than any chapter can.
+
+Once you've shipped something simple and understand the basics — what a build is, what deployment means, what happens when you change a file — then come back here. This chapter is about scaling up: more agents, more moving parts, more structure. It only makes sense if you've already built something small.
+
 ### From two agents to many
 
 The blog example used two sub-agents — a researcher and a writer — coordinated by a command file. Software needs more. The codebase is larger, the work is more specialized, and mistakes are harder to undo. So the roles expand: a manager coordinates, an explorer reads the codebase, a developer writes code, and a reviewer checks quality before anything ships.
