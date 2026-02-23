@@ -50,8 +50,8 @@ const chapterFiles = [
   {
     file: "06-agents-beyond-code.md",
     number: 6,
-    title: "Agents Beyond Code",
-    shortTitle: "Agents Beyond Code",
+    title: "Non-Technical Uses for Agents",
+    shortTitle: "Non-Technical Uses",
   },
   {
     file: "07-working-with-files-and-code.md",
