@@ -1,6 +1,7 @@
 "use client";
 
-import { Menu, Search, Download } from "lucide-react";
+import Link from "next/link";
+import { Menu, Search, Download, Home, Mail, MessageSquare } from "lucide-react";
 
 interface TopBarProps {
   onMenuClick: () => void;
@@ -18,6 +19,15 @@ export function TopBar({ onMenuClick, onSearchClick }: TopBarProps) {
       >
         <Menu className="h-5 w-5" />
       </button>
+
+      {/* Home */}
+      <Link
+        href="/"
+        className="flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <Home className="h-4 w-4" />
+        <span className="hidden sm:inline">Home</span>
+      </Link>
 
       {/* Spacer */}
       <div className="flex-1" />
@@ -44,6 +54,16 @@ export function TopBar({ onMenuClick, onSearchClick }: TopBarProps) {
       >
         <Download className="h-4 w-4" />
         <span className="hidden sm:inline">Download PDF</span>
+      </a>
+
+      {/* Feedback */}
+      <a
+        href="mailto:royfrenk@gmail.com?subject=Guide%20Feedback"
+        className="ml-3 flex items-center gap-2 rounded-lg border border-border px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:border-accent/30 transition-all"
+        aria-label="Send feedback"
+      >
+        <MessageSquare className="h-4 w-4" />
+        <span className="hidden sm:inline">Feedback</span>
       </a>
     </header>
   );

@@ -49,6 +49,12 @@ export default function LandingPage() {
             </span>
           </div>
           <div className="flex items-center gap-3">
+            <a
+              href="#about"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About
+            </a>
             <Link
               href="/00-introduction"
               className="flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
@@ -154,15 +160,17 @@ export default function LandingPage() {
       </section>
 
       {/* About */}
-      <section className="border-t border-border py-16 sm:py-20">
+      <section id="about" className="border-t border-border py-16 sm:py-20 scroll-mt-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-xl font-bold text-foreground sm:text-2xl">
             About the author
           </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Written by Roy Frenkel. I built this guide after months of working
-            with AI agents on real projects — hitting walls, learning what
-            works, and wishing someone had organized the answers for me.
+            Written by Roy Frenkiel — product leader turned AI builder.
+            After years leading product at startups and enterprise companies,
+            I started building with AI agents and realized the gap between
+            what these tools can do and what most people know about them.
+            This guide is everything I wish someone had told me when I started.
           </p>
           <div className="mt-6 flex items-center justify-center gap-4">
             <a
