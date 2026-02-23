@@ -14,6 +14,8 @@ import {
   FolderGit2,
   Globe,
   PenTool,
+  Linkedin,
+  Github,
 } from "lucide-react";
 
 const chapterIcons: Record<number, React.ReactNode> = {
@@ -149,6 +151,40 @@ export default function LandingPage() {
               Start the Guide
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="border-t border-border py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl px-6 text-center">
+          <h2 className="text-xl font-bold text-foreground sm:text-2xl">
+            About the author
+          </h2>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Written by Roy Frenkel. I built this guide after months of working
+            with AI agents on real projects — hitting walls, learning what
+            works, and wishing someone had organized the answers for me.
+          </p>
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/royfrenk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/royfrenk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
           </div>
         </div>
       </section>
