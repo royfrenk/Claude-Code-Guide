@@ -67,6 +67,8 @@ When you commit changes, they're saved locally on your machine. Pushing uploads 
 Push my changes to GitHub
 ```
 
+![Git Workflow](/diagrams/diagram-git-workflow.svg)
+
 ### Setting up Git and GitHub
 
 #### Git
