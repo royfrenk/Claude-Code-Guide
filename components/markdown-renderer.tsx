@@ -174,8 +174,8 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
               {children}
             </ul>
           ),
-          ol: ({ children }) => (
-            <ol className="my-4 space-y-2 pl-6 text-[17px] leading-[1.75] list-decimal marker:text-muted-foreground">
+          ol: ({ children, start }) => (
+            <ol start={start} className="my-4 space-y-2 pl-6 text-[17px] leading-[1.75] list-decimal marker:text-muted-foreground">
               {children}
             </ol>
           ),

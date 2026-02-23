@@ -1,5 +1,7 @@
 # Working With AI Agents: A Guide for Non-Technical People
 
+> **TL;DR:** A practical guide for non-technical people who want to work with AI agents. Part A covers the basics — what agents are, how they work, and how to set one up. Part B shows the recommended process and how to build your own agent system. Part C covers building and deploying software. No coding background required.
+
 This guide is for people who aren't developers but want to understand — and use — AI agents. Not just for coding. Agents can write content, organize data, manage projects, and automate repetitive knowledge work. No technical background required.
 
 A note before you start: this space is moving fast. Tools change, interfaces get redesigned, new capabilities show up every few weeks. This guide is a snapshot — it captures how things work at the time of writing, but some details will drift. The good news is that the concepts (how to think about agents, how to direct them, how to structure your work) are durable even when the buttons move around. And when something specific is out of date, you can always ask Claude or any other AI agent — they're surprisingly good at explaining their own tools. That's actually why I wrote this guide: to structure the answers to questions I faced and wished someone had organized for me.
