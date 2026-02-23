@@ -1,4 +1,4 @@
-## Chapter 6: Non-Technical Uses for Agents
+## Chapter 7: Non-Technical Uses for Agents
 
 > **TL;DR:** AI agents aren't just for building software. They can write content, organize research, manage data, and automate repetitive knowledge work. This chapter shows how — with a real example of someone who used an agent to revive a dormant blog.
 

@@ -104,8 +104,8 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
                 chapter.number === 1
                   ? "Part A: Understanding Agents"
                   : chapter.number === 6
-                    ? "Part B: Non-Technical Uses"
-                    : chapter.number === 7
+                    ? "Part B: Putting It to Work"
+                    : chapter.number === 8
                       ? "Part C: Building Software"
                       : null;
 

@@ -14,14 +14,15 @@ The guide is organized in three parts:
 4. **Setting Up** — Installing Claude Code, configuring VS Code, and running your first command.
 5. **Configuring Your Agent** — Instruction files, rules, memory, skills, commands, and MCP servers.
 
-**Part B: Non-Technical Uses** — Using agents for non-coding work. Content writing, data management, and other knowledge tasks.
+**Part B: Putting It to Work** — How agents orchestrate real tasks, with examples from writing and software development.
 
-6. **Non-Technical Uses for Agents** — A real walkthrough of using an agent to revive a dormant blog, plus examples for accounting and other non-coding work.
+6. **How It All Comes Together** — Commands, skills, sub-agents, and tracking files working as a system. Two walkthroughs: writing a blog post and building a software feature.
+7. **Non-Technical Uses for Agents** — A real walkthrough of using an agent to revive a dormant blog, plus examples for accounting and other non-coding work.
 
 **Part C: Building Software** — For those who want to build and deploy applications.
 
-7. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
-8. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+8. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
+9. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 

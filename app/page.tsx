@@ -7,6 +7,7 @@ import {
   Terminal,
   Rocket,
   Settings,
+  Workflow,
   PenTool,
   FolderGit2,
   Globe,
@@ -18,9 +19,10 @@ const chapterIcons: Record<number, React.ReactNode> = {
   3: <Terminal className="h-5 w-5" />,
   4: <Rocket className="h-5 w-5" />,
   5: <Settings className="h-5 w-5" />,
-  6: <PenTool className="h-5 w-5" />,
-  7: <FolderGit2 className="h-5 w-5" />,
-  8: <Globe className="h-5 w-5" />,
+  6: <Workflow className="h-5 w-5" />,
+  7: <PenTool className="h-5 w-5" />,
+  8: <FolderGit2 className="h-5 w-5" />,
+  9: <Globe className="h-5 w-5" />,
 };
 
 export default function LandingPage() {
@@ -60,7 +62,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <BookOpen className="h-3.5 w-3.5 text-accent" />
-            Free online guide &middot; 8 chapters
+            Free online guide &middot; 9 chapters
           </div>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Working With{" "}
@@ -162,9 +164,10 @@ function getChapterDescription(num: number | null): string {
     3: "Three ways to work with AI: chat, platform, or agent-assisted tools.",
     4: "Installing Claude Code, configuring VS Code, and running your first command.",
     5: "Instruction files, rules, memory, custom agents, and MCP servers.",
-    6: "Using agents for content writing, data work, and other non-coding tasks.",
-    7: "Saving your work, going back to previous versions, and backing up online.",
-    8: "Where your project lives and how people access it after you build it.",
+    6: "How commands, skills, agents, and tracking files orchestrate a real mission.",
+    7: "Using agents for content writing, data work, and other non-coding tasks.",
+    8: "Saving your work, going back to previous versions, and backing up online.",
+    9: "Where your project lives and how people access it after you build it.",
   };
   return descriptions[num ?? 0] ?? "";
 }
