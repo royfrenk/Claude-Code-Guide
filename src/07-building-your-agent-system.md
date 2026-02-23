@@ -1,16 +1,10 @@
 ## Chapter 7: Building Your Agent System
 
-> **TL;DR:** Chapter 6 showed the process. This chapter shows how to build it. Using a real blog about flags as the example, we walk through every step: gathering source material, generating a voice skill, defining a research playbook, and wiring it all together with a command.
+> **TL;DR:** Chapter 6 showed the process. This chapter shows how to build it. Using a real blog about flags as the example, we walk through every step: gathering source material, generating a voice skill, defining a research playbook, setting up specialized agents, and wiring it all together with a command.
 
 ---
 
-Chapter 6 introduced the recommended process — orchestrator, explorer, actor, reviewer, iterate, improve — and showed how it maps to a blog about flags. This chapter walks through how that system was actually built. Not the output — the setup. By the end, you'll know how to build something like it for your own work.
-
-### The starting point
-
-A friend of mine had a blog about flags — vexillology, the study of flag design and symbolism. He'd been writing about it for years: the history behind each flag's colors, the meaning of symbols, stories about redesigns and controversies. Good niche content with a loyal audience.
-
-Then life happened. He stopped writing, the blog sat dormant for two years, and he wanted to bring it back. The old content was still good — he just needed to start producing new posts again. Here's how he used an agent to build a system that does most of the work.
+Chapter 6 introduced the recommended process and showed how it maps to a blog about flags — a single command that researches a flag, checks the archive, and drafts a post in the author's voice. This chapter walks through how that system was actually built. Not the output — the setup. By the end, you'll know how to build something like it for your own work.
 
 ### Step 1: Gather the archive
 
@@ -39,21 +33,24 @@ The agent read all 89 posts and produced a style guide. Here's a sample of what 
 
 ```markdown
 ## Tone
-"Expert-Casual" — two enthusiastic flag-nerd friends telling stories in a pub.
-Visible enthusiasm. Everyday language. Controlled vulnerability — willing to say
+"Expert-Casual" — two enthusiastic flag-nerd
+friends telling stories in a pub. Visible
+enthusiasm. Everyday language. Willing to say
 "we don't know everything."
 
 ## Sentence patterns
-- Mix short dramatic sentences ("That's it. Done.") with longer narrative ones
+- Short dramatic sentences ("That's it. Done.")
+  mixed with longer narrative ones
 - Fragments are fine: "Cool, right?"
-- Three dots for drama: "Gone! Gone forever? Maybe..."
+- Three dots for drama: "Gone forever? Maybe..."
 
 ## Signature tools
-- Parenthetical asides: "(we don't know if he really existed, but the story's
-  too beautiful not to tell)"
-- Rhetorical questions answered immediately: "So why is it so common?"
-- Self-aware humor: "Yeah, we're thinking about a YouTube channel. No, it won't
-  be called 'fun with flags.'"
+- Parenthetical asides: "(we don't know if he
+  really existed, but the story's too beautiful
+  not to tell)"
+- Rhetorical questions answered immediately
+- Self-aware humor: "No, the channel won't be
+  called 'fun with flags.'"
 
 ## What NOT to do
 - No academic language ("It should be noted...")
@@ -62,7 +59,7 @@ Visible enthusiasm. Everyday language. Controlled vulnerability — willing to s
 - Never a fact-list — always a narrative
 ```
 
-He reviewed it, made corrections ("I'm more sarcastic than that," "I never use bullet lists"), and saved it as `.claude/skills/shay-voice.md`. Now any time the agent needs to write in his voice, it loads this skill. The voice file is the single highest-leverage piece of configuration — it's what makes the output sound like him instead of generic AI text.
+He reviewed it, made corrections ("I'm more sarcastic than that," "I never use bullet lists"), and saved it as `.claude/skills/voice.md`. Now any time the agent needs to write in his voice, it loads this skill. The voice file is the single highest-leverage piece of configuration — it's what makes the output sound like him instead of generic AI text.
 
 ### Step 3: Define the research playbook
 
@@ -85,29 +82,42 @@ The skill also defines quality standards: find what Wikipedia doesn't cover, pri
 
 This is the difference between "do research" and "here's what interesting research looks like for us."
 
-### Step 4: Build the command
+### Step 4: Define the agents
 
-The command file (`.claude/commands/content-manager.md`) is the orchestrator — the recipe that chains everything together. It's not code. It's a plain-text checklist:
+The research and writing are different kinds of work, so the author split them into two **custom agents** — the same concept from Chapter 5:
+
+- `.claude/agents/researcher.md` — searches the web using the research playbook, checks the archive for previous coverage, and saves organized findings to a research file.
+- `.claude/agents/writer.md` — reads the research findings, loads the voice skill, and drafts the post.
+
+Each agent file describes what it does, what skills it uses, and what it produces. The researcher uses `blog-post.md` as its playbook. The writer uses `voice.md` as its style guide. They don't need to know about each other — the command file connects them.
+
+### Step 5: Build the command
+
+The command file (`.claude/commands/content-manager.md`) is the orchestrator — the recipe that chains the agents together. It's not code. It's a plain-text checklist:
 
 ```markdown
 Write a new blog post about: $ARGUMENTS
 
 Steps:
-1. Read .claude/skills/blog-post.md for research categories.
-2. Search the web for information about this flag, organized by those categories.
-3. Check archive.md — has this flag been covered before?
-   If yes, note what exists and focus on new angles.
-4. Write the post using the voice skill (.claude/skills/shay-voice.md).
-5. Save to posts/ and present the draft for review.
+1. Run the researcher agent:
+   - Use .claude/skills/blog-post.md for categories
+   - Search the web, organized by category
+   - Check archive.md for previous coverage
+   - Save findings to research-notes.md
+2. Run the writer agent:
+   - Read research-notes.md
+   - Write the post using .claude/skills/voice.md
+   - Save to posts/
+3. Present the draft for review.
 ```
 
-That's it. The command references two skills (research playbook and voice), one reference file (the archive), and defines the order. When the author types `/content-manager Poland`, the agent follows this checklist top to bottom.
+That's it. The command dispatches two agents, each with its own skill, connected by a shared file. When the author types `/content-manager Poland`, the agents run in sequence — research first, then writing.
 
-### Step 5: Run it, review, improve
+### Step 6: Run it, review, improve
 
 Here's what happens when the author types the command:
 
-The agent reads the research skill and searches the web for Poland's flag — origin stories, symbolism, design oddities, the eagle that lost its crown during communism and got it back in 1989. It checks the archive to see if Poland was covered before. Then it loads the voice skill and writes the post — opening with an intriguing riddle (the blog's signature move), weaving in humor and parenthetical asides, ending with a sign-off.
+The researcher agent reads the research skill and searches the web for Poland's flag — origin stories, symbolism, design oddities, the eagle that lost its crown during communism and got it back in 1989. It checks the archive to see if Poland was covered before and saves organized findings. Then the writer agent picks up those findings, loads the voice skill, and drafts the post — opening with an intriguing riddle (the blog's signature move), weaving in humor and parenthetical asides, ending with a sign-off.
 
 The author reads the draft. "The section about the crown needs more historical context." "The opening riddle gives away too much." The agent revises. Two or three rounds and the post is ready.
 
@@ -117,13 +127,15 @@ After a few posts, the author noticed the agent kept missing adoption dates. He 
 
 | File | What it does | Config layer (Ch5) |
 |------|-------------|-------------------|
-| `.claude/commands/content-manager.md` | The command — triggers the workflow, defines the steps | Command |
+| `.claude/commands/content-manager.md` | The command — triggers the workflow, dispatches agents | Command |
+| `.claude/agents/researcher.md` | The researcher — searches the web using the research playbook | Agent |
+| `.claude/agents/writer.md` | The writer — drafts the post in the author's voice | Agent |
 | `.claude/skills/blog-post.md` | The research playbook — 10 categories of trivia to look for | Skill |
-| `.claude/skills/shay-voice.md` | The voice — how the author writes (generated from old posts) | Skill |
+| `.claude/skills/voice.md` | The voice — how the author writes (generated from old posts) | Skill |
 | `archive.md` | The archive — 89 previous posts for context and dedup | Reference data |
 | `posts/` | Output directory — where drafts get saved | Project structure |
 
-One command. Two skills. An archive. Five files total. The author types a single command and gets a draft in his voice, informed by his research standards, that doesn't repeat what he's already written. The hard part wasn't any individual piece — it was knowing which pieces to create and how they connect.
+One command. Two agents. Two skills. An archive. The author types a single command and gets a draft in his voice, informed by his research standards, that doesn't repeat what he's already written. The hard part wasn't any individual piece — it was knowing which pieces to create and how they connect.
 
 ---
 

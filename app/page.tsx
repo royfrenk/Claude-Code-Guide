@@ -10,6 +10,7 @@ import {
   Workflow,
   Wrench,
   Code,
+  Cog,
   FolderGit2,
   Globe,
 } from "lucide-react";
@@ -23,8 +24,9 @@ const chapterIcons: Record<number, React.ReactNode> = {
   6: <Workflow className="h-5 w-5" />,
   7: <Wrench className="h-5 w-5" />,
   8: <Code className="h-5 w-5" />,
-  9: <FolderGit2 className="h-5 w-5" />,
-  10: <Globe className="h-5 w-5" />,
+  9: <Cog className="h-5 w-5" />,
+  10: <FolderGit2 className="h-5 w-5" />,
+  11: <Globe className="h-5 w-5" />,
 };
 
 export default function LandingPage() {
@@ -64,7 +66,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <BookOpen className="h-3.5 w-3.5 text-accent" />
-            Free online guide &middot; 10 chapters
+            Free online guide &middot; 11 chapters
           </div>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Working With{" "}
@@ -169,8 +171,9 @@ function getChapterDescription(num: number | null): string {
     6: "The recommended process for agent work — from input to review to improvement.",
     7: "Step-by-step: building skills, commands, and a complete agent workflow.",
     8: "The same process at scale — multiple agents building a software feature.",
-    9: "Saving your work, going back to previous versions, and backing up online.",
-    10: "Where your project lives and how people access it after you build it.",
+    9: "A real software system broken down: agents, commands, rules, and project structure.",
+    10: "Saving your work, going back to previous versions, and backing up online.",
+    11: "Where your project lives and how people access it after you build it.",
   };
   return descriptions[num ?? 0] ?? "";
 }

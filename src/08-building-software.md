@@ -1,16 +1,14 @@
 ## Chapter 8: Building Software with Agents
 
-> **TL;DR:** The same process from Chapter 6 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The difference: instead of one agent wearing all the hats, specialized sub-agents divide the labor. A manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
+> **TL;DR:** The same process from Chapter 6 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The blog used two agents (researcher and writer). Software adds more: a manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
 
 ---
 
 Chapters 6 and 7 showed the recommended process and how to build a system for it — using a blog as the example. This chapter shows what happens when the same process scales up to building software. The shape is the same. The number of agents changes.
 
-### From one agent to many
+### From two agents to many
 
-In the blog example, a single agent wore multiple hats — explorer, writer, researcher. That works for content, where the output is one file and the reviewer is one person.
-
-Software is different. The codebase is larger, the work is more specialized, and mistakes are harder to undo. So instead of one agent doing everything, the roles get split across dedicated **sub-agents**. Think of it like a film crew: the director doesn't also hold the camera, do the lighting, and edit the footage.
+The blog example used two sub-agents — a researcher and a writer — coordinated by a command file. Software needs more. The codebase is larger, the work is more specialized, and mistakes are harder to undo. So the roles expand: a manager coordinates, an explorer reads the codebase, a developer writes code, and a reviewer checks quality before anything ships.
 
 ### The cast
 
@@ -25,27 +23,51 @@ Software is different. The codebase is larger, the work is more specialized, and
 
 These are **custom agents** — the same concept from Chapter 5. Each is a markdown file that defines what the agent does, what it can access, and how it behaves.
 
-### How it flows
+### Example: Adding search to an app
 
-**1. You brief.** "Add a search feature to the app." This goes to the manager agent.
+You've been building a podcast app. Users can browse episodes, but there's no way to search. You type: "Add a search feature — users should be able to search episodes by title and description."
 
-**2. Orchestrator dispatches explorer.** Before anyone writes code, the explorer reads through the existing project — what's already built, what needs to change, where the new feature connects to existing pieces. Its findings go into a **spec file** — a tracking document that stays with the process.
+Here's how the agents handle it:
 
-**3. Explorer hands off to a planner.** Based on the findings, a plan gets written: what to build, in what order, what depends on what. You approve the plan before any code is written. This is a **gate** — the process pauses until you say "go."
+**1. You brief the manager.** The manager receives your request and dispatches the explorer first. No code gets written yet.
 
-**4. Developer builds.** The developer writes code in small steps — finishing one piece, testing it, then moving to the next. Progress gets logged in the spec file.
+**2. Explorer reads the codebase.** The explorer goes through the existing project: the database schema, the API endpoints, the frontend components. It produces a **spec file** — a document that records what it found and what needs to change. Something like:
 
-**5. Reviewer checks.** The reviewer reads the code, checks for quality issues, and either approves or sends it back with feedback. Another gate. If the work isn't right, it goes back to the developer — the iteration loop.
+- The episodes table has `title` and `description` columns — both searchable
+- There's no search endpoint yet — need to add `GET /api/episodes/search`
+- The frontend has an episode list component — add a search bar above it
+- The app uses a specific CSS framework — the search bar should match
 
-**6. You test.** The developer deploys to a preview environment. You test it. If something's wrong ("the search results are in the wrong order," "the filter doesn't work on mobile"), you give feedback and the developer iterates.
+The spec file becomes the shared brain for the rest of the process. Every agent reads it.
 
-**7. Post-mortem.** After the work is done, a **sprint file** records what happened: which tasks were completed, what issues came up, what decisions were made. You review it. What went well? What took too long?
+**3. Planner writes the plan.** Based on the explorer's findings, a plan gets written: what to build, in what order, what depends on what. You see it before any code is written. This is a **gate** — the process pauses until you say "go."
 
-**8. Change process.** Learnings feed back into the rules and configuration. Maybe the explorer missed a database table — you add a step to the exploration checklist. Maybe the reviewer caught the same formatting issue three times — you add a rule. The system improves.
+Maybe you look at the plan and say: "Also add a filter for episode length — short, medium, long." The planner updates the plan. You approve. Now the developer knows exactly what to build.
+
+**4. Developer builds.** The developer writes code in small steps — the API endpoint first, then the frontend component, then the filter. Each piece gets tested before moving to the next. Progress gets logged in the spec file so nothing falls through the cracks.
+
+**5. Reviewer checks.** The reviewer reads the code, checks for quality issues, and either approves or sends it back. If the developer forgot to handle the case where the search returns no results, the reviewer catches it. The developer fixes it. This is the **iteration loop** — it runs until the reviewer approves.
+
+**6. You test.** The developer deploys to a preview environment — a temporary version of your app where you can try the changes. You search for an episode. The results work, but they're sorted alphabetically instead of by relevance. You say: "Sort results by relevance, not alphabetically." The developer iterates.
+
+**7. Post-mortem.** After the feature ships, a **sprint file** records what happened: which tasks were completed, what issues came up, what took longer than expected. The search endpoint took two extra rounds because the explorer missed that descriptions were stored as HTML, not plain text. Good to know for next time.
+
+**8. Change process.** You add a note to the explorer's instructions: "When checking database fields for search, verify the storage format — plain text vs. HTML vs. markdown." Next feature, the explorer catches this upfront.
+
+### Gates: where you stay in control
+
+Two moments in this process require your approval before anything continues:
+
+1. **After the plan.** You see what's going to be built before any code is written. This is the cheapest place to catch misunderstandings — changing a plan costs nothing, changing finished code costs time.
+2. **After the build.** You test the feature in a preview environment before it goes to production. This is your safety net.
+
+Everything between the gates runs automatically. The agents coordinate, hand off work, and iterate with each other. You step in at the decision points.
 
 ### Same process, more moving parts
 
-The blog post used one agent wearing all the hats. The software sprint uses multiple agents, each in a dedicated role. But the recommended structure from Chapter 6 is the same: user input, orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process. The number of agents changes. The complexity of the work changes. The process scales to fit.
+The blog used two agents — researcher and writer. The software sprint uses four or more, each in a dedicated role. But the recommended structure from Chapter 6 is the same: user input, orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process. The number of agents changes. The complexity of the work changes. The process scales to fit.
+
+Chapter 9 walks through a real system built for software development — every agent, command, and rule, broken down the same way Chapter 7 broke down the blog system.
 
 ---
 

@@ -22,8 +22,9 @@ The guide is organized in three parts:
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
 
 8. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
-9. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
-10. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+9. **Building Your Software System** — A real system broken down: agents, commands, rules, and project structure. Take what's useful, build your own.
+10. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
+11. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 
