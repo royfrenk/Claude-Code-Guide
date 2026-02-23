@@ -122,7 +122,7 @@ While you're in the Extensions panel, there are a few other extensions worth ins
 | Extension | What it does | Why you'd want it |
 |---|---|---|
 | **Markdown Preview Enhanced** | Shows a live preview of markdown files side by side with the raw text | Useful for reading and editing CLAUDE.md and other documentation files. You'll be writing these in Chapter 5. |
-| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 10) — makes version history visual instead of text-based. |
+| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 11) — makes version history visual instead of text-based. |
 | **Error Lens** | Shows error messages directly in your code, right next to the line that caused them | Catches problems as you type instead of making you hunt through a separate panel. |
 | **GitHub Copilot** | AI code suggestions that appear as you type, like autocomplete on steroids | A second AI perspective alongside Claude Code. Free tier available. |
 | **Gemini Code Assist** | Google's AI coding assistant — similar to Copilot, different model | Another option for inline suggestions. Free tier available. Good to have a second opinion. |

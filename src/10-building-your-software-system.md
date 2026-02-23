@@ -1,10 +1,10 @@
-## Chapter 9: Building Your Software System
+## Chapter 10: Building Your Software System
 
-> **TL;DR:** Chapter 8 showed the process. This chapter shows one way to build it. I share my own system — agents, commands, rules, and project structure — as a reference. It's probably over-engineered for most cases, but it shows what a mature setup looks like. Take what's useful, skip what isn't, and build your own.
+> **TL;DR:** Chapter 9 showed the process. This chapter shows one way to build it. I share my own system — agents, commands, rules, and project structure — as a reference. It's probably over-engineered for most cases, but it shows what a mature setup looks like. Take what's useful, skip what isn't, and build your own.
 
 ---
 
-Chapter 8 showed the software development process: manager dispatches agents, explorer researches, developer builds, reviewer checks, you approve at gates. This chapter walks through how I built a system that does all of that. It's the same pattern as Chapter 7 (building the blog system), but for software.
+Chapter 9 showed the software development process: manager dispatches agents, explorer researches, developer builds, reviewer checks, you approve at gates. This chapter walks through how I built a system that does all of that. It's the same pattern as Chapter 7 (building the blog system), but for software.
 
 A disclaimer upfront: this system evolved over months of building projects with agents. It has more files, more agents, and more rules than most people need. I'm sharing it as a reference — not a template you should copy wholesale. Start with what you need and add complexity only when a gap shows up.
 

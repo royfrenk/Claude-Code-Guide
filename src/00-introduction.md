@@ -6,7 +6,7 @@ A note before you start: this space is moving fast. Tools change, interfaces get
 
 The guide is organized in three parts:
 
-**Part A: Understanding Agents** — What agents are, how they work, and how to set one up. Read this first regardless of what you plan to use agents for.
+**Part A: The Basics** — What agents are, how they work, and how to set one up. Read this first regardless of what you plan to use agents for.
 
 1. **What AI Agents Are (and Aren't)** — What AI agents are, how to direct them, and what engines (models) power them.
 2. **Memory and Context** — Context windows, what gets lost between sessions, and external memory layers.
@@ -18,13 +18,14 @@ The guide is organized in three parts:
 
 6. **How It All Comes Together** — The recommended process: orchestrator, explorer, actor, reviewer, iterate, improve. One example showing how it maps to real work.
 7. **Building Your Agent System** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
+8. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
 
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
 
-8. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
-9. **Building Your Software System** — A real system broken down: agents, commands, rules, and project structure. Take what's useful, build your own.
-10. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
-11. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+9. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
+10. **Building Your Software System** — A real system broken down: agents, commands, rules, and project structure. Take what's useful, build your own.
+11. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
+12. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 

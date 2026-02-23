@@ -102,10 +102,10 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
               // Section headers for the three parts
               const sectionLabel =
                 chapter.number === 1
-                  ? "Part A: Understanding Agents"
+                  ? "Part A: The Basics"
                   : chapter.number === 6
                     ? "Part B: Putting It to Work"
-                    : chapter.number === 8
+                    : chapter.number === 9
                       ? "Part C: Building Software"
                       : null;
 

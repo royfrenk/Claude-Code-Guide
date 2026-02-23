@@ -27,7 +27,7 @@ After the work is done, two more steps are recommended:
 
 You can start with just the first five roles and skip the post-mortem entirely. But if you want your agent work to get better over time — not just task by task, but structurally — the last two steps are what make that happen.
 
-The rest of this chapter shows how this looks in practice — a real example of the process at work. Chapter 7 then walks through every step of building this system, so you can set it up yourself. Chapter 8 shows the same process at a larger scale, with multiple agents building software.
+The rest of this chapter shows how this looks in practice — a real example of the process at work. Chapter 7 then walks through every step of building this system, so you can set it up yourself. Chapter 9 shows the same process at a larger scale, with multiple agents building software.
 
 ### Example 1: Writing a blog post
 

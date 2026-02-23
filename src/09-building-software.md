@@ -1,4 +1,4 @@
-## Chapter 8: Building Software with Agents
+## Chapter 9: Building Software with Agents
 
 > **TL;DR:** The same process from Chapter 6 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The blog used two agents (researcher and writer). Software adds more: a manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
 
@@ -67,7 +67,7 @@ Everything between the gates runs automatically. The agents coordinate, hand off
 
 The blog used two agents — researcher and writer. The software sprint uses four or more, each in a dedicated role. But the recommended structure from Chapter 6 is the same: user input, orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process. The number of agents changes. The complexity of the work changes. The process scales to fit.
 
-Chapter 9 walks through a real system built for software development — every agent, command, and rule, broken down the same way Chapter 7 broke down the blog system.
+Chapter 10 walks through a real system built for software development — every agent, command, and rule, broken down the same way Chapter 7 broke down the blog system.
 
 ---
 

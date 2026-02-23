@@ -6,7 +6,7 @@
 
 Chapter 6 introduced the recommended process and showed how it maps to a blog about flags — a single command that researches a flag, checks the archive, and drafts a post in the author's voice. This chapter walks through how that system was actually built. Not the output — the setup. By the end, you'll know how to build something like it for your own work.
 
-### Step 1: Gather the archive
+### Step 1: Collect the source material
 
 Whatever your domain, the first step is the same: get your existing material into files the agent can read.
 
@@ -17,7 +17,7 @@ Go to my old blog at [URL] and download every post. Save them all into a single
 markdown file called archive.md, organized by date with the title as a heading.
 ```
 
-The agent crawled the site, pulled every post, and produced a single `archive.md` file — 89 posts spanning several years. This became the raw material for everything that followed: the voice skill, the archive checks, the context for new posts. The agent can only work with what it can see. This step makes everything visible.
+The agent crawled the site, pulled every post, and produced a single `archive.md` file — 89 posts spanning several years. This one file became the foundation for everything that followed. The agent analyzed it to generate the voice skill (Step 2). The author studied his own patterns in it to define the research playbook (Step 3). And every new post gets checked against it to avoid repeating old content. One archive, three purposes — all from a single collection step.
 
 ### Step 2: Generate a voice skill
 
@@ -141,7 +141,7 @@ One command. Two agents. Two skills. An archive. The author types a single comma
 
 ### Practical tips
 
-> **Start with the archive.** Whatever your domain, the first step is always getting your existing material into files the agent can read. Old blog posts, past invoices, reference documents, templates — dump it all into markdown files. The agent can only work with what it can see.
+> **Start by collecting the source material.** Whatever your domain, the first step is always getting your existing material into files the agent can read. Old blog posts, past invoices, reference documents, templates — dump it all into markdown files. The agent can only work with what it can see. This archive becomes the foundation: the agent analyzes it to learn your voice, you study it to define your standards, and it serves as reference data during every run.
 
 > **Your voice file is the highest-leverage investment.** If you're doing any kind of writing work, spend the time to get your voice file right. Have the agent analyze your existing writing, then correct it. A good voice file turns generic AI output into something that sounds like you.
 
