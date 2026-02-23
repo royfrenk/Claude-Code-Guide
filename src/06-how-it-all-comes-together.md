@@ -27,7 +27,7 @@ After the work is done, two more steps are recommended:
 
 You can start with just the first five roles and skip the post-mortem entirely. But if you want your agent work to get better over time — not just task by task, but structurally — the last two steps are what make that happen.
 
-The rest of this chapter shows two implementations of this process — one simple, one complex. Chapter 7 then walks through the simple case in full practical detail, so you can set it up yourself.
+The rest of this chapter shows how this looks in practice — a real example of the process at work. Chapter 7 then walks through every step of building this system, so you can set it up yourself. Chapter 8 shows the same process at a larger scale, with multiple agents building software.
 
 ### Example 1: Writing a blog post
 
@@ -50,45 +50,6 @@ After a few posts, the author noticed the agent kept missing adoption dates. He 
 | **Change process** — updated research skill | Fixed a recurring gap (missing adoption dates) | Skill |
 
 One command. Two skills. An archive. Chapter 7 walks through the full setup — how the archive was built, how the voice skill was created, and how to build this kind of system for your own work.
-
-### Example 2: Building a software feature
-
-Same process, bigger scale. When the task is building a feature — not writing a post — the roles get split across specialized **sub-agents** instead of one agent doing everything.
-
-![Software feature process — multiple agents, dedicated roles](diagrams/diagram-sprint-process.svg)
-
-#### The cast
-
-| Process role | Agent | What it does |
-|-------------|-------|-------------|
-| **Orchestrator** | Manager | Dispatches agents, tracks progress, enforces gates |
-| **Explorer** | Explorer | Reads the codebase, identifies what needs to change |
-| **Actor** | Developer | Writes the code, runs tests, deploys |
-| **Reviewer** | Reviewer | Checks quality, approves or sends back |
-
-These are **custom agents** — the same concept from Chapter 5. Each is a markdown file that defines what the agent does, what it can access, and how it behaves.
-
-#### How it flows
-
-**1. User input.** "Add a search feature to the app." This goes to the manager agent.
-
-**2. Orchestrator dispatches explorer.** Before anyone writes code, the explorer reads through the existing project — what's already built, what needs to change, where the new feature connects to existing pieces. Its findings go into a **spec file** — a tracking document that stays with the process.
-
-**3. Explorer hands off to a planner.** Based on the findings, a plan gets written: what to build, in what order, what depends on what. You approve the plan before any code is written. This is a **gate** — the process pauses until you say "go."
-
-**4. Actor builds.** The developer writes code in small steps — finishing one piece, testing it, then moving to the next. Progress gets logged in the spec file.
-
-**5. Reviewer checks.** The reviewer reads the code, checks for quality issues, and either approves or sends it back with feedback. Another gate. If the work isn't right, it goes back to the developer — the iteration loop.
-
-**6. You test.** The developer deploys to a preview environment. You test it. If something's wrong ("the search results are in the wrong order," "the filter doesn't work on mobile"), you give feedback and the developer iterates.
-
-**7. Post-mortem.** After the work is done, a **sprint file** records what happened: which tasks were completed, what issues came up, what decisions were made. You review it. What went well? What took too long?
-
-**8. Change process.** Learnings feed back into the rules and configuration. Maybe the explorer missed a database table — you add a step to the exploration checklist. Maybe the reviewer caught the same formatting issue three times — you add a rule. The system improves.
-
-#### Same process, more moving parts
-
-The blog post used one agent wearing all the hats. The software sprint uses multiple agents, each in a dedicated role. But the recommended structure is the same. The number of agents changes. The complexity of the work changes. The process scales to fit.
 
 ---
 

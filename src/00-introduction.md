@@ -14,15 +14,16 @@ The guide is organized in three parts:
 4. **Setting Up** — Installing Claude Code, configuring VS Code, and running your first command.
 5. **Configuring Your Agent** — Instruction files, rules, memory, skills, commands, and MCP servers.
 
-**Part B: Putting It to Work** — How agents orchestrate real tasks, with examples from writing and software development.
+**Part B: Putting It to Work** — The recommended process for agent work, and how to build your own agent system from scratch.
 
-6. **How It All Comes Together** — Commands, skills, sub-agents, and tracking files working as a system. Two walkthroughs: writing a blog post and building a software feature.
-7. **Non-Technical Uses for Agents** — A real walkthrough of using an agent to revive a dormant blog, plus examples for accounting and other non-coding work.
+6. **How It All Comes Together** — The recommended process: orchestrator, explorer, actor, reviewer, iterate, improve. One example showing how it maps to real work.
+7. **Building Your Agent System** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
 
-**Part C: Building Software** — For those who want to build and deploy applications.
+**Part C: Building Software** — For those who want to build and deploy applications with agents.
 
-8. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
-9. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+8. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
+9. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
+10. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 

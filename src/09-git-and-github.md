@@ -1,4 +1,4 @@
-## Chapter 8: Git and GitHub
+## Chapter 9: Git and GitHub
 
 > **TL;DR:** Git is an infinite undo button for your project. GitHub is where your project lives online. Together, they let you save your work, go back to any previous version, and collaborate with others. Your agent handles most of the mechanics — but you need to understand what's happening.
 
