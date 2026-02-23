@@ -115,6 +115,58 @@ But there's one command you absolutely need to know: **Ctrl+C**. This is the uni
 
 **One thing the terminal can't do well: edit text.** The terminal is great for running commands, but it's a terrible text editor. If a command ever drops you into a text editor inside the terminal (you'll know because the cursor starts behaving strangely and nothing you type seems right), press `Esc`, then type `:q!` and press Enter. That exits the most common terminal text editor (called Vim). It's a rite of passage — even experienced developers get trapped in Vim. Don't worry about it. You have VS Code for editing files.
 
+### The Claude Code status bar
+
+At the bottom of the Claude Code panel, there's a thin status bar that shows you what's happening at a glance. Here's what each piece means:
+
+| Element | What it shows |
+|---------|--------------|
+| **Mode toggle** | Which mode the agent is in — Normal, Plan, or Auto-accept |
+| **Context file** | The file or project the agent is currently focused on |
+| **Context usage** | How much of the context window is used (e.g., "45% used" or "100% used") |
+| **Action icons** | Quick actions like attaching files or submitting messages |
+
+The **context usage** indicator is especially useful. As you work, the agent accumulates context — every file it reads, every message you exchange. When it hits 100%, the agent compresses older messages to make room. This is normal. If you notice the agent "forgetting" things you discussed earlier, context compression is usually why. You can start a fresh conversation to reset it.
+
+#### Modes
+
+Claude Code has three modes that control how the agent works:
+
+**Normal mode** (default). The agent proposes changes and asks for your approval before making them. Every file edit, every terminal command — you see it first and click "Accept" or "Reject." This is the safest way to work and where you should start.
+
+**Plan mode**. The agent researches and plans but doesn't make any changes. It reads files, explores the codebase, and writes a plan for what it would do — then shows you the plan for approval. Useful when you want to understand what the agent is thinking before it touches anything.
+
+**Auto-accept mode**. The agent makes changes without asking. It edits files, runs commands, and moves forward on its own. This is faster but riskier — you're trusting the agent to make good decisions. Use this once you're comfortable with how the agent works and you've set up proper guardrails (Chapter 5).
+
+You can switch modes by clicking the mode toggle in the status bar, or by typing `/auto-accept` or `/plan` in the chat.
+
+#### Permissions and bypass
+
+By default, Claude Code asks permission before doing anything that could change your files or run commands. This is smart when you're learning — you see exactly what the agent wants to do before it does it.
+
+But as you get more comfortable, the constant "Allow this?" prompts can slow you down. That's where **bypass permissions** comes in. It tells the agent to skip permission checks and just do the work.
+
+**How to enable bypass permissions:**
+
+1. Open **VS Code Settings** (Cmd+, on Mac, Ctrl+, on Windows)
+2. Search for **Claude Code**
+3. Find the **Auto Approve** setting
+4. Check the boxes for what you want to auto-approve — file edits, terminal commands, or both
+
+Alternatively, you can switch to **auto-accept mode** in the status bar, which bypasses all permission prompts for the current session.
+
+**When to use bypass permissions:**
+- You're working on a personal project and trust the agent
+- You've already reviewed the agent's plan and want it to execute without interruption
+- You're doing repetitive work where approving each step adds no value
+
+**When to keep permissions on:**
+- You're new to Claude Code (keep them on for your first few sessions)
+- You're working on production code or shared projects
+- The agent is doing something unfamiliar and you want to understand each step
+
+Start with permissions on. Switch to auto-accept once the "Allow?" prompts feel like they're slowing you down instead of protecting you.
+
 ### Recommended extensions
 
 While you're in the Extensions panel, there are a few other extensions worth installing. None of these are required, but they make the experience better:
