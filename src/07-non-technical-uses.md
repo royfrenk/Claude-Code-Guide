@@ -1,10 +1,10 @@
 ## Chapter 7: Non-Technical Uses for Agents
 
-> **TL;DR:** AI agents aren't just for building software. They can write content, organize research, manage data, and automate repetitive knowledge work. This chapter shows how — with a real example of someone who used an agent to revive a dormant blog.
+> **TL;DR:** AI agents aren't just for building software. They can write content, organize research, manage data, and automate repetitive knowledge work. This chapter walks through a real example — step by step — of someone who used an agent to revive a dormant blog, then shows a simpler accounting use case.
 
 ---
 
-Most of this guide uses software development as its lens. That's because coding agents are the most mature category right now — the tools are built for it. But the same principles (clear instructions, structured memory, iterative workflows) apply to work that has nothing to do with code.
+Chapter 6 showed the recommended process: user input, orchestrator, explorer, actor, reviewer, iterate, improve. This chapter puts that into practice for work that has nothing to do with code.
 
 If you can describe what you want in plain language, and the work involves text, files, or data, an agent can probably help.
 
@@ -117,17 +117,6 @@ An agent can do this. You'd set it up like:
 3. **A command** like `/categorize` that: reads the CSV, applies the rules, flags ambiguous transactions for your review, and outputs a clean categorized spreadsheet
 
 The agent does the tedious sorting. You review the flagged items and make the judgment calls. What used to take an afternoon takes fifteen minutes.
-
-### The common pattern
-
-Every non-coding agent workflow follows the same structure:
-
-1. **Give the agent your source material** — archive of old content, bank statements, research papers, whatever you're working with
-2. **Define how you want the work done** — voice, style, rules, standards (these become skills and rules files)
-3. **Create a repeatable workflow** — a command that chains the steps together
-4. **Review and iterate** — the agent drafts, you refine
-
-If you went through Chapter 5, you'll recognize these as the same configuration layers: CLAUDE.md for context, skills for reusable expertise, rules for constraints, commands for workflows. The tools don't care whether you're writing TypeScript or writing about flags.
 
 ---
 
