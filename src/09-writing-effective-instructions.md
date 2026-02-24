@@ -1,4 +1,4 @@
-## Chapter 8: Writing Effective Instructions
+## Chapter 9: Writing Effective Instructions
 
 > **TL;DR:** Skills, agents, and commands are just markdown files — but how you write them matters. This chapter covers the craft: conditional logic, sub-agent dispatching, orchestration, blocking gates, skill sizing, skill composition, and using files as external memory.
 
@@ -153,7 +153,7 @@ In practice:
 | Design tokens | 3-5 pages | Colors, spacing, typography, component specs |
 | Domain reference | 5-10 pages | Comprehensive domain knowledge for a specific field |
 
-The voice skill from Chapter 7 was about a page — tone, sentence patterns, signature tools, what not to do. That's enough to make the output sound like the author instead of generic AI text.
+The voice skill from Chapter 8 was about a page — tone, sentence patterns, signature tools, what not to do. That's enough to make the output sound like the author instead of generic AI text.
 
 If a skill file keeps growing past 5 pages, that's a signal to split it. A design system, for example, might split into a core skill (tokens and universal rules) plus context-specific skills (marketing pages, application screens, dashboards). The core loads every time; the specific one loads based on what you're building.
 

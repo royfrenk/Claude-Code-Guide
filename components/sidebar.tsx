@@ -103,9 +103,9 @@ export function Sidebar({ chapters, isOpen, onClose }: SidebarProps) {
               const sectionLabel =
                 chapter.number === 1
                   ? "Part A: The Basics"
-                  : chapter.number === 6
+                  : chapter.number === 7
                     ? "Part B: Putting It to Work"
-                    : chapter.number === 9
+                    : chapter.number === 10
                       ? "Part C: Building Software"
                       : null;
 

@@ -138,7 +138,16 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           blockquote: ({ children }) => {
             const index = blockquoteIndexRef.current++;
             const text = getTextContent(children);
+            const isKeyConcept = text.startsWith("Key Concept:");
             const isTldr = text.startsWith("TL;DR:");
+
+            if (isKeyConcept) {
+              return (
+                <blockquote className="my-8 rounded-lg border border-border bg-muted px-6 py-5 text-[17px] leading-[1.75] [&>p]:mb-0 [&>p]:text-foreground">
+                  {children}
+                </blockquote>
+              );
+            }
 
             // Check if we're in practical tips section
             const isPracticalTip =

@@ -1,4 +1,4 @@
-## Chapter 12: Servers, Hosting, and Deployment
+## Chapter 13: Servers, Hosting, and Deployment
 
 > **TL;DR:** Building something is half the job. The other half is putting it somewhere people can access it. This chapter explains what servers are, where your project can live, and how to get it from your computer to the internet.
 
@@ -75,7 +75,7 @@ Once set up, here's the typical flow:
 
 1. **Build locally** — work on your project with Claude
 2. **Test** — make sure it works on your machine
-3. **Commit and push** — save your changes and push to GitHub (Chapter 11)
+3. **Commit and push** — save your changes and push to GitHub (Chapter 5)
 4. **Auto-deploy** — your hosting platform detects the push and deploys automatically
 5. **Verify** — check the live URL to make sure it looks right
 

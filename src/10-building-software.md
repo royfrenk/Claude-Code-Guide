@@ -1,10 +1,10 @@
-## Chapter 9: Building Software with Agents
+## Chapter 10: Building Software with Agents
 
-> **TL;DR:** The same process from Chapter 6 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The blog used two agents (researcher and writer). Software adds more: a manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
+> **TL;DR:** The same process from Chapter 7 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The blog used two agents (researcher and writer). Software adds more: a manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
 
 ---
 
-Chapters 6 and 7 showed the recommended process and how to build a system for it — using a blog as the example. This chapter shows what happens when the same process scales up to building software. The shape is the same. The number of agents changes.
+Chapters 7 and 8 showed the recommended process and how to build a system for it — using a blog as the example. This chapter shows what happens when the same process scales up to building software. The shape is the same. The number of agents changes.
 
 ### Before you jump in
 
@@ -27,7 +27,7 @@ The blog example used two sub-agents — a researcher and a writer — coordinat
 | **Actor** | Developer | Writes the code, runs tests, deploys |
 | **Reviewer** | Reviewer | Checks quality, approves or sends back |
 
-These are **custom agents** — the same concept from Chapter 5. Each is a markdown file that defines what the agent does, what it can access, and how it behaves.
+These are **custom agents** — the same concept from Chapter 6. Each is a markdown file that defines what the agent does, what it can access, and how it behaves.
 
 ### Example: Adding search to an app
 
@@ -71,9 +71,9 @@ Everything between the gates runs automatically. The agents coordinate, hand off
 
 ### Same process, more moving parts
 
-The blog used two agents — researcher and writer. The software sprint uses four or more, each in a dedicated role. But the recommended structure from Chapter 6 is the same: user input, orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process. The number of agents changes. The complexity of the work changes. The process scales to fit.
+The blog used two agents — researcher and writer. The software sprint uses four or more, each in a dedicated role. But the recommended structure from Chapter 7 is the same: user input, orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process. The number of agents changes. The complexity of the work changes. The process scales to fit.
 
-Chapter 10 walks through a real system built for software development — every agent, command, and rule, broken down the same way Chapter 7 broke down the blog system.
+Chapter 11 covers the default commands that ship with Claude Code. Chapter 12 walks through a real system built for software development — every agent, command, and rule, broken down the same way Chapter 8 broke down the blog system.
 
 ---
 

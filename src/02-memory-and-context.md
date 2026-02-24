@@ -39,7 +39,7 @@ From most permanent to most temporary:
 
 ![The three layers of agent memory](diagrams/diagram-memory-layers.svg)
 
-**Instruction files (permanent).** A file like **CLAUDE.md** that sits in your project and contains standing instructions: what this project is, what technologies it uses, what the agent should never touch. The agent reads this automatically at the start of every session. You write it once, update it occasionally. (We'll build these files step by step in Chapter 5.)
+**Instruction files (permanent).** A file like **CLAUDE.md** that sits in your project and contains standing instructions: what this project is, what technologies it uses, what the agent should never touch. The agent reads this automatically at the start of every session. You write it once, update it occasionally. (We'll build these files step by step in Chapter 6.)
 
 The `.md` extension stands for **Markdown** — a simple way to write formatted text using plain characters. You don't need special software to write it — any text editor works. Here's what a markdown file looks like raw:
 
@@ -73,7 +73,7 @@ Same content, two views. Markdown files are everywhere in software projects beca
 
 #### Getting the agent to take its own notes
 
-You can *tell* the agent to leave notes for its future self. Ask it to update the project documentation, write clear **commit messages** (a commit message is a short note that gets saved every time you save a version of your code — more on this in Chapter 11), or maintain a to-do list file that tracks what's done and what's left.
+You can *tell* the agent to leave notes for its future self. Ask it to update the project documentation, write clear **commit messages** (a commit message is a short note that gets saved every time you save a version of your code — more on this in Chapter 5), or maintain a to-do list file that tracks what's done and what's left.
 
 This turns the agent into an active participant in its own memory system. It still won't *remember* — but the next session's agent will find better clues.
 

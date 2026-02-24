@@ -1,10 +1,10 @@
-## Chapter 10: Building Your Software System
+## Chapter 12: Roy's Claude Config
 
-> **TL;DR:** Chapter 9 showed the process. This chapter shows one way to build it. I share my own system — agents, commands, rules, and project structure — as a reference. It's probably over-engineered for most cases, but it shows what a mature setup looks like. Take what's useful, skip what isn't, and build your own.
+> **TL;DR:** Chapter 10 showed the software development process. This chapter shows one way to build it. I share my own system — agents, commands, rules, and project structure — as a reference. It's probably over-engineered for most cases, but it shows what a mature setup looks like. Take what's useful, skip what isn't, and build your own.
 
 ---
 
-Chapter 9 showed the software development process: manager dispatches agents, explorer researches, developer builds, reviewer checks, you approve at gates. This chapter walks through how I built a system that does all of that. It's the same pattern as Chapter 7 (building the blog system), but for software.
+Chapter 10 showed the software development process: manager dispatches agents, explorer researches, developer builds, reviewer checks, you approve at gates. This chapter walks through how I built a system that does all of that. It's the same pattern as Chapter 8 (building the blog system), but for software.
 
 **This is my system.** Not a recommendation, not a best practice — my personal workflow that evolved over months of building projects with agents. It has more files, more agents, and more rules than most people need. I'm sharing it as a reference so you can see what a mature setup looks like, take what's useful, and build your own.
 
@@ -26,7 +26,7 @@ project/
 └── src/                   # The actual code
 ```
 
-**`CLAUDE.md`** is the project's instruction file — the one from Chapter 5. It tells the agent what the project is, how to run it, where to deploy, and what rules to follow. Every agent reads this first.
+**`CLAUDE.md`** is the project's instruction file — the one from Chapter 6. It tells the agent what the project is, how to run it, where to deploy, and what rules to follow. Every agent reads this first.
 
 **`roadmap.md`** is the task backlog — a prioritized list of what to build next. When I type `/sprint`, the manager reads this file to decide what to work on.
 
@@ -88,7 +88,7 @@ The `/sprint` command reads the roadmap to find the highest-priority ticket, the
 
 ### The rules
 
-Rules are instructions that apply to every agent, every time (Chapter 5). Mine cover six areas:
+Rules are instructions that apply to every agent, every time (Chapter 6). Mine cover six areas:
 
 | Rule file | What it enforces |
 |-----------|-----------------|
@@ -119,7 +119,7 @@ Every agent reads `CLAUDE.md` (project config) and the rules (coding standards, 
 
 ### The files that make it work
 
-| File | What it does | Config layer (Ch5) |
+| File | What it does | Config layer (Ch6) |
 |------|-------------|-------------------|
 | `.claude/agents/em.md` | Manager — dispatches agents, enforces gates | Agent |
 | `.claude/agents/explorer.md` | Explorer — reads codebase, creates spec | Agent |
@@ -141,7 +141,30 @@ Every agent reads `CLAUDE.md` (project config) and the rules (coding standards, 
 | `docs/post-mortem/` | Post-mortems — what went wrong and how to fix the process | Project structure |
 | `docs/design-specs/` | Design specs — UI layout and interaction plans | Project structure |
 
-That's a lot of files. Most projects don't need all of them. The blog system from Chapter 7 had seven files total and worked great. This system has more because software development has more moving parts — more agents, more handoffs, more places where things can go wrong.
+That's a lot of files. Most projects don't need all of them. The blog system from Chapter 8 had seven files total and worked great. This system has more because software development has more moving parts — more agents, more handoffs, more places where things can go wrong.
+
+### Other systems to study
+
+My system is one approach. Here are other public configurations worth browsing — each takes a different angle on the same problem:
+
+**Curated collections** — good starting points for discovering what's available:
+
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) — A curated list of skills, commands, agents, hooks, and workflow guides. Organized by category with dozens of entries in each. Start here if you want to browse what the community has built.
+- [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) — A larger collection: 135 agents, 42 commands, 120 plugins, 19 hooks. More catalog than tutorial, but useful for finding specific tools.
+
+**Complete configurations** — full systems you can study end to end:
+
+- [everything-claude-code](https://github.com/affaan-m/everything-claude-code) — A battle-tested setup from an Anthropic hackathon winner. Includes 13 specialized sub-agents, 40+ skills, 32 slash commands, and hooks for session persistence. One of the most comprehensive public configurations.
+- [claude-code-showcase](https://github.com/ChrisWiles/claude-code-showcase) — A clean example of a complete `.claude/` directory: agents, commands, hooks, skills, and GitHub Actions integration. Good for seeing how the pieces fit together.
+
+**Specialized deep dives** — focused on specific aspects:
+
+- [claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) — A thorough walkthrough of all hook lifecycle events with working examples. If you want to understand hooks beyond the basics in Chapter 6, this is the reference.
+- [claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) — A collection of 33 specialized sub-agents organized by domain: frontend, backend, security, data, DevOps. Useful as templates for writing your own agents.
+
+**My configuration** — the actual files behind this chapter:
+
+- [github.com/royfrenk/claude-config](https://github.com/royfrenk/claude-config) — Every agent, command, and rule described in this chapter. Browse the actual markdown files, not just the descriptions above.
 
 ### Build your own
 
@@ -150,8 +173,6 @@ This is my system. It fits how I work. Yours will be different — and it should
 The pattern is what matters: define what good work looks like, create agents for distinct roles, wire them together with a command, and improve the system every time something goes wrong.
 
 Start with the minimum: one agent, one command, a few rules. Add an explorer when you notice the agent keeps missing context. Add a reviewer when you notice the same bugs getting through. Add rules when you notice the same mistakes repeating. Let the gaps tell you what to build next.
-
-If you want to see the actual files — not just the descriptions above — browse the full configuration at [github.com/royfrenk/claude-config](https://github.com/royfrenk/claude-config).
 
 ---
 
@@ -164,3 +185,5 @@ If you want to see the actual files — not just the descriptions above — brow
 > **The spec file is the most important file.** It's the shared brain that connects all the agents. If you adopt one thing from this chapter, make it spec files — a single document per feature that records what the explorer found, what the plan is, and what the developer built.
 
 > **Post-mortems are how the system gets smarter.** They're optional but powerful. A five-minute review after each sprint surfaces the gaps. A one-line fix to a rule prevents the same mistake next time. Compound that over months and the system becomes remarkably good.
+
+> **Study other systems, don't copy them.** The links above are references, not templates. Browse them to see how other people solve the same problems, then build what fits your workflow.

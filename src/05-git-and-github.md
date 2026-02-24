@@ -1,4 +1,4 @@
-## Chapter 11: Git and GitHub
+## Chapter 5: Git and GitHub
 
 > **TL;DR:** Git is an infinite undo button for your project. GitHub is where your project lives online. Together, they let you save your work, go back to any previous version, and collaborate with others. Your agent handles most of the mechanics — but you need to understand what's happening.
 
@@ -8,11 +8,23 @@
 
 Imagine writing a 20-page document with no undo button. Every change is permanent. Delete a paragraph by accident? Gone. Rewrite a section and realize the original was better? Too late.
 
-That's what building software is like without **version control** — a system that tracks every change you make, lets you undo any of them, and keeps a complete history of your project.
+That's what building anything with an agent is like without **version control** — a system that tracks every change you make, lets you undo any of them, and keeps a complete history of your project.
 
 **GitHub** is the easiest way to think about this. It's like Google Drive for code — a free website where you upload your project files, keep track of every version, and share or collaborate with others. Most IDEs (including VS Code) connect to it natively, so uploading and downloading projects is built right in.
 
 Behind GitHub is **Git** — the version control engine that actually tracks your changes. Git runs on your computer and records every save point. GitHub stores those save points online where they're safe, shareable, and accessible from any machine. You'll mostly interact with GitHub through your agent or your IDE — Git does the work under the hood.
+
+### Not just for code
+
+You might think Git and GitHub are only for software projects. They're not. Any project you work on with an agent benefits from a repository — even if there's no code involved.
+
+A blog, a research archive, a collection of marketing materials, a set of instruction files for your agent — all of these are folders full of files that change over time. A repository gives you:
+
+- **Backup.** Your project lives on GitHub, not just on your laptop. If your machine dies, everything is safe.
+- **History.** You can see what changed, when, and why. When an agent rewrites a section and you prefer the old version — go back.
+- **Portability.** Clone the repo onto any machine and keep working. Move between a desktop and a laptop. Share the project with a collaborator.
+
+When you start a new project — any project, not just a software one — the first step is creating a folder and connecting it to Git. It takes thirty seconds and gives you a safety net from day one.
 
 ### The core concepts
 
@@ -83,14 +95,33 @@ Check if Git is installed
 
 #### GitHub
 
-1. Create a free account at [github.com](https://github.com)
-2. Ask Claude to connect your project to GitHub:
+**1. Create a free account.** Go to [github.com](https://github.com) and sign up. The free tier is more than enough — unlimited public and private repositories, no credit card required. Pick a username you're comfortable with; it becomes part of your project URLs.
+
+**2. Install the GitHub CLI.** This lets Claude Code interact with GitHub directly. Ask Claude:
+
+```
+Install the GitHub CLI and authenticate me
+```
+
+Claude will install the `gh` tool and open a browser window for you to log in. Once authenticated, Claude can create repos, push code, and open pull requests — all through the terminal.
+
+**3. Create a repository for your project.** Once authenticated, ask Claude:
 
 ```
 Create a GitHub repository for this project and push the code
 ```
 
-Claude will walk you through connecting your account (usually by opening a browser window for authentication) and then push your code.
+Claude creates the repo on GitHub, connects your local project to it, and pushes your files. From here on, every commit you push is backed up online.
+
+#### Connecting GitHub to Claude Code
+
+If you already have a GitHub account and the CLI installed, connecting Claude Code is one command:
+
+```
+gh auth login
+```
+
+Claude can run this for you. It opens a browser window, you confirm, and you're connected. After that, Claude can push code, create pull requests, and interact with your repos without any extra setup.
 
 ### The everyday workflow
 

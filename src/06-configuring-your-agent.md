@@ -1,10 +1,10 @@
-## Chapter 5: Configuring Your Agent
+## Chapter 6: Configuring Your Agent
 
 > **TL;DR:** Claude Code reads configuration files to know how to behave. The instruction file (CLAUDE.md) is where you start. Rules, memory, and skills give it context. Agents, commands, hooks, and MCP servers give it capabilities. You don't have to create any of these files by hand — just ask Claude to set them up for you.
 
 ---
 
-Chapter 4 got Claude Code running. This chapter is about making it work *well* — giving it the right context, the right tools, and the right guardrails before you hand it a real task.
+Chapters 4 and 5 got Claude Code running and your project backed up with Git. This chapter is about making the agent work *well* — giving it the right context, the right tools, and the right guardrails before you hand it a real task.
 
 ### Where everything lives: the .claude folder
 
@@ -26,9 +26,9 @@ The `~` symbol means your home folder — `/Users/yourname` on Mac, `C:\Users\yo
 This is important: **you can ask Claude to set up any of this configuration for you.** You don't need to know the exact folder structure or file format. Just tell the agent what you want:
 
 - "Create a CLAUDE.md for this project"
-- "Add a rule that all posts should follow AP style"
-- "Set up a custom agent for editing my drafts"
-- "Create a skill for publishing a new blog post"
+- "Add a rule that all code should follow our naming conventions"
+- "Set up a custom agent for reviewing code"
+- "Create a skill that describes my writing voice"
 
 Claude knows where these files go and how to format them. As you get more comfortable, you might want to edit them directly — but you never have to.
 
@@ -60,38 +60,7 @@ Think of CLAUDE.md as a brief for a new team member who joins the project every 
 - Style preferences and conventions
 - Known issues or quirks
 
-#### A real example
-
-```markdown
-# Project: Flag Stories Blog
-
-A blog about flags — their history, symbolism, and design.
-
-## What this project is
-A personal blog covering vexillology (flag study). Posts cover individual flags,
-regional comparisons, and design analysis. Target audience: history and design
-enthusiasts.
-
-## Key files
-- archive.md — complete archive of all previous posts (do not modify)
-- editorial-guide.md — what makes a good post, what to research, what to include
-- /drafts — work in progress, one file per post
-- /published — final posts, do not modify without asking
-
-## Rules
-- Always check archive.md before writing — don't repeat topics already covered
-- Follow the editorial guide for structure and depth
-- Use the voice skill (/voice) for tone and style
-- All posts must include: history, symbolism, design analysis, adoption date
-- Never publish directly — always present drafts for review first
-
-## Workflow
-- New post: /write-post [country name]
-- Review: read draft, give feedback, iterate
-- Publish: move from /drafts to /published
-```
-
-This works the same way for software projects — you'd list your tech stack, build commands, and coding conventions instead. The structure is identical; only the content changes.
+The structure is the same whether you're building software or writing content — project description, key files, rules, workflow. Chapter 7 shows a complete real-world CLAUDE.md.
 
 #### How to create it
 
@@ -123,13 +92,13 @@ As your CLAUDE.md grows, you might want to organize it. Instead of one giant fil
 
 ```
 my-project/.claude/rules/
-├── voice.md           — tone, sentence style, vocabulary
-├── editorial.md       — what to include, research standards
-├── formatting.md      — headings, image placement, post structure
-└── publishing.md      — review checklist before publishing
+├── code-style.md      — formatting, naming, file organization
+├── testing.md         — what to test, how to run tests
+├── security.md        — input validation, authentication rules
+└── deployment.md      — staging vs production, deployment checklist
 ```
 
-For a software project, these might be `code-style.md`, `testing.md`, `security.md`, and `deployment.md` instead. Same concept, different domain.
+For a content project, these might be `voice.md`, `editorial.md`, `formatting.md`, and `publishing.md` instead. Same concept, different domain. Chapter 7 shows a real example.
 
 Each rule is a plain markdown file. Claude reads all of them automatically, just like CLAUDE.md. The advantage is organization — when you want to update your testing rules, you edit one focused file instead of hunting through a giant instruction document.
 
@@ -144,8 +113,8 @@ Remember Chapter 2 — the memory problem? Memory is one of the solutions.
 Claude Code has an **auto memory** system. As you work, it can save notes to a file called `MEMORY.md` that persists across sessions. Next time you start a new session, Claude reads this file and remembers what it learned.
 
 What goes in memory:
-- Patterns it discovered about your project ("this blog always includes a 'Design Analysis' section")
-- Workflow insights ("the editorial guide was updated — posts now require source citations")
+- Patterns it discovered about your project ("the API always returns dates in ISO format")
+- Workflow insights ("running tests before deploying catches most issues")
 - Your preferences ("user prefers short paragraphs and avoids passive voice")
 
 Memory lives at `~/.claude/projects/<your-project>/memory/MEMORY.md`. You can also ask Claude to remember things explicitly:
@@ -164,27 +133,9 @@ Stop remembering the thing about Tailwind — we switched to plain CSS
 
 A **skill** is a knowledge file that teaches an agent about a specific domain. Think of it as expertise in a bottle — what good writing sounds like, what thorough research includes, what your brand guidelines require.
 
-Skills are markdown files that live in `.claude/skills/<skill-name>/SKILL.md`:
+Skills are markdown files that live in `.claude/skills/<skill-name>/SKILL.md`. A voice skill might capture your writing style. A design tokens skill might define your brand colors and typography. A research playbook might list the categories of information to look for.
 
-```markdown
-# Voice Guide
-
-## Tone
-"Expert-Casual" — two enthusiastic flag-nerd
-friends telling stories in a pub.
-
-## Sentence patterns
-- Short dramatic sentences mixed with longer
-  narrative ones
-- Fragments are fine: "Cool, right?"
-
-## What NOT to do
-- No academic language
-- No condescension
-- Never a fact-list — always a narrative
-```
-
-Skills don't run on their own — they provide context that agents and commands load when they need it. The voice skill above gets loaded by the writer agent when drafting a post. A research playbook skill gets loaded by the researcher agent when gathering material.
+Skills don't run on their own — they provide context that agents and commands load when they need it. A voice skill gets loaded by a writer agent when drafting. A research playbook gets loaded by a researcher agent when gathering material. Chapter 7 shows real examples of both.
 
 **Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you have domain expertise worth codifying — your writing voice, your research standards, your brand guidelines.
 
@@ -196,24 +147,11 @@ Skills don't run on their own — they provide context that agents and commands 
 
 A **custom agent** is a specialized version of Claude that you define for a specific type of task. Think of it as creating a team member with a specific role: one agent for code review, another for writing tests, another for planning.
 
-Each agent is a markdown file with a name, description, and instructions:
-
-```markdown
----
-name: editor
-description: Reviews drafts for quality, voice consistency, and editorial standards
----
-
-You are an editorial reviewer. When reviewing a draft:
-1. Check that it follows the voice guide (tone, sentence length, vocabulary)
-2. Verify all required sections are present per the editorial guide
-3. Flag any factual claims that need source citations
-4. Summarize findings in a clear table
-```
+Each agent is a markdown file with a name, description, and instructions. The file tells the agent what role to play, what to focus on, and what to produce. Chapter 7 shows real agent definitions.
 
 Custom agents live in `.claude/agents/` (project) or `~/.claude/agents/` (global). When Claude Code needs to handle a task that matches an agent's description, it can dispatch that agent — or you can invoke one directly.
 
-**To create one:** Ask Claude — "Create a custom agent for editing my drafts" — and it will set it up.
+**To create one:** Ask Claude — "Create a custom agent for reviewing code" — and it will set it up.
 
 #### Why use custom agents?
 
@@ -226,28 +164,11 @@ The main agent can do everything. But custom agents are useful when:
 
 A **command** is a workflow recipe you trigger by typing a slash. Think of it as a checklist that the agent follows step by step — often dispatching agents and loading skills along the way.
 
-Commands are markdown files that live in `.claude/commands/<command-name>.md`:
-
-```markdown
-Write a new blog post about: $ARGUMENTS
-
-Steps:
-1. Run the researcher agent
-   - Use the blog-post skill for categories
-   - Check archive.md for previous coverage
-   - Save findings to research-notes.md
-2. Run the writer agent
-   - Read research-notes.md
-   - Use the voice skill for tone
-   - Save draft to posts/
-3. Present the draft for review
-```
-
-You invoke this by typing `/content-manager Poland`. The agent reads the steps and follows them — dispatching the researcher and writer agents, each of which loads its own skills.
+Commands are markdown files that live in `.claude/commands/<command-name>.md`. Each one lists the steps to follow, which agents to dispatch, and which skills to load. You invoke a command by typing its name with a slash — like `/deploy` or `/write-post Poland`. The agent reads the steps and follows them. Chapter 7 shows a complete command that wires agents and skills together.
 
 > **The difference between skills, commands, and agents:** A skill is knowledge ("here's what good research looks like"). A command is a workflow ("do research, then write, then review"). An agent is a role ("you are the researcher — here's how you work"). Commands dispatch agents; agents load skills; everyone follows the rules.
 
-**To create one:** Ask Claude — "Create a command for writing new blog posts" — and it will set it up.
+**To create one:** Ask Claude — "Create a command for my deployment workflow" — and it will set it up.
 
 ### 7. Hooks
 
@@ -313,11 +234,11 @@ claude mcp add --transport http github https://mcp.github.com
 | It references project files or structure | It's about how *you* work, not the project |
 
 **Examples:**
-- "All posts must include an adoption date" → project rule (specific to the flag blog)
+- "All API responses must include error codes" → project rule (specific to this app)
 - "Always explain your changes before making them" → global rule (your preference everywhere)
-- A voice skill for the flag blog's writing style → project skill
-- A `/content-manager` command for the blog workflow → project command
-- An editorial review agent you use across all writing projects → global agent
+- Brand guidelines for your website's design → project skill
+- A `/deploy` command for the deployment workflow → project command
+- A code review agent you use across all projects → global agent
 
 ---
 

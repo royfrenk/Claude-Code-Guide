@@ -12,6 +12,7 @@ import {
   Wrench,
   Code,
   Cog,
+  Layers,
   FolderGit2,
   Globe,
   PenTool,
@@ -22,14 +23,15 @@ const chapterIcons: Record<number, React.ReactNode> = {
   2: <BookOpen className="h-5 w-5" />,
   3: <Terminal className="h-5 w-5" />,
   4: <Rocket className="h-5 w-5" />,
-  5: <Settings className="h-5 w-5" />,
-  6: <Workflow className="h-5 w-5" />,
-  7: <Wrench className="h-5 w-5" />,
-  8: <PenTool className="h-5 w-5" />,
-  9: <Code className="h-5 w-5" />,
-  10: <Cog className="h-5 w-5" />,
-  11: <FolderGit2 className="h-5 w-5" />,
-  12: <Globe className="h-5 w-5" />,
+  5: <FolderGit2 className="h-5 w-5" />,
+  6: <Settings className="h-5 w-5" />,
+  7: <Workflow className="h-5 w-5" />,
+  8: <Wrench className="h-5 w-5" />,
+  9: <PenTool className="h-5 w-5" />,
+  10: <Code className="h-5 w-5" />,
+  11: <Cog className="h-5 w-5" />,
+  12: <Layers className="h-5 w-5" />,
+  13: <Globe className="h-5 w-5" />,
 };
 
 export default function LandingPage() {
@@ -81,7 +83,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <BookOpen className="h-3.5 w-3.5 text-accent" />
-            Free online guide &middot; 12 chapters
+            Free online guide &middot; 13 chapters
           </div>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Working With{" "}
@@ -184,14 +186,15 @@ function getChapterDescription(num: number | null): string {
     2: "Context windows, what gets lost between sessions, and external memory layers.",
     3: "Three ways to work with AI: chat, platform, or agent-assisted tools.",
     4: "Installing Claude Code, configuring VS Code, and running your first command.",
-    5: "Instruction files, rules, memory, custom agents, and MCP servers.",
-    6: "The recommended process for agent work — from input to review to improvement.",
-    7: "Step-by-step: building skills, commands, and a complete agent workflow.",
-    8: "The craft of writing instruction files that actually work.",
-    9: "The same process at scale — multiple agents building a software feature.",
-    10: "A real software system broken down: agents, commands, rules, and project structure.",
-    11: "Saving your work, going back to previous versions, and backing up online.",
-    12: "Where your project lives and how people access it after you build it.",
+    5: "Saving your work, going back to previous versions, and backing up online.",
+    6: "Instruction files, rules, memory, custom agents, and MCP servers.",
+    7: "The process in action: a real content project with skills, agents, and commands.",
+    8: "Step-by-step: building skills, commands, and a complete agent workflow.",
+    9: "The craft of writing instruction files that actually work.",
+    10: "The same process at scale — multiple agents building a software feature.",
+    11: "The default slash commands that ship with Claude Code and how to use them.",
+    12: "A real Claude Code setup: agents, commands, rules, and links to other public configs.",
+    13: "Where your project lives and how people access it after you build it.",
   };
   return descriptions[num ?? 0] ?? "";
 }

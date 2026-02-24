@@ -47,7 +47,7 @@ A few rules of thumb:
 
 #### Tools that help
 
-**A spec or brief.** A text file describing what you're building — who it's for, what it should do, what it should look like. Keep it as a file in the project that the agent reads automatically. More on this in Chapter 5.
+**A spec or brief.** A text file describing what you're building — who it's for, what it should do, what it should look like. Keep it as a file in the project that the agent reads automatically. More on this in Chapter 6.
 
 **Reference images.** Most agents can look at images. A screenshot of a website you like, a rough sketch, a wireframe — these give the agent more to work with than words alone.
 

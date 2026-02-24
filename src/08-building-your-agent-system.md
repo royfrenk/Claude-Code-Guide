@@ -1,10 +1,22 @@
-## Chapter 7: Building Your Agent System
+## Chapter 8: Building Your Agent System
 
-> **TL;DR:** Chapter 6 showed the process. This chapter shows how to build it. Using a real blog about flags as the example, we walk through every step: gathering source material, generating a voice skill, defining a research playbook, setting up specialized agents, and wiring it all together with a command.
+> **TL;DR:** Chapter 7 showed the process. This chapter shows how to build it. Using a real blog about flags as the example, we walk through every step: gathering source material, generating a voice skill, defining a research playbook, setting up specialized agents, and wiring it all together with a command.
 
 ---
 
-Chapter 6 introduced the recommended process and showed how it maps to a blog about flags — a single command that researches a flag, checks the archive, and drafts a post in the author's voice. This chapter walks through how that system was actually built. Not the output — the setup. By the end, you'll know how to build something like it for your own work.
+Chapter 7 introduced the recommended process and showed how it maps to a blog about flags — a single command that researches a flag, checks the archive, and drafts a post in the author's voice. This chapter walks through how that system was actually built. Not the output — the setup. By the end, you'll know how to build something like it for your own work.
+
+### Step 0: Create a folder and connect it to Git
+
+Before anything else — before collecting material, before configuring agents — create a project folder and initialize it as a Git repository. This is the first step for any project, not just software.
+
+```
+Create a new folder called flag-blog, initialize Git, and create a GitHub repo for it
+```
+
+Claude creates the folder, runs `git init`, and connects it to GitHub. From this point on, every change is tracked and backed up. When the agent rewrites your voice file and you prefer the old version — you can go back. When you want to work from a different machine — clone the repo and keep going.
+
+This takes thirty seconds. Do it at the start of every project.
 
 ### Step 1: Collect the source material
 
@@ -84,7 +96,7 @@ This is the difference between "do research" and "here's what interesting resear
 
 ### Step 4: Define the agents
 
-The research and writing are different kinds of work, so the author split them into two **custom agents** — the same concept from Chapter 5:
+The research and writing are different kinds of work, so the author split them into two **custom agents** — the same concept from Chapter 6:
 
 - `.claude/agents/researcher.md` — searches the web using the research playbook, checks the archive for previous coverage, and saves organized findings to a research file.
 - `.claude/agents/writer.md` — reads the research findings, loads the voice skill, and drafts the post.
@@ -121,11 +133,11 @@ The researcher agent reads the research skill and searches the web for Poland's 
 
 The author reads the draft. "The section about the crown needs more historical context." "The opening riddle gives away too much." The agent revises. Two or three rounds and the post is ready.
 
-After a few posts, the author noticed the agent kept missing adoption dates. He added a line to the research skill: "always include the adoption date and the designer if known." Next post, the agent got it right. This is the change process from Chapter 6 — surfacing a gap and fixing it in the configuration, not in a one-off prompt.
+After a few posts, the author noticed the agent kept missing adoption dates. He added a line to the research skill: "always include the adoption date and the designer if known." Next post, the agent got it right. This is the change process from Chapter 7 — surfacing a gap and fixing it in the configuration, not in a one-off prompt.
 
 ### The files that make it work
 
-| File | What it does | Config layer (Ch5) |
+| File | What it does | Config layer (Ch6) |
 |------|-------------|-------------------|
 | `.claude/commands/content-manager.md` | The command — triggers the workflow, dispatches agents | Command |
 | `.claude/agents/researcher.md` | The researcher — searches the web using the research playbook | Agent |

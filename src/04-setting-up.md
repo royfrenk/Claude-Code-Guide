@@ -136,7 +136,7 @@ Claude Code has three modes that control how the agent works:
 
 **Plan mode**. The agent researches and plans but doesn't make any changes. It reads files, explores the codebase, and writes a plan for what it would do — then shows you the plan for approval. Useful when you want to understand what the agent is thinking before it touches anything.
 
-**Auto-accept mode**. The agent makes changes without asking. It edits files, runs commands, and moves forward on its own. This is faster but riskier — you're trusting the agent to make good decisions. Use this once you're comfortable with how the agent works and you've set up proper guardrails (Chapter 5).
+**Auto-accept mode**. The agent makes changes without asking. It edits files, runs commands, and moves forward on its own. This is faster but riskier — you're trusting the agent to make good decisions. Use this once you're comfortable with how the agent works and you've set up proper guardrails (Chapter 6).
 
 You can switch modes by clicking the mode toggle in the status bar, or by typing `/auto-accept` or `/plan` in the chat.
 
@@ -173,8 +173,8 @@ While you're in the Extensions panel, there are a few other extensions worth ins
 
 | Extension | What it does | Why you'd want it |
 |---|---|---|
-| **Markdown Preview Enhanced** | Shows a live preview of markdown files side by side with the raw text | Useful for reading and editing CLAUDE.md and other documentation files. You'll be writing these in Chapter 5. |
-| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 11) — makes version history visual instead of text-based. |
+| **Markdown Preview Enhanced** | Shows a live preview of markdown files side by side with the raw text | Useful for reading and editing CLAUDE.md and other documentation files. You'll be writing these in Chapter 6. |
+| **GitLens** | Shows who changed what and when in your code | Helpful once you start using Git (Chapter 5) — makes version history visual instead of text-based. |
 | **Error Lens** | Shows error messages directly in your code, right next to the line that caused them | Catches problems as you type instead of making you hunt through a separate panel. |
 | **GitHub Copilot** | AI code suggestions that appear as you type, like autocomplete on steroids | A second AI perspective alongside Claude Code. Free tier available. |
 | **Gemini Code Assist** | Google's AI coding assistant — similar to Copilot, different model | Another option for inline suggestions. Free tier available. Good to have a second opinion. |

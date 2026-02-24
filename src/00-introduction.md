@@ -14,20 +14,21 @@ The guide is organized in three parts:
 2. **Memory and Context** — Context windows, what gets lost between sessions, and external memory layers.
 3. **Tools of the Trade** — Chat interfaces, all-in-one platforms, and agent-assisted tools. The landscape and how to pick.
 4. **Setting Up** — Installing Claude Code, configuring VS Code, and running your first command.
-5. **Configuring Your Agent** — Instruction files, rules, memory, skills, commands, and MCP servers.
+5. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
+6. **Configuring Your Agent** — Instruction files, rules, memory, skills, commands, and MCP servers.
 
 **Part B: Putting It to Work** — The recommended process for agent work, and how to build your own agent system from scratch.
 
-6. **How It All Comes Together** — The recommended process: orchestrator, explorer, actor, reviewer, iterate, improve. One example showing how it maps to real work.
-7. **Building Your Agent System** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
-8. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
+7. **Content Writing Example** — The recommended process in action: a real content project with skills, agents, and a command that produces a full draft.
+8. **Building Your Agent System** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
+9. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
 
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
 
-9. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
-10. **Building Your Software System** — A real system broken down: agents, commands, rules, and project structure. Take what's useful, build your own.
-11. **Git and GitHub** — Version control: saving your work, going back to previous versions, and backing up online.
-12. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+10. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
+11. **Commands, Skills, and Workflows** — The default slash commands that ship with Claude Code and how to use them day to day.
+12. **Roy's Claude Config** — A real Claude Code setup: agents, commands, rules, and links to other public configs. Take what's useful, build your own.
+13. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 
