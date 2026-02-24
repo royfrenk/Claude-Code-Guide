@@ -60,7 +60,7 @@ Think of CLAUDE.md as a brief for a new team member who joins the project every 
 - Style preferences and conventions
 - Known issues or quirks
 
-The structure is the same whether you're building software or writing content — project description, key files, rules, workflow. Chapter 7 shows a complete real-world CLAUDE.md.
+The structure is the same whether you're building software or writing content — project description, key files, rules, workflow. Chapter 8 shows a complete real-world CLAUDE.md.
 
 #### How to create it
 
@@ -98,7 +98,7 @@ my-project/.claude/rules/
 └── deployment.md      — staging vs production, deployment checklist
 ```
 
-For a content project, these might be `voice.md`, `editorial.md`, `formatting.md`, and `publishing.md` instead. Same concept, different domain. Chapter 7 shows a real example.
+For a content project, these might be `voice.md`, `editorial.md`, `formatting.md`, and `publishing.md` instead. Same concept, different domain. Chapter 8 shows a real example.
 
 Each rule is a plain markdown file. Claude reads all of them automatically, just like CLAUDE.md. The advantage is organization — when you want to update your testing rules, you edit one focused file instead of hunting through a giant instruction document.
 
@@ -135,7 +135,7 @@ A **skill** is a knowledge file that teaches an agent about a specific domain. T
 
 Skills are markdown files that live in `.claude/skills/<skill-name>/SKILL.md`. A voice skill might capture your writing style. A design tokens skill might define your brand colors and typography. A research playbook might list the categories of information to look for.
 
-Skills don't run on their own — they provide context that agents and commands load when they need it. A voice skill gets loaded by a writer agent when drafting. A research playbook gets loaded by a researcher agent when gathering material. Chapter 7 shows real examples of both.
+Skills don't run on their own — they provide context that agents and commands load when they need it. A voice skill gets loaded by a writer agent when drafting. A research playbook gets loaded by a researcher agent when gathering material. Chapter 8 shows real examples of both.
 
 **Built-in skills** come with Claude Code. You can also install community skills or create your own. Creating your own becomes useful when you have domain expertise worth codifying — your writing voice, your research standards, your brand guidelines.
 
@@ -147,7 +147,7 @@ Skills don't run on their own — they provide context that agents and commands 
 
 A **custom agent** is a specialized version of Claude that you define for a specific type of task. Think of it as creating a team member with a specific role: one agent for code review, another for writing tests, another for planning.
 
-Each agent is a markdown file with a name, description, and instructions. The file tells the agent what role to play, what to focus on, and what to produce. Chapter 7 shows real agent definitions.
+Each agent is a markdown file with a name, description, and instructions. The file tells the agent what role to play, what to focus on, and what to produce. Chapter 8 shows real agent definitions.
 
 Custom agents live in `.claude/agents/` (project) or `~/.claude/agents/` (global). When Claude Code needs to handle a task that matches an agent's description, it can dispatch that agent — or you can invoke one directly.
 
@@ -164,7 +164,7 @@ The main agent can do everything. But custom agents are useful when:
 
 A **command** is a workflow recipe you trigger by typing a slash. Think of it as a checklist that the agent follows step by step — often dispatching agents and loading skills along the way.
 
-Commands are markdown files that live in `.claude/commands/<command-name>.md`. Each one lists the steps to follow, which agents to dispatch, and which skills to load. You invoke a command by typing its name with a slash — like `/deploy` or `/write-post Poland`. The agent reads the steps and follows them. Chapter 7 shows a complete command that wires agents and skills together.
+Commands are markdown files that live in `.claude/commands/<command-name>.md`. Each one lists the steps to follow, which agents to dispatch, and which skills to load. You invoke a command by typing its name with a slash — like `/deploy` or `/write-post Poland`. The agent reads the steps and follows them. Chapter 8 shows a complete command that wires agents and skills together.
 
 > **The difference between skills, commands, and agents:** A skill is knowledge ("here's what good research looks like"). A command is a workflow ("do research, then write, then review"). An agent is a role ("you are the researcher — here's how you work"). Commands dispatch agents; agents load skills; everyone follows the rules.
 

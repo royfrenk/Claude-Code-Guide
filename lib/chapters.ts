@@ -56,8 +56,8 @@ const chapterFiles = [
   {
     file: "07-how-it-all-comes-together.md",
     number: 7,
-    title: "The Meta Process",
-    shortTitle: "The Meta Process",
+    title: "The Meta-Process",
+    shortTitle: "The Meta-Process",
   },
   {
     file: "08-building-your-agent-system.md",

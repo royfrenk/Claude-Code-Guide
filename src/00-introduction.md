@@ -19,8 +19,8 @@ The guide is organized in three parts:
 
 **Part B: Putting It to Work** — The recommended process for agent work, and how to build your own agent system from scratch.
 
-7. **The Meta Process** — The recommended process in action: a real content project with skills, agents, and a command that produces a full draft.
-8. **Content Writing Example** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
+7. **The Meta-Process** — The recommended structure for agent work: orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process.
+8. **Content Writing Example** — The meta-process in action: a flag blog with two agents, two skills, and one command. Full build walkthrough.
 9. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
 
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
