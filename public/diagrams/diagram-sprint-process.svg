@@ -75,7 +75,7 @@
 
   <!-- 7. Update Rules -->
   <rect x="160" y="600" width="200" height="50" rx="8" fill="#F5EEF8" stroke="#8E44AD" stroke-width="1.5"/>
-  <text x="260" y="622" text-anchor="middle" font-size="12" font-weight="600" fill="#6C3483">Update Rules & Checklists</text>
+  <text x="260" y="622" text-anchor="middle" font-size="12" font-weight="600" fill="#6C3483">Update Rules &amp; Checklists</text>
   <text x="260" y="637" text-anchor="middle" font-size="10" fill="#6C3483">fix gaps, add guardrails</text>
 
   <!-- Change process loops back (left side) -->
