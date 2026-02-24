@@ -1,4 +1,4 @@
-## Chapter 8: Building Your Agent System
+## Chapter 8: Content Writing Example
 
 > **TL;DR:** Chapter 7 showed the process. This chapter shows how to build it. Using a real blog about flags as the example, we walk through every step: gathering source material, generating a voice skill, defining a research playbook, setting up specialized agents, and wiring it all together with a command.
 

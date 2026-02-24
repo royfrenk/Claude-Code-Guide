@@ -217,11 +217,14 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
             <td className="px-4 py-3 text-foreground text-sm">{children}</td>
           ),
           code: ({ children, className, ...props }: ComponentPropsWithoutRef<"code"> & { className?: string }) => {
-            const isBlock = className?.startsWith("language-");
-            if (isBlock) {
+            const isLanguageBlock = className?.startsWith("language-");
+            const content = String(children).replace(/\n$/, "");
+            const isMultiline = content.includes("\n");
+
+            if (isLanguageBlock || isMultiline) {
               return (
                 <CodeBlock className={className}>
-                  {String(children).replace(/\n$/, "")}
+                  {content}
                 </CodeBlock>
               );
             }

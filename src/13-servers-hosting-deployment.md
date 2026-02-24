@@ -20,6 +20,46 @@ How you deploy depends on what you built:
 
 Most beginner projects are static or lightly dynamic. If your project is a website with no user accounts and no database — it's static.
 
+### Frontend and backend
+
+A web project has two sides:
+
+The **frontend** is what users see and interact with — buttons, text, images, forms, animations. It runs in the browser on the user's device. When you look at a website, you're looking at the frontend. Technologies: HTML, CSS, JavaScript, and frameworks like React or Next.js.
+
+The **backend** is what runs on the server — the stuff users never see. It handles business logic: checking passwords, saving data, processing payments, sending emails. When you click "Log in," the frontend sends your credentials to the backend. The backend checks them against a database and sends back "yes" or "no." Technologies: Node.js, Python, Ruby, Go, and others.
+
+Some projects have both. An e-commerce site has a frontend (the product pages you browse) and a backend (the server that processes your credit card and updates inventory). Other projects are frontend-only — a personal blog, a landing page, a portfolio. No backend needed because there's no data to process.
+
+When people say "full-stack," they mean someone who works on both sides.
+
+### Databases
+
+A **database** is where an application stores its data permanently. User accounts, orders, messages, settings — anything that needs to survive a page refresh or a server restart lives in a database.
+
+Think of it as a collection of spreadsheets. A "users" table has rows for each user — name, email, password (encrypted). An "orders" table has rows for each purchase — what was bought, when, by whom. Tables connect to each other: an order row points to the user who placed it.
+
+Two main types:
+
+**Relational databases** (PostgreSQL, MySQL, SQLite) — Data lives in structured tables with defined columns. Like a well-organized spreadsheet. Best for data with clear relationships: users have orders, orders have items, items have categories.
+
+**Document databases** (MongoDB, Firebase) — Data lives in flexible documents (like JSON files). Each document can have a different structure. Best for data that varies a lot or doesn't fit neatly into tables.
+
+For most projects, **PostgreSQL** is the default choice. It's free, well-supported, and handles everything from a small personal project to a large application. Services like Supabase and Railway give you a PostgreSQL database with a few clicks.
+
+If your project doesn't need to store user data — no accounts, no forms that save, no content that changes — you don't need a database. A static site works fine.
+
+### Production and staging
+
+When you're building something, you don't want mistakes to show up on the live site. That's why most projects have two environments:
+
+**Staging** is the test version. It looks and works exactly like the real thing, but only you (and your team) can see it. You deploy here first, test everything, and catch problems before they reach real users. Staging URLs look like `my-project-staging.vercel.app` or `develop-my-project.vercel.app`.
+
+**Production** is the live version — the real URL that actual users visit. `www.cleanpaws.com`. You only deploy here after you've tested on staging and everything works.
+
+The workflow: make changes → deploy to staging → test → if it works, deploy to production. If something breaks on staging, no one notices except you. If something breaks in production, your users see it. That's the whole reason staging exists — it's your safety net.
+
+In practice, this usually maps to Git branches (Chapter 5). You push to a `develop` branch, which auto-deploys to staging. When you're satisfied, you merge into `main`, which auto-deploys to production. Two branches, two environments, one safety net.
+
 ### Where to host
 
 #### For static sites
@@ -76,10 +116,12 @@ Once set up, here's the typical flow:
 1. **Build locally** — work on your project with Claude
 2. **Test** — make sure it works on your machine
 3. **Commit and push** — save your changes and push to GitHub (Chapter 5)
-4. **Auto-deploy** — your hosting platform detects the push and deploys automatically
-5. **Verify** — check the live URL to make sure it looks right
+4. **Auto-deploy to staging** — your hosting platform detects the push and deploys to the staging environment
+5. **Test on staging** — check the staging URL to make sure it works in a real environment
+6. **Deploy to production** — merge to the main branch, which auto-deploys to the live URL
+7. **Verify** — check the production URL to make sure it looks right
 
-Most platforms give you a **preview URL** for every push — so you can check your changes before they go live to the main URL.
+Most platforms give you a **preview URL** for every push — so you can check your changes before they go live.
 
 ### Domains
 
@@ -133,3 +175,15 @@ Add the environment variables from my .env file to Vercel
 | Is a frontend that talks to a separate API | Static hosting for frontend + dynamic for API | Vercel (frontend) + Railway (API) |
 
 If you're not sure, start static. You can always add a backend later.
+
+---
+
+### Practical tips
+
+> **Always deploy to staging first.** Never push straight to production. Even for "small" changes. The five minutes you spend testing on staging will save you from the panicked fix you'd need when a broken change goes live.
+
+> **You don't need a database until you do.** Start without one. If your project is a blog, a portfolio, or a landing page — static hosting is enough. Add a database when you actually need to store user data, not because you think you might need it someday.
+
+> **Frontend and backend can live on different platforms.** A common pattern: host your frontend on Vercel (free, fast) and your backend on Railway or Render. They talk to each other over the internet. You don't need to put everything in one place.
+
+> **Environment variables are how you keep secrets safe.** Never put API keys, passwords, or credentials in your code. Store them as environment variables on your hosting platform. Your agent can help you set this up.

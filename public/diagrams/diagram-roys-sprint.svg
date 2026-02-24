@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 820" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E74C3C"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27AE60"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8E44AD"/>
+    </marker>
+  </defs>
+
+  <rect width="540" height="820" fill="#fafafa" rx="12"/>
+
+  <text x="270" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">Roy's Sprint Process</text>
+  <text x="270" y="50" text-anchor="middle" font-size="11" fill="#888">/sprint CCG-12 — seven agents, two gates, one command</text>
+
+  <!-- 1. You give ticket -->
+  <rect x="170" y="72" width="200" height="50" rx="8" fill="#E8D5F5" stroke="#9B59B6" stroke-width="2"/>
+  <text x="270" y="94" text-anchor="middle" font-size="12" font-weight="bold" fill="#6C3483">/sprint CCG-12</text>
+  <text x="270" y="109" text-anchor="middle" font-size="10" fill="#6C3483">you give a ticket number</text>
+
+  <line x1="270" y1="122" x2="270" y2="145" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 2. Manager -->
+  <rect x="170" y="150" width="200" height="50" rx="8" fill="#D5F5E3" stroke="#27AE60" stroke-width="2"/>
+  <text x="270" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Manager</text>
+  <text x="270" y="187" text-anchor="middle" font-size="10" fill="#1E8449">reads roadmap / syncs Linear</text>
+
+  <line x1="270" y1="200" x2="270" y2="223" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3. Explorer -->
+  <rect x="170" y="228" width="200" height="50" rx="8" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+  <text x="270" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#21618C">Explorer</text>
+  <text x="270" y="265" text-anchor="middle" font-size="10" fill="#21618C">reads codebase, creates spec file</text>
+
+  <line x1="270" y1="278" x2="270" y2="301" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 4. Plan Writer + Design Planner -->
+  <rect x="130" y="306" width="280" height="50" rx="8" fill="#D6EAF8" stroke="#2E86C1" stroke-width="2"/>
+  <text x="270" y="328" text-anchor="middle" font-size="12" font-weight="bold" fill="#21618C">Plan Writer + Design Planner</text>
+  <text x="270" y="343" text-anchor="middle" font-size="10" fill="#21618C">structures plan; design spec if UI feature</text>
+
+  <line x1="270" y1="356" x2="270" y2="379" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Gate 1 -->
+  <rect x="195" y="381" width="150" height="26" rx="4" fill="#fff" stroke="#888" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="270" y="398" text-anchor="middle" font-size="10" fill="#888">Gate 1: you approve the plan</text>
+
+  <line x1="270" y1="407" x2="270" y2="430" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 5. Developer -->
+  <rect x="170" y="435" width="200" height="50" rx="8" fill="#FDEBD0" stroke="#E67E22" stroke-width="2"/>
+  <text x="270" y="457" text-anchor="middle" font-size="12" font-weight="bold" fill="#A04000">Developer</text>
+  <text x="270" y="472" text-anchor="middle" font-size="10" fill="#A04000">writes code, runs tests</text>
+
+  <line x1="270" y1="485" x2="270" y2="508" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 6. Reviewer + Design Reviewer -->
+  <rect x="130" y="513" width="280" height="50" rx="8" fill="#F9E79F" stroke="#F1C40F" stroke-width="2"/>
+  <text x="270" y="535" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D6608">Reviewer + Design Reviewer</text>
+  <text x="270" y="550" text-anchor="middle" font-size="10" fill="#7D6608">code quality + UI against design spec</text>
+
+  <!-- Iteration loop: Reviewer → Developer -->
+  <path d="M 410 535 C 470 535, 470 460, 410 460" fill="none" stroke="#E74C3C" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrRed)"/>
+  <text x="485" y="498" text-anchor="middle" font-size="10" font-weight="600" fill="#E74C3C">Fix</text>
+
+  <!-- Done from reviewer -->
+  <line x1="270" y1="563" x2="270" y2="586" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+
+  <!-- Gate 2 -->
+  <rect x="175" y="590" width="190" height="26" rx="4" fill="#fff" stroke="#888" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="270" y="607" text-anchor="middle" font-size="10" fill="#888">Gate 2: you test on staging</text>
+
+  <!-- Iterate loop: Gate 2 → Developer -->
+  <path d="M 175 603 C 100 603, 100 460, 167 460" fill="none" stroke="#E74C3C" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrRed)"/>
+  <text x="90" y="535" text-anchor="middle" font-size="10" font-weight="600" fill="#E74C3C">/iterate</text>
+
+  <line x1="270" y1="616" x2="270" y2="645" stroke="#27AE60" stroke-width="1.5" marker-end="url(#arrGreen)"/>
+  <text x="290" y="636" font-size="10" fill="#27AE60" font-weight="600">Ship</text>
+
+  <!-- 7. Sprint File -->
+  <rect x="170" y="650" width="200" height="45" rx="8" fill="#FADBD8" stroke="#E74C3C" stroke-width="1.5"/>
+  <text x="270" y="669" text-anchor="middle" font-size="11" font-weight="600" fill="#922B21">Sprint File</text>
+  <text x="270" y="683" text-anchor="middle" font-size="10" fill="#922B21">records what happened</text>
+
+  <line x1="270" y1="695" x2="270" y2="718" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 8. Post-mortem / Change Process -->
+  <rect x="150" y="723" width="240" height="45" rx="8" fill="#F5EEF8" stroke="#8E44AD" stroke-width="1.5"/>
+  <text x="270" y="742" text-anchor="middle" font-size="11" font-weight="600" fill="#6C3483">/post-mortem + /change-process</text>
+  <text x="270" y="756" text-anchor="middle" font-size="10" fill="#6C3483">fix gaps, update rules and agents</text>
+
+  <!-- Change process loops back -->
+  <path d="M 150 745 C 60 745, 60 175, 167 175" fill="none" stroke="#8E44AD" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrPurple)"/>
+  <text x="50" y="460" text-anchor="middle" font-size="9" fill="#8E44AD" transform="rotate(-90, 50, 460)">next sprint is better</text>
+
+  <!-- Bottom note -->
+  <text x="270" y="800" text-anchor="middle" font-size="10" fill="#999" font-style="italic">Seven agents. Two gates. One command. The spec file connects them all.</text>
+</svg>

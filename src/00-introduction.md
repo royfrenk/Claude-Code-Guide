@@ -19,14 +19,14 @@ The guide is organized in three parts:
 
 **Part B: Putting It to Work** — The recommended process for agent work, and how to build your own agent system from scratch.
 
-7. **Content Writing Example** — The recommended process in action: a real content project with skills, agents, and a command that produces a full draft.
-8. **Building Your Agent System** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
+7. **The Meta Process** — The recommended process in action: a real content project with skills, agents, and a command that produces a full draft.
+8. **Content Writing Example** — Step-by-step: gathering source material, generating a voice skill, defining a research playbook, and wiring it together with a command.
 9. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
 
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
 
 10. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
-11. **Commands, Skills, and Workflows** — The default slash commands that ship with Claude Code and how to use them day to day.
+11. **Claude Built-in Capabilities** — The default slash commands that ship with Claude Code and how to use them day to day.
 12. **Roy's Claude Config** — A real Claude Code setup: agents, commands, rules, and links to other public configs. Take what's useful, build your own.
 13. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 

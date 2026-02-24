@@ -1,4 +1,4 @@
-## Chapter 7: Content Writing Example
+## Chapter 7: The Meta Process
 
 > **TL;DR:** This chapter puts the configuration layers from Chapter 6 into practice with a real project — a blog about flags. One command produces a full draft, using a CLAUDE.md, two skills, two agents, and a command file. The recommended process — orchestrator, explorer, actor, reviewer, iterate — maps directly to these configuration files.
 

@@ -56,14 +56,14 @@ const chapterFiles = [
   {
     file: "07-how-it-all-comes-together.md",
     number: 7,
-    title: "Content Writing Example",
-    shortTitle: "Content Writing Example",
+    title: "The Meta Process",
+    shortTitle: "The Meta Process",
   },
   {
     file: "08-building-your-agent-system.md",
     number: 8,
-    title: "Building Your Agent System",
-    shortTitle: "Building Your System",
+    title: "Content Writing Example",
+    shortTitle: "Content Writing Example",
   },
   {
     file: "09-writing-effective-instructions.md",
@@ -80,8 +80,8 @@ const chapterFiles = [
   {
     file: "11-building-your-software-system.md",
     number: 11,
-    title: "Commands, Skills, and Workflows",
-    shortTitle: "Commands & Workflows",
+    title: "Claude Built-in Capabilities",
+    shortTitle: "Built-in Capabilities",
   },
   {
     file: "12-a-more-complicated-system.md",

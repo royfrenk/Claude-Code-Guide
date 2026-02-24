@@ -16,33 +16,29 @@ Every project I work on follows the same layout:
 
 ```
 project/
-├── CLAUDE.md              # Project config
+├── CLAUDE.md                                  # Project config
 ├── docs/
-│   ├── PROJECT_STATE.md   # Current codebase state
-│   ├── roadmap.md         # Task backlog
-│   ├── technical-specs/   # One spec per feature
-│   ├── sprints/           # Iteration tracking
-│   └── post-mortem/       # Failure analysis
-└── src/                   # The actual code
+│   ├── PROJECT_STATE.md                       # Current codebase state
+│   ├── roadmap.md                             # Task backlog
+│   ├── technical-specs/
+│   │   ├── CCG-01-search.md                   # One spec per feature
+│   │   └── CCG-02-dark-mode.md
+│   ├── design-specs/                          # UI layout and interaction plans
+│   ├── sprints/
+│   │   ├── sprint-001-search.done.md          # Completed sprint
+│   │   └── sprint-002-dark-mode.active.md     # In-progress sprint
+│   └── post-mortem/
+│       └── 2026-02-18-search-bug.md           # What went wrong, why, what to fix
+└── src/                                       # The actual code
 ```
 
 **`CLAUDE.md`** is the project's instruction file — the one from Chapter 6. It tells the agent what the project is, how to run it, where to deploy, and what rules to follow. Every agent reads this first.
 
-**`roadmap.md`** is the task backlog — a prioritized list of what to build next. When I type `/sprint`, the manager reads this file to decide what to work on.
+**`roadmap.md`** is the task backlog — a prioritized list of what to build next. When I type `/sprint`, the manager reads this file to decide what to work on. For some projects, I sync this with **Linear** (a project management tool) — the `/create-issue` command creates a ticket in Linear and adds it to the roadmap, and the system keeps both in sync during sprints.
 
-**`technical-specs/`** holds one spec file per feature. The explorer creates it, the planner adds to it, the developer logs progress in it. It's the shared brain for a feature — everything that matters lives in one file.
+**Spec files** (`docs/technical-specs/CCG-01-search.md`) — One per feature. I treat each feature as a **story** — a short narrative with a name, like "search" or "dark-mode." The issue prefix (`CCG`) identifies the project, and the name makes it easy to find later. The explorer creates the spec after researching the codebase: what needs to change, which files are involved, dependencies, edge cases, and the implementation plan. Every agent reads the spec file. The developer logs progress in it. If the session gets interrupted, the spec file has everything needed to resume. This is the most important file — the shared brain for a feature.
 
-**`sprints/`** records what happened during each work session — tasks completed, issues found, decisions made. This is the raw material for post-mortems.
-
-**`post-mortem/`** captures what went wrong after a sprint. When an agent makes a mistake worth learning from, the post-mortem documents what happened, why, and what rule or instruction to change so it doesn't happen again.
-
-### The files
-
-The project structure above lists folders. Here's what actually goes *in* them — the files that agents read and write during a sprint.
-
-**Spec files** (`docs/technical-specs/CCG-01.md`) — One per feature. The explorer creates it after researching the codebase. It contains: what needs to change, which files are involved, dependencies, edge cases, and the implementation plan. Every agent reads the spec file. The developer logs progress in it. If the session gets interrupted, the spec file has everything needed to resume. This is the most important file — the shared brain for a feature.
-
-**Sprint files** (`docs/sprints/sprint-001-search.active.md`) — One per work session. Tracks which tasks were attempted, what succeeded, what failed, and any bugs found during testing. The `.active.md` suffix means it's in progress; when complete, it becomes `.done.md`. Sprint files are the raw record — what actually happened versus what was planned.
+**Sprint files** (`docs/sprints/sprint-001-search.active.md`) — One per work session, named after the story it's working on. Tracks which tasks were attempted, what succeeded, what failed, and any bugs found during testing. The `.active.md` suffix means it's in progress; when complete, it becomes `.done.md`. Sprint files are the raw record — what actually happened versus what was planned.
 
 **Post-mortem files** (`docs/post-mortem/2026-02-18-search-bug.md`) — Created when something goes notably wrong. Documents the mistake, why it happened, and proposes a specific fix — usually a new line in a rule file or a change to an agent's instructions. This is how the system learns. A five-minute post-mortem after a bad sprint prevents the same mistake from repeating across every future sprint.
 
@@ -70,7 +66,7 @@ I use seven custom agents, each defined as a markdown file in `.claude/agents/`:
 
 Commands are how I trigger workflows. Three do most of the work:
 
-**`/sprint`** — The main command. Reads the roadmap, picks the top priority task, and runs the full process: explore → plan → gate → develop → review → gate → deploy to staging. One command, full workflow.
+**`/sprint`** — The main command. I give it a ticket number (like `CCG-12`) and it runs the full process: explore → plan → gate → develop → review → design review → gate → deploy to staging. One command, full workflow.
 
 **`/iterate`** — What I use after testing on staging. "The search results are in the wrong order." "The button doesn't work on mobile." The iterate command picks up where the sprint left off and fixes what I report.
 
@@ -82,9 +78,9 @@ Commands are how I trigger workflows. Three do most of the work:
 
 #### A note on tickets
 
-I use **Linear** as my project management tool, but the concept applies to any system — Jira, GitHub Issues, Notion, or even a plain markdown file. A **ticket** (or **issue**) is a unit of work: "Add search to the app," "Fix the broken login flow," "Update the homepage design." Each ticket has a title, a description, acceptance criteria (how you know it's done), and a priority.
+I use **Linear** as my project management tool, but the concept applies to any system — Jira, GitHub Issues, Notion, or even a plain markdown file. A **ticket** (or **issue**) is a unit of work: "Add search to the app," "Fix the broken login flow," "Update the homepage design." Each ticket has a title, a description, acceptance criteria (how you know it's done), and a priority. I give each ticket a number — `CCG-12`, `QUO-38` — so I can reference it quickly.
 
-The `/sprint` command reads the roadmap to find the highest-priority ticket, then runs the full process against it. The `/iterate` command picks up where the sprint left off for that same ticket. When the work is done, the ticket gets marked complete. Tickets are how you break a project into manageable pieces and track what's been done.
+When I start a sprint, I give it the ticket number: `/sprint CCG-12`. The manager pulls the ticket details (from the roadmap or from Linear), then runs the full process against it. The `/iterate` command picks up where the sprint left off for that same ticket. When the work is done, the ticket gets marked complete — both in the roadmap and in Linear. Tickets are how you break a project into manageable pieces and track what's been done.
 
 ### The rules
 
@@ -103,17 +99,20 @@ Each rule file started small and grew. Every time an agent made a mistake that I
 
 ### How it connects
 
-Here's the flow when I type `/sprint`:
+Here's the flow when I type `/sprint CCG-12`:
 
-1. The **manager** reads `roadmap.md` and picks the top task.
+![Roy's sprint process — the full agent workflow](diagrams/diagram-roys-sprint.svg)
+
+1. The **manager** reads the ticket from the roadmap (or syncs it from Linear).
 2. It dispatches the **explorer**, who reads the codebase and creates a spec file in `technical-specs/`.
 3. The **plan writer** reads the spec and creates a plan. If the feature involves UI, the **design planner** creates a design spec too. The manager shows me the plan — **gate 1**.
 4. I approve (or adjust). The manager dispatches the **developer**.
-5. The developer builds, following the plan (and design spec, if one exists). Tests pass. The **reviewer** checks the code. For UI features, the **design reviewer** also checks against the design spec.
-6. The developer deploys to staging. The manager tells me it's ready — **gate 2**.
-7. I test on staging. If something's off, I type `/iterate` with feedback. The developer fixes it.
-8. When I'm satisfied, I approve production deployment.
-9. A sprint file records what happened. I run `/post-mortem` if something notable went wrong, and `/change-process` to feed the learnings back into the system.
+5. The developer builds, following the plan (and design spec, if one exists). Tests pass.
+6. The **reviewer** checks the code. For UI features, the **design reviewer** also checks the implementation against the design spec. If either reviewer sends it back, the developer fixes and resubmits.
+7. The developer deploys to staging. The manager tells me it's ready — **gate 2**.
+8. I test on staging. If something's off, I type `/iterate` with feedback. The developer fixes it.
+9. When I'm satisfied, I approve production deployment.
+10. A sprint file records what happened. I run `/post-mortem` if something notable went wrong, and `/change-process` to feed the learnings back into the system.
 
 Every agent reads `CLAUDE.md` (project config) and the rules (coding standards, security, testing). Every agent logs its work to the spec file. The spec file is the thread that connects them all.
 

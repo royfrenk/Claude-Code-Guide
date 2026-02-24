@@ -1,4 +1,4 @@
-## Chapter 11: Commands, Skills, and Workflows
+## Chapter 11: Claude Built-in Capabilities
 
 > **TL;DR:** Claude Code ships with built-in slash commands that manage your sessions, context, settings, and tools. These work out of the box — no setup required. Chapter 6 covered the configuration layer (rules, skills, agents, commands you create). This chapter covers the operational layer — the default commands you'll use every day.
 
