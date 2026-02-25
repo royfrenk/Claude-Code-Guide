@@ -22,13 +22,14 @@ The guide is organized in three parts:
 7. **The Meta-Process** — The recommended structure for agent work: orchestrator, explorer, actor, reviewer, iterate, post-mortem, change process.
 8. **Content Writing Example** — The meta-process in action: a flag blog with two agents, two skills, and one command. Full build walkthrough.
 9. **Writing Effective Instructions** — The craft of writing instruction files: conditional logic, sub-agent dispatching, orchestration, gates, skill sizing, and external memory.
+10. **Personal AI Agents** — OpenClaw and the world of agents that run 24/7 on your own hardware, communicate through messaging apps, and act autonomously.
 
 **Part C: Building Software** — For those who want to build and deploy applications with agents.
 
-10. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
-11. **Claude Built-in Capabilities** — The default slash commands that ship with Claude Code and how to use them day to day.
-12. **Roy's Claude Config** — A real Claude Code setup: agents, commands, rules, and links to other public configs. Take what's useful, build your own.
-13. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
+11. **Building Software with Agents** — The same process at scale: multiple agents, spec files, sprint files, and gates for human approval.
+12. **Claude Built-in Capabilities** — The default slash commands that ship with Claude Code and how to use them day to day.
+13. **Roy's Claude Config** — A real Claude Code setup: agents, commands, rules, and links to other public configs. Take what's useful, build your own.
+14. **Servers, Hosting, and Deployment** — Where your project lives and how people access it.
 
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 

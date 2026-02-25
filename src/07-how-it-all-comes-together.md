@@ -33,7 +33,7 @@ This same framework works at every level of complexity:
 
 - **Simple task.** You type a prompt, the agent does the work, you review. The orchestrator is just you. The explorer is the agent reading the codebase. The actor is the agent writing code. The reviewer is you.
 - **Content writing.** A command file dispatches a researcher and a writer — two sub-agents, each with its own skill. Chapter 8 walks through this setup using a real blog as the example.
-- **Software development.** A manager agent dispatches an explorer, a developer, and a reviewer — four or more sub-agents in a structured flow. Chapter 10 covers this.
+- **Software development.** A manager agent dispatches an explorer, a developer, and a reviewer — four or more sub-agents in a structured flow. Chapter 11 covers this.
 
 The number of agents changes. The complexity of the work changes. The process stays the same.
 

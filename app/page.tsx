@@ -16,6 +16,7 @@ import {
   FolderGit2,
   Globe,
   PenTool,
+  Bot,
 } from "lucide-react";
 
 const chapterIcons: Record<number, React.ReactNode> = {
@@ -28,10 +29,11 @@ const chapterIcons: Record<number, React.ReactNode> = {
   7: <Workflow className="h-5 w-5" />,
   8: <Wrench className="h-5 w-5" />,
   9: <PenTool className="h-5 w-5" />,
-  10: <Code className="h-5 w-5" />,
-  11: <Cog className="h-5 w-5" />,
-  12: <Layers className="h-5 w-5" />,
-  13: <Globe className="h-5 w-5" />,
+  10: <Bot className="h-5 w-5" />,
+  11: <Code className="h-5 w-5" />,
+  12: <Cog className="h-5 w-5" />,
+  13: <Layers className="h-5 w-5" />,
+  14: <Globe className="h-5 w-5" />,
 };
 
 export default function LandingPage() {
@@ -83,7 +85,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <BookOpen className="h-3.5 w-3.5 text-accent" />
-            Free online guide &middot; 13 chapters
+            Free online guide &middot; 14 chapters
           </div>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Working With{" "}
@@ -191,10 +193,11 @@ function getChapterDescription(num: number | null): string {
     7: "The recommended structure for agent work: orchestrator, explorer, actor, reviewer, iterate.",
     8: "The meta-process in action: a flag blog with two agents, two skills, and one command. Full build walkthrough.",
     9: "The craft of writing instruction files that actually work.",
-    10: "The same process at scale — multiple agents building a software feature.",
-    11: "Built-in slash commands, tools, and capabilities that ship with Claude Code.",
-    12: "A real Claude Code setup: agents, commands, rules, and links to other public configs.",
-    13: "Where your project lives and how people access it after you build it.",
+    10: "OpenClaw and the world of personal AI agents — what they do, how they work, and what can go wrong.",
+    11: "The same process at scale — multiple agents building a software feature.",
+    12: "Built-in slash commands, tools, and capabilities that ship with Claude Code.",
+    13: "A real Claude Code setup: agents, commands, rules, and links to other public configs.",
+    14: "Where your project lives and how people access it after you build it.",
   };
   return descriptions[num ?? 0] ?? "";
 }
