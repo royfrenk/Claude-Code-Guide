@@ -21,7 +21,7 @@ const chapterFiles = [
     file: "01-what-ai-agents-are.md",
     number: 1,
     title: "What AI Agents Are (and Aren't)",
-    shortTitle: "What AI Agents Are",
+    shortTitle: "What AI Agents Are (and Aren't)",
   },
   {
     file: "02-memory-and-context.md",
@@ -69,7 +69,7 @@ const chapterFiles = [
     file: "09-writing-effective-instructions.md",
     number: 9,
     title: "Writing Effective Instructions",
-    shortTitle: "Writing Instructions",
+    shortTitle: "Writing Effective Instructions",
   },
   {
     file: "10-personal-ai-agents.md",
@@ -81,25 +81,25 @@ const chapterFiles = [
     file: "11-building-software.md",
     number: 11,
     title: "Building Software with Agents",
-    shortTitle: "Building Software",
+    shortTitle: "Building Software with Agents",
   },
   {
     file: "12-building-your-software-system.md",
     number: 12,
     title: "Claude Built-in Capabilities",
-    shortTitle: "Built-in Capabilities",
+    shortTitle: "Claude Built-in Capabilities",
   },
   {
     file: "13-a-more-complicated-system.md",
     number: 13,
     title: "Roy's Claude Config",
-    shortTitle: "Roy's Config",
+    shortTitle: "Roy's Claude Config",
   },
   {
     file: "14-servers-hosting-deployment.md",
     number: 14,
     title: "Servers, Hosting, and Deployment",
-    shortTitle: "Servers & Deployment",
+    shortTitle: "Servers, Hosting, and Deployment",
   },
   {
     file: "15-glossary.md",
