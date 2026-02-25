@@ -114,3 +114,12 @@ The safety recommendations from both OpenClaw's community and security researche
 > **The costs are real and ongoing.** Unlike Claude Code where you pay per session, a 24/7 agent burns tokens continuously. Set API spending limits before you turn it on. $600 in a week is not an edge case — it's a common first-week experience.
 
 > **This space is moving fast.** OpenClaw's creator joined OpenAI. The project moved to a foundation. New alternatives appear weekly. The specific tool may change — the concept of a personal AI agent running on your own hardware is the durable idea.
+
+---
+
+### More reading
+
+- [OpenClaw Is the Bad Boy of AI Agents. Here's Why Security Experts Are Worried (Fortune)](https://fortune.com/2026/02/12/openclaw-ai-agents-security-risks-beware/) — A balanced overview of OpenClaw's rapid growth, what people are building with it, and the security concerns that come with giving an AI agent full access to your machine.
+- [The Lethal Trifecta for AI Agents (Simon Willison)](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — Why combining private data, untrusted content, and external communication creates a structural vulnerability in autonomous agents that no one has solved yet.
+- [Personal AI Agents Like OpenClaw Are a Security Nightmare (Cisco)](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare) — Cisco's security team breaks down the specific risks of personal AI agents: credential theft, prompt injection, and runaway actions. (Technical deep-dive — worth reading for the risk awareness, even if you skip the technical details.)
+- [How to Use OpenClaw Safely (Gen Digital)](https://www.gendigital.com/blog/insights/leadership-perspectives/how-to-use-openclaw-safely) — Practical safety recommendations if you decide to try OpenClaw: separate accounts, sandbox mode, allow/deny lists, and budget controls.

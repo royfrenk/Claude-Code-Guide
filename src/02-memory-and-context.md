@@ -95,3 +95,12 @@ If something "broke" between sessions, the agent didn't forget. It never knew. T
 > **End each session with a save.** Before closing: (1) commit your changes — "Commit everything with a message about what we did today," (2) push to GitHub — "Push to GitHub," (3) optionally, ask the agent to update notes — "Update the CLAUDE.md with what we accomplished and what's left to do." This takes a minute and means tomorrow's session starts clean.
 
 > **Know when to start fresh.** If the agent seems confused, if the conversation is going in circles, or if you've been going back and forth on the same issue for too long — start a new session. A fresh agent with a clear instruction is often more productive than a confused agent with a long conversation history.
+
+---
+
+### More reading
+
+- [What Is a Context Window? (IBM)](https://www.ibm.com/think/topics/context-window) — A clear explanation of context windows, what they hold, and why they matter for every AI interaction.
+- [How Does LLM Memory Work? (DataCamp)](https://www.datacamp.com/blog/how-does-llm-memory-work) — A deeper look at the different types of AI memory — short-term, long-term, and external — and how to build context-aware applications.
+- [What Is a Context Window — and Why Does It Matter? (Zapier)](https://zapier.com/blog/context-window/) — A plain-language walkthrough of context windows, what fills them up, and the tradeoffs of bigger vs. smaller windows.
+- [What Are AI Tokens and Context Windows, and Why Should You Care? (Simple.ai)](https://simple.ai/p/tokens-and-context-windows) — A conversational explainer of how AI breaks text into tokens and why context windows have a hard limit.

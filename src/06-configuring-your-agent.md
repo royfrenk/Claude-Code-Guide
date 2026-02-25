@@ -245,3 +245,12 @@ claude mcp add --transport http github https://mcp.github.com
 ### Practical tips
 
 > **Don't skip the CLAUDE.md.** Starting without a CLAUDE.md is like hiring someone and not telling them what the project is. The agent will work — but it'll make assumptions about your tech stack, style, and preferences that might not match yours. Five minutes writing a CLAUDE.md saves hours of corrections.
+
+---
+
+### More reading
+
+- [Best Practices for Claude Code (Anthropic)](https://code.claude.com/docs/en/best-practices) — The official guide from Anthropic on configuring CLAUDE.md, managing context, using multi-session workflows, and getting the most out of Claude Code.
+- [The Complete Guide to Building Skills for Claude (Anthropic)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf?hsLang=en) — Anthropic's official guide to creating reusable skills, covering structure, sizing, and composition patterns.
+- [Using CLAUDE.md Files: Customizing Claude Code for Your Codebase (Anthropic)](https://claude.com/blog/using-claude-md-files) — Anthropic's official walkthrough of CLAUDE.md files, covering structure, the `/init` command, and best practices for giving your agent persistent project context.
+- [Ultimate Guide to Claude MCP Servers and Setup (Generect)](https://generect.com/blog/claude-mcp/) — A comprehensive walkthrough of the Model Context Protocol, from what MCP servers are to setting them up for GitHub, databases, and other tools. (Advanced — skip this if you're just getting started.)

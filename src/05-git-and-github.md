@@ -186,3 +186,11 @@ If you understand commits, branches, push, and pull — you know enough to work 
 ### Practical tips
 
 > **Commit after every completed task.** Every time you reach a working state — commit. Think of commits as save points in a game. If the agent breaks something in the next task, you can go back. A good rhythm: one commit per completed task. Finished the contact form? Commit. Fixed the header? Commit. About to redesign the homepage? Commit first.
+
+---
+
+### More reading
+
+- [What Is Git? Our Beginner's Guide to Version Control (GitHub Blog)](https://github.blog/developer-skills/programming-languages-and-frameworks/what-is-git-our-beginners-guide-to-version-control/) — GitHub's own introduction to Git, written for people who have never used version control before.
+- [A Simple Guide to GitHub for Non-Developers (Unito)](https://unito.io/blog/guide-to-github-for-project-managers/) — Explains GitHub in terms of project management — repositories, issues, pull requests — without assuming you write code.
+- [Git and GitHub Tutorial: Version Control for Beginners (freeCodeCamp)](https://www.freecodecamp.org/news/git-and-github-for-beginners/) — A step-by-step walkthrough of the core Git workflow, from your first commit to pushing to GitHub.

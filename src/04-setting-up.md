@@ -189,3 +189,11 @@ To install any of these: search for the name in the Extensions panel, find the r
 | Can't sign in | Make sure you have a Claude account at [claude.ai](https://claude.ai). Claude Code requires at least a Pro subscription (\$20/mo). |
 | Agent responds but can't create files | Check that you've opened a folder in VS Code (File → Open Folder), not just a single file. The agent needs a project folder to work in. |
 | Extension installed but no icon in sidebar | Try restarting VS Code (close it completely and reopen). Sometimes extensions need a restart to appear. |
+
+---
+
+### More reading
+
+- [Claude Code Quickstart (Anthropic)](https://code.claude.com/docs/en/quickstart) — The official step-by-step guide from Anthropic for getting Claude Code installed and running.
+- [Claude Code Tutorial for Beginners (codewithmukesh)](https://codewithmukesh.com/blog/claude-code-for-beginners/) — A hands-on walkthrough covering installation, first commands, and practical tips for getting productive quickly.
+- [Claude Code for the Rest of Us: Setup Guide and Use Cases (WhyTryAI)](https://www.whytryai.com/p/claude-code-beginner-guide) — Written for non-developers, this guide covers the basics of what Claude Code can do and how to start using it without a technical background.

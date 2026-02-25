@@ -118,3 +118,12 @@ The practical rule: start with a mid-range model. Drop to cheap for grunt work. 
 > **Read what the agent changed.** The agent tells you what it did after each task. Read it. Sometimes it makes assumptions you didn't intend — changing a file you didn't ask about, using a library you don't want, or interpreting your request differently than you meant. Catching these early is easy. Catching them three tasks later is hard.
 
 > **Watch what you approve.** When the agent asks permission to run a command or make a change, read the request before approving. Pay special attention to file deletions, package installs, and configuration changes.
+
+---
+
+### More reading
+
+- [The Agentic Loop, Explained: What Every PM Should Know (iKangai)](https://www.ikangai.com/the-agentic-loop-explained-what-every-pm-should-know-about-how-ai-agents-actually-work/) — A non-technical breakdown of the perceive-reason-act cycle that powers every AI agent.
+- [The Complete Beginners Guide to Autonomous Agents (Matt Shumer)](https://www.mattprd.com/p/the-complete-beginners-guide-to-autonomous-agents) — An accessible introduction to how agents work, what they can do, and their limitations.
+- [Not All AI-Assisted Programming Is Vibe Coding (Simon Willison)](https://simonwillison.net/2025/Mar/19/vibe-coding/) — The distinction between letting AI write code you don't review ("vibe coding") and using AI as a serious tool, with practical advice on when each approach makes sense.
+- [AI Agents for Beginners (Microsoft)](https://github.com/microsoft/ai-agents-for-beginners) — A 12-lesson course covering agent fundamentals, from concept to working code.

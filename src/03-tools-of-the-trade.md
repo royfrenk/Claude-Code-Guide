@@ -151,3 +151,11 @@ Both are solid choices. This guide uses Claude Code because it teaches you the m
 | **Learning curve** | Lowest — if you can chat, you can use it. | Gentle — describe what you want in plain language. | Steeper — need to understand terminal, project structure, deployment basics. |
 | **Best for** | Quick questions, small snippets, learning, one-off tasks. | Quick prototypes, MVPs, landing pages. | Projects you want to own, customize, and maintain long-term. |
 | **Limitations** | No automation — you copy-paste everything manually. No file access, no deployment, no memory between sessions. | Platform lock-in. Limited customization. If they shut down or change pricing, your project is affected. Hard to move your code elsewhere. | Steeper learning curve. You handle hosting, deployment, and project structure yourself. Things can break and you need to troubleshoot. |
+
+---
+
+### More reading
+
+- [Cursor vs Windsurf vs Claude Code: The Honest Comparison (DEV Community)](https://dev.to/pockit_tools/cursor-vs-windsurf-vs-claude-code-in-2026-the-honest-comparison-after-using-all-three-3gof) — A side-by-side review from a developer who used all three tools on real projects, covering context handling, pricing, and workflow differences.
+- [Best AI Coding IDE 2025: Cursor vs Antigravity vs Claude Code vs Windsurf (HumAI)](https://www.humai.blog/best-ai-coding-ide-2025-cursor-vs-antigravity-vs-claude-code-vs-windsurf-the-complete-comparison/) — A detailed comparison including Antigravity's Manager View and how each tool handles multi-agent workflows.
+- [The Fastest Way to Start Coding with AI Tools — A Beginner's Guide (Geeky Gadgets)](https://www.geeky-gadgets.com/beginners-guide-to-ai-coding/) — A step-by-step roadmap for non-coders, starting with conversational AI and progressing to no-code platforms and agent-assisted tools.

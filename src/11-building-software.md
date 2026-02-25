@@ -86,3 +86,12 @@ Chapter 12 covers the default commands that ship with Claude Code. Chapter 13 wa
 > **Gates exist to protect you.** Approving a plan before code gets written is not bureaucracy — it's the cheapest place to catch misunderstandings. Reviewing code before it ships is the second cheapest. The most expensive place to find a problem is in production.
 
 > **Always do the post-mortem.** Even a quick scan of what happened tells you what to change. This is how your process gets better over time — not by reading documentation, but by reviewing your own work.
+
+---
+
+### More reading
+
+- [My LLM Coding Workflow Going into 2026 (Addy Osmani)](https://addyosmani.com/blog/ai-coding-workflow/) — A senior Google engineer's real workflow for building software with AI agents: planning, chunking work, quality gates, and the importance of human oversight.
+- [Vibe Coding as a Software Engineer (Pragmatic Engineer)](https://newsletter.pragmaticengineer.com/p/vibe-coding-as-a-software-engineer) — What happens when professional engineers use AI to write code at scale, including the tradeoffs between speed and understanding.
+- [2026 Agentic Coding Trends Report (Anthropic)](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf?hsLang=en) — Anthropic's data on how developers are using coding agents in practice: adoption rates, workflow patterns, and where agents help most.
+- [A Practical Guide to Building Agents (OpenAI)](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — OpenAI's guide to agent design for product and engineering teams, covering orchestration patterns and real deployment examples from companies like Coinbase and Thomson Reuters.

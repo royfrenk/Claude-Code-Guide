@@ -187,3 +187,11 @@ If you're not sure, start static. You can always add a backend later.
 > **Frontend and backend can live on different platforms.** A common pattern: host your frontend on Vercel (free, fast) and your backend on Railway or Render. They talk to each other over the internet. You don't need to put everything in one place.
 
 > **Environment variables are how you keep secrets safe.** Never put API keys, passwords, or credentials in your code. Store them as environment variables on your hosting platform. Your agent can help you set this up.
+
+---
+
+### More reading
+
+- [Best Hosting Platform in 2025: A Hands-On Guide (Level Up Coding)](https://levelup.gitconnected.com/best-hosting-platform-in-2025-my-hands-on-guide-to-choosing-the-right-one-15e43b8dfee4) — A developer's comparison of Vercel, Netlify, Railway, Render, and others, with recommendations based on project type.
+- [Static Hosting: When to Use Vercel, Netlify, and Other Platforms (DEV Community)](https://dev.to/alex_aslam/static-hosting-when-to-use-vercel-netlify-and-other-platforms-1jdh) — A practical breakdown of when each platform makes sense, based on whether your project is static, dynamic, or somewhere in between.
+- [Deploying a Static Site to a CDN/Serverless Hosting (DoHost)](https://dohost.us/index.php/2025/08/11/deploying-a-static-site-to-a-cdn-serverless-hosting-e-g-netlify-vercel/) — The mechanics of deploying to CDN-based hosting: what happens when you push, how global distribution works, and why static sites are fast by default.

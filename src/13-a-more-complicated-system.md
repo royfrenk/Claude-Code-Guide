@@ -186,3 +186,12 @@ Start with the minimum: one agent, one command, a few rules. Add an explorer whe
 > **Post-mortems are how the system gets smarter.** They're optional but powerful. A five-minute review after each sprint surfaces the gaps. A one-line fix to a rule prevents the same mistake next time. Compound that over months and the system becomes remarkably good.
 
 > **Study other systems, don't copy them.** The links above are references, not templates. Browse them to see how other people solve the same problems, then build what fits your workflow.
+
+---
+
+### More reading
+
+- [Cooking with Claude Code: The Complete Tutorial and Guide (Sid Bharath)](https://www.siddharthbharath.com/claude-code-the-complete-guide/) — A comprehensive guide covering agents, skills, commands, hooks, and plugins, with practical examples of building a complete system.
+- [awesome-claude-code (GitHub)](https://github.com/hesreallyhim/awesome-claude-code) — A curated collection of community-built skills, commands, agents, and hooks for Claude Code, organized by category.
+- [Claude Code Sub-Agents (GitHub)](https://github.com/lst97/claude-code-sub-agents) — 33 specialized sub-agent templates organized by domain (frontend, backend, security, data, DevOps), useful as starting points for building your own agents.
+- [Designing Agentic Loops (Simon Willison)](https://simonwillison.net/2025/Sep/30/designing-agentic-loops/) — A thoughtful look at how to structure the loops that agents run in, with practical considerations for safety, cost control, and human oversight.

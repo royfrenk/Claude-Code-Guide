@@ -100,3 +100,11 @@ The real power comes when you combine built-in commands with the custom configur
 > **Use `/init` on every new project.** It takes ten seconds and gives the agent a head start. You can always edit the generated CLAUDE.md later, but starting with something is always better than starting with nothing.
 
 > **Use `/plan` for anything risky.** Plan mode lets the agent analyze and propose changes without executing them. You review the plan, approve or adjust, then it executes. For unfamiliar codebases or complex changes, this is the safest way to work.
+
+---
+
+### More reading
+
+- [Slash Commands (Claude Code Docs)](https://code.claude.com/docs/en/slash-commands) — The official reference for every built-in slash command, with usage examples and parameter descriptions.
+- [How I Use Claude Code, Plus My Best Tips (Builder.io)](https://www.builder.io/blog/claude-code) — Practical tips from a developer on context management, model switching, and the commands they use most in daily work.
+- [Claude Code CLI Cheatsheet (Shipyard)](https://shipyard.build/blog/claude-code-cheat-sheet/) — A quick-reference card for Claude Code commands, configuration options, and keyboard shortcuts.

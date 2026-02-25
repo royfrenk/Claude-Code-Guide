@@ -270,3 +270,12 @@ This turns files into the persistent brain that the agent itself lacks. The agen
 > **Files are the agent's memory.** Anything important should be in a file — not in the conversation. Conversations end. Files persist. Design your workflow around files, and session interruptions become harmless.
 
 > **Split skills when they grow.** One page is fine. Three pages is fine. Ten pages means you should split into a core skill and context-specific skills. The test: would any agent load this whole file and use all of it? If not, split.
+
+---
+
+### More reading
+
+- [How to Write Effective Prompts for AI Agents (MindStudio)](https://www.mindstudio.ai/blog/prompt-engineering-ai-agents) — A beginner-friendly guide to writing agent prompts, covering memory systems, structured formatting, and why agent instructions differ from chatbot prompts.
+- [How to Build Your Agent: 11 Prompting Techniques (Augment Code)](https://www.augmentcode.com/blog/how-to-build-your-agent-11-prompting-techniques-for-better-ai-agents) — Specific techniques for writing agent instructions: structured formatting, step-by-step decomposition, and tool-calling patterns.
+- [How to Write 10/10 AI Instructions (Optimizely)](https://www.optimizely.com/insights/blog/how-to-write-ai-instructions/) — A practical guide to writing the foundational instructions that shape agent behavior — covering objectives, workflows, response formats, and error handling.
+- [Effective Harnesses for Long-Running Agents (Anthropic)](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) — How to build the scaffolding around long-running agents: checkpointing, recovery, and the file-based state management described in this chapter.

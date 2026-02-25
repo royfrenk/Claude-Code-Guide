@@ -180,3 +180,11 @@ One command. Two agents. Two skills. An archive. The author types a single comma
 > **Don't just say "do research" — define what good research means.** A research playbook that lists specific categories produces organized, useful output. A vague "research this topic" produces a Wikipedia summary. The more specific your skill, the better the results.
 
 > **Commands are just prompts with structure.** Don't overthink them. Write the steps you'd follow yourself, put them in a markdown file in `.claude/commands/`, and now you've got a repeatable workflow. You can always refine it after a few runs.
+
+---
+
+### More reading
+
+- [Creating an AI Agent to Write Blog Posts with CrewAI (Towards Data Science)](https://towardsdatascience.com/creating-an-ai-agent-to-write-blog-posts-with-crewai/) — A walkthrough of building a multi-agent writing system with a planner, writer, and editor, similar to the flag blog pattern in this chapter.
+- [Automate Blog Creation in Brand Voice with AI (n8n)](https://n8n.io/workflows/2648-automate-blog-creation-in-brand-voice-with-ai/) — A practical workflow template that chains research, writing, and brand voice enforcement, demonstrating the same skill-based approach used in the flag blog. (Note: n8n is a different automation tool, not Claude Code — but the workflow pattern is the same.)
+- [The Complete Guide to Building Skills for Claude (Anthropic)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf?hsLang=en) — How to create and structure skills like the voice and research playbook files described in this chapter.

@@ -46,3 +46,11 @@ The number of agents changes. The complexity of the work changes. The process st
 > **The iteration loop is where the value is.** The first draft is never the final version — for blog posts or software. Get comfortable giving specific feedback: not "this isn't right" but "the introduction is too formal" or "the button should be on the left." The agent improves with each round.
 
 > **Always do the post-mortem.** Even a quick scan of what happened tells you what to change. This is how your process gets better over time — not by reading documentation, but by reviewing your own work.
+
+---
+
+### More reading
+
+- [Building Effective AI Agents (Anthropic)](https://www.anthropic.com/research/building-effective-agents) — Anthropic's guide to composable agent patterns: prompting, chaining, routing, orchestration, and evaluation. The foundational reference for the process described in this chapter.
+- [How We Built Our Multi-Agent Research System (Anthropic)](https://www.anthropic.com/engineering/multi-agent-research-system) — A detailed look at how Anthropic built a real multi-agent system with an orchestrator-worker pattern, including how agents coordinate and share context.
+- [AI Agent Orchestration Patterns (Microsoft)](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns) — Microsoft's reference for agent design patterns: sequential, parallel, supervisor, and group chat. Useful for understanding the architectural options behind any orchestration workflow.
