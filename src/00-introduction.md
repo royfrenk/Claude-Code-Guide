@@ -34,11 +34,3 @@ The guide is organized in three parts:
 Each chapter ends with a **Practical tips** section — short, concrete advice you can apply immediately. You don't need to read those tips upfront. They're there when you need them.
 
 **Glossary** — Every technical term introduced in this guide, collected in one place. Not a chapter — an addendum you can flip to anytime.
-
----
-
-### More reading
-
-- [The 2026 Guide to AI Agents (IBM)](https://www.ibm.com/think/ai-agents) — A clear, non-technical overview of what AI agents are, how they work, and where they're headed.
-- [A Practical Guide to Building Agents (OpenAI)](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) — OpenAI's guide to agent design patterns, covering single-agent and multi-agent architectures with real-world examples.
-- [Building Effective AI Agents (Anthropic)](https://www.anthropic.com/research/building-effective-agents) — Anthropic's guide to composable agent patterns, from simple prompts to multi-agent orchestration.

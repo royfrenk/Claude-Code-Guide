@@ -1,96 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="system-ui, -apple-system, sans-serif">
-  <rect width="900" height="520" fill="#fafafa" rx="12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="960" height="680" fill="#fafafa" rx="12"/>
 
-  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">The AI Building Tool Landscape</text>
+  <text x="480" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">The AI Tool Landscape</text>
 
-  <!-- Chat Interfaces section -->
-  <rect x="20" y="55" width="270" height="440" rx="12" fill="#F3E8F9" stroke="#8E44AD" stroke-width="2"/>
-  <text x="155" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#6C3483">Chat Interfaces</text>
-  <text x="155" y="100" text-anchor="middle" font-size="11" fill="#9B59B6">Talk to the model, copy-paste output</text>
+  <!-- Row 1: Chat, E2E Software Building, Enterprise Orchestration -->
 
-  <!-- ChatGPT -->
-  <rect x="38" y="120" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
-  <text x="55" y="143" font-size="13" font-weight="bold" fill="#6C3483">ChatGPT</text>
-  <text x="55" y="160" font-size="11" fill="#666">OpenAI's chat. Most popular.</text>
+  <!-- Chat Interfaces -->
+  <rect x="20" y="55" width="290" height="275" rx="12" fill="#F3E8F9" stroke="#8E44AD" stroke-width="2"/>
+  <text x="165" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#6C3483">Chat Interfaces</text>
+  <text x="165" y="98" text-anchor="middle" font-size="10" fill="#9B59B6">Talk to the model, copy-paste output</text>
 
-  <!-- Claude.ai -->
-  <rect x="38" y="188" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
-  <text x="55" y="211" font-size="13" font-weight="bold" fill="#6C3483">Claude.ai</text>
-  <text x="55" y="228" font-size="11" fill="#666">Anthropic's chat. Strong at code.</text>
+  <rect x="35" y="112" width="260" height="42" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="50" y="131" font-size="12" font-weight="bold" fill="#6C3483">ChatGPT</text>
+  <text x="50" y="145" font-size="10" fill="#666">OpenAI's chat. Most popular.</text>
 
-  <!-- Gemini -->
-  <rect x="38" y="256" width="234" height="55" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
-  <text x="55" y="279" font-size="13" font-weight="bold" fill="#6C3483">Gemini</text>
-  <text x="55" y="296" font-size="11" fill="#666">Google's chat. Free tier available.</text>
+  <rect x="35" y="162" width="260" height="42" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="50" y="181" font-size="12" font-weight="bold" fill="#6C3483">Claude.ai</text>
+  <text x="50" y="195" font-size="10" fill="#666">Anthropic's chat. Strong at code.</text>
 
-  <!-- Chat characteristics -->
-  <rect x="38" y="395" width="234" height="85" rx="6" fill="#E8D5F5" stroke="none"/>
-  <text x="53" y="415" font-size="11" fill="#6C3483" font-weight="600">You handle everything:</text>
-  <text x="53" y="433" font-size="11" fill="#555">- Copy code into your own files</text>
-  <text x="53" y="449" font-size="11" fill="#555">- Set up your own project</text>
-  <text x="53" y="465" font-size="11" fill="#555">- No automation, manual control</text>
+  <rect x="35" y="212" width="260" height="42" rx="8" fill="white" stroke="#8E44AD" stroke-width="1"/>
+  <text x="50" y="231" font-size="12" font-weight="bold" fill="#6C3483">Gemini</text>
+  <text x="50" y="245" font-size="10" fill="#666">Google's chat. Free tier available.</text>
 
-  <!-- All-in-one Platforms section -->
-  <rect x="310" y="55" width="270" height="440" rx="12" fill="#FEF9E7" stroke="#F39C12" stroke-width="2"/>
-  <text x="445" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#7D6608">All-in-one Platforms</text>
-  <text x="445" y="100" text-anchor="middle" font-size="11" fill="#B7950B">You describe, it builds and hosts</text>
+  <rect x="35" y="268" width="260" height="50" rx="6" fill="#E8D5F5" stroke="none"/>
+  <text x="50" y="286" font-size="10" fill="#6C3483" font-weight="600">You handle everything manually.</text>
+  <text x="50" y="300" font-size="10" fill="#555">No files, no automation, no memory.</text>
 
-  <!-- Replit -->
-  <rect x="328" y="120" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
-  <text x="345" y="143" font-size="13" font-weight="bold" fill="#7D6608">Replit</text>
-  <text x="345" y="160" font-size="11" fill="#666">Browser dev environment + hosting.</text>
+  <!-- E2E Software Building Platforms -->
+  <rect x="330" y="55" width="290" height="275" rx="12" fill="#FEF9E7" stroke="#F39C12" stroke-width="2"/>
+  <text x="475" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#7D6608">E2E Software Building</text>
+  <text x="475" y="98" text-anchor="middle" font-size="10" fill="#B7950B">You describe, it builds and hosts</text>
 
-  <!-- Lovable -->
-  <rect x="328" y="188" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
-  <text x="345" y="211" font-size="13" font-weight="bold" fill="#7D6608">Lovable</text>
-  <text x="345" y="228" font-size="11" fill="#666">Describe in words, it builds + deploys.</text>
+  <rect x="345" y="112" width="260" height="42" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="360" y="131" font-size="12" font-weight="bold" fill="#7D6608">Replit</text>
+  <text x="360" y="145" font-size="10" fill="#666">Browser dev environment + hosting.</text>
 
-  <!-- v0 -->
-  <rect x="328" y="256" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
-  <text x="345" y="279" font-size="13" font-weight="bold" fill="#7D6608">v0 (Vercel)</text>
-  <text x="345" y="296" font-size="11" fill="#666">UI focused. Describe, design, deploy.</text>
+  <rect x="345" y="162" width="260" height="42" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="360" y="181" font-size="12" font-weight="bold" fill="#7D6608">Lovable</text>
+  <text x="360" y="195" font-size="10" fill="#666">Describe in words, it builds + deploys.</text>
 
-  <!-- Base44 -->
-  <rect x="328" y="324" width="234" height="55" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
-  <text x="345" y="347" font-size="13" font-weight="bold" fill="#7D6608">Base44</text>
-  <text x="345" y="364" font-size="11" fill="#666">All-in-one: describe, build, host.</text>
+  <rect x="345" y="212" width="260" height="42" rx="8" fill="white" stroke="#F39C12" stroke-width="1"/>
+  <text x="360" y="231" font-size="12" font-weight="bold" fill="#7D6608">v0 / Base44</text>
+  <text x="360" y="245" font-size="10" fill="#666">UI design, all-in-one app building.</text>
 
-  <!-- All-in-one characteristics -->
-  <rect x="328" y="395" width="234" height="85" rx="6" fill="#FCF3CF" stroke="none"/>
-  <text x="343" y="415" font-size="11" fill="#7D6608" font-weight="600">Platform handles:</text>
-  <text x="343" y="433" font-size="11" fill="#555">- Hosting, deployment, servers</text>
-  <text x="343" y="449" font-size="11" fill="#555">- Project structure and setup</text>
-  <text x="343" y="465" font-size="11" fill="#555">- Less control, faster start</text>
+  <rect x="345" y="268" width="260" height="50" rx="6" fill="#FCF3CF" stroke="none"/>
+  <text x="360" y="286" font-size="10" fill="#7D6608" font-weight="600">Platform handles everything.</text>
+  <text x="360" y="300" font-size="10" fill="#555">Fast start, less control, vendor lock-in.</text>
 
-  <!-- Agent-assisted Tools section -->
-  <rect x="600" y="55" width="280" height="440" rx="12" fill="#EBF5FB" stroke="#2E86C1" stroke-width="2"/>
-  <text x="740" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#21618C">Agent-assisted Tools</text>
-  <text x="740" y="100" text-anchor="middle" font-size="11" fill="#5499C7">Your files, your machine, AI writes code</text>
+  <!-- Enterprise Agent Orchestration -->
+  <rect x="640" y="55" width="300" height="275" rx="12" fill="#FDEDEC" stroke="#C0392B" stroke-width="2"/>
+  <text x="790" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#922B21">Enterprise Orchestration</text>
+  <text x="790" y="98" text-anchor="middle" font-size="10" fill="#E74C3C">Agents handle your customers</text>
 
-  <!-- Claude Code -->
-  <rect x="618" y="120" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
-  <text x="635" y="143" font-size="13" font-weight="bold" fill="#1B4F72">Claude Code</text>
-  <text x="635" y="160" font-size="11" fill="#666">CLI + VS Code. Most autonomous agent.</text>
+  <rect x="655" y="112" width="270" height="42" rx="8" fill="white" stroke="#C0392B" stroke-width="1"/>
+  <text x="670" y="131" font-size="12" font-weight="bold" fill="#922B21">Sierra</text>
+  <text x="670" y="145" font-size="10" fill="#666">Customer experience agents. $10B val.</text>
 
-  <!-- Cursor -->
-  <rect x="618" y="188" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
-  <text x="635" y="211" font-size="13" font-weight="bold" fill="#1B4F72">Cursor</text>
-  <text x="635" y="228" font-size="11" fill="#666">AI-powered IDE. Choose your model.</text>
+  <rect x="655" y="162" width="270" height="42" rx="8" fill="white" stroke="#C0392B" stroke-width="1"/>
+  <text x="670" y="181" font-size="12" font-weight="bold" fill="#922B21">Google Vertex AI</text>
+  <text x="670" y="195" font-size="10" fill="#666">Agent builder. 100+ system connectors.</text>
 
-  <!-- Windsurf -->
-  <rect x="618" y="256" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
-  <text x="635" y="279" font-size="13" font-weight="bold" fill="#1B4F72">Windsurf</text>
-  <text x="635" y="296" font-size="11" fill="#666">Agent IDE. Similar to Cursor.</text>
+  <rect x="655" y="212" width="270" height="42" rx="8" fill="white" stroke="#C0392B" stroke-width="1"/>
+  <text x="670" y="231" font-size="12" font-weight="bold" fill="#922B21">Copilot Studio / Agentforce</text>
+  <text x="670" y="245" font-size="10" fill="#666">Microsoft &amp; Salesforce ecosystems.</text>
 
-  <!-- Antigravity -->
-  <rect x="618" y="324" width="244" height="55" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
-  <text x="635" y="347" font-size="13" font-weight="bold" fill="#1B4F72">Antigravity</text>
-  <text x="635" y="364" font-size="11" fill="#666">Google's IDE. Multi-agent views.</text>
+  <rect x="655" y="268" width="270" height="50" rx="6" fill="#FADBD8" stroke="none"/>
+  <text x="670" y="286" font-size="10" fill="#922B21" font-weight="600">Your customers talk to the agents.</text>
+  <text x="670" y="300" font-size="10" fill="#555">Enterprise pricing ($500K+). High volume.</text>
 
-  <!-- Agent-assisted characteristics -->
-  <rect x="618" y="395" width="244" height="85" rx="6" fill="#D4E6F1" stroke="none"/>
-  <text x="633" y="415" font-size="11" fill="#1B4F72" font-weight="600">You handle:</text>
-  <text x="633" y="433" font-size="11" fill="#555">- Hosting and deployment</text>
-  <text x="633" y="449" font-size="11" fill="#555">- Project structure and setup</text>
-  <text x="633" y="465" font-size="11" fill="#555">- Full control and ownership</text>
+  <!-- Row 2: Workflow Automation, Agent Workspace Platforms -->
+
+  <!-- Workflow Automation -->
+  <rect x="120" y="360" width="320" height="290" rx="12" fill="#E8F8F5" stroke="#1ABC9C" stroke-width="2"/>
+  <text x="280" y="387" text-anchor="middle" font-size="14" font-weight="bold" fill="#0E6655">Workflow Automation</text>
+  <text x="280" y="403" text-anchor="middle" font-size="10" fill="#1ABC9C">Connect apps: "when X happens, do Y"</text>
+
+  <rect x="135" y="417" width="290" height="42" rx="8" fill="white" stroke="#1ABC9C" stroke-width="1"/>
+  <text x="150" y="436" font-size="12" font-weight="bold" fill="#0E6655">Zapier</text>
+  <text x="150" y="450" font-size="10" fill="#666">7,000+ integrations. Easiest to use.</text>
+
+  <rect x="135" y="467" width="290" height="42" rx="8" fill="white" stroke="#1ABC9C" stroke-width="1"/>
+  <text x="150" y="486" font-size="12" font-weight="bold" fill="#0E6655">Make</text>
+  <text x="150" y="500" font-size="10" fill="#666">Visual builder. Cheaper than Zapier.</text>
+
+  <rect x="135" y="517" width="290" height="42" rx="8" fill="white" stroke="#1ABC9C" stroke-width="1"/>
+  <text x="150" y="536" font-size="12" font-weight="bold" fill="#0E6655">n8n</text>
+  <text x="150" y="550" font-size="10" fill="#666">Open source. Self-hosted option.</text>
+
+  <rect x="135" y="580" width="290" height="55" rx="6" fill="#D1F2EB" stroke="none"/>
+  <text x="150" y="598" font-size="10" fill="#0E6655" font-weight="600">Automates repetitive tasks.</text>
+  <text x="150" y="612" font-size="10" fill="#555">No coding. AI blocks available for smart</text>
+  <text x="150" y="626" font-size="10" fill="#555">routing, summarizing, and classification.</text>
+
+  <!-- Agent Workspace Platforms -->
+  <rect x="490" y="360" width="350" height="290" rx="12" fill="#EBF5FB" stroke="#2E86C1" stroke-width="2"/>
+  <text x="665" y="387" text-anchor="middle" font-size="14" font-weight="bold" fill="#21618C">Agent Workspace Platforms</text>
+  <text x="665" y="403" text-anchor="middle" font-size="10" fill="#5499C7">Your files, your machine, AI writes code</text>
+
+  <rect x="505" y="417" width="320" height="42" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="520" y="436" font-size="12" font-weight="bold" fill="#1B4F72">Claude Code</text>
+  <text x="520" y="450" font-size="10" fill="#666">CLI + VS Code. Most autonomous agent.</text>
+
+  <rect x="505" y="467" width="320" height="42" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="520" y="486" font-size="12" font-weight="bold" fill="#1B4F72">Cursor</text>
+  <text x="520" y="500" font-size="10" fill="#666">AI-powered IDE. Choose your model.</text>
+
+  <rect x="505" y="517" width="320" height="42" rx="8" fill="white" stroke="#2E86C1" stroke-width="1"/>
+  <text x="520" y="536" font-size="12" font-weight="bold" fill="#1B4F72">Windsurf / Antigravity</text>
+  <text x="520" y="550" font-size="10" fill="#666">Agent IDEs built on VS Code.</text>
+
+  <rect x="505" y="580" width="320" height="55" rx="6" fill="#D4E6F1" stroke="none"/>
+  <text x="520" y="598" font-size="10" fill="#1B4F72" font-weight="600">Full control and ownership.</text>
+  <text x="520" y="612" font-size="10" fill="#555">Your files, your machine. You handle</text>
+  <text x="520" y="626" font-size="10" fill="#555">hosting, deployment, and project structure.</text>
 </svg>
