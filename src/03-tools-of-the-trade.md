@@ -49,19 +49,21 @@ The tradeoff is control. You work within what the platform supports. If you need
 
 ### Enterprise agent orchestration platforms
 
-These platforms don't help *you* build software — they help businesses deploy AI agents that handle operations. Customer service, sales, support, onboarding. The agents talk to customers, look up orders, process returns, schedule appointments — across chat, voice, email, and messaging apps.
+These are platforms for building, deploying, and managing AI agents at scale. Think of them as visual workbenches where businesses design agents — through a UI, not code — and assign them to tasks across the organization. Customer service is one use case, but it's far from the only one. Agents built on these platforms handle IT operations, HR onboarding, supply chain logistics, marketing campaigns, data processing, financial workflows, and more.
 
-The key difference from everything else in this chapter: you're not the one talking to the agent. Your *customers* are. You set up the agents, define what they can do, connect them to your systems (order database, CRM, knowledge base), and the platform orchestrates everything behind the scenes. Multiple specialized agents work together — one handles billing questions, another handles returns, a third escalates to a human when it's stuck.
+What they have in common: you use the platform to create agents, define what each agent can do, connect them to your business systems (databases, CRMs, ERPs, communication tools), and orchestrate how they work together. The platform handles the infrastructure — scaling, monitoring, security, governance — so the business focuses on what the agents should accomplish.
 
-| Platform | What it does | Notes |
+Some platforms specialize. Sierra focuses on customer-facing agents — conversations across chat, voice, and messaging where the agent remembers previous interactions. Google's Vertex AI Agent Builder is far more general-purpose — a full development environment with connectors to 100+ enterprise systems, where you can build agents for virtually any business function. Others sit somewhere in between.
+
+| Platform | Focus | Notes |
 |---|---|---|
-| **Sierra** | Customer experience agents — service, sales, account management. Agents remember previous conversations with the same customer. | Founded by Salesforce's former co-CEO. \$10B valuation. Uses multiple AI models behind the scenes, each picked for what it does best. |
-| **Google Vertex AI Agent Builder** | Build and deploy agents with connectors to 100+ enterprise systems (SAP, Salesforce, Oracle). | Part of Google Cloud. Low-code, production-ready. Best for organizations already on Google Cloud. |
-| **Microsoft Copilot Studio** | Low-code agent builder integrated with Microsoft 365, Teams, and Outlook. | Tightly bundled with the Microsoft ecosystem. Strong governance and policy controls. |
-| **Salesforce Agentforce** | Multi-agent platform built into Salesforce CRM. Agents handle sales, service, and marketing workflows. | Best for companies already using Salesforce. Agents work directly with your CRM data. |
-| **ServiceNow AI Agent Orchestrator** | Teams of specialized agents that collaborate across IT, HR, and operations. | Best for IT-heavy organizations. Agents coordinate multi-step tasks across departments. |
+| **Sierra** | Customer experience — agents that handle service, sales, and account management across chat, voice, and email. | Founded by Salesforce's former co-CEO. \$10B valuation. Agents have persistent memory across conversations. Uses multiple AI models, each picked for what it does best. |
+| **Google Vertex AI Agent Builder** | General-purpose — build agents for any business function with connectors to 100+ enterprise systems (SAP, Salesforce, Oracle, custom APIs). | The most elaborate platform in this list. Low-code and full-code options. Part of Google Cloud. |
+| **Microsoft Copilot Studio** | Microsoft ecosystem — agents integrated with Microsoft 365, Teams, Outlook, and SharePoint. | Low-code builder. Strong governance and policy controls. Best for organizations already on Microsoft. |
+| **Salesforce Agentforce** | CRM and sales — agents that work directly with customer data, sales pipelines, and marketing workflows. | Built into Salesforce. Best for companies already using the Salesforce ecosystem. |
+| **ServiceNow AI Agent Orchestrator** | IT and operations — teams of specialized agents that collaborate across IT, HR, procurement, and facilities. | Best for IT-heavy organizations. Agents coordinate multi-step tasks across departments. |
 
-These platforms are expensive — enterprise pricing, often custom-negotiated, with full deployments running \$500K–\$2M. They're designed for companies with high customer volume, not personal projects. But they're worth knowing about because they show where agents are headed: not just tools you talk to, but systems that run autonomously on behalf of a business.
+These platforms are expensive — enterprise pricing, often custom-negotiated, with full deployments running \$500K–\$2M. They're designed for organizations, not personal projects. But they're worth knowing about because they show where agents are headed: not just tools you talk to, but systems that run autonomously across an entire business.
 
 ### Workflow automation platforms
 

@@ -1,6 +1,6 @@
 ## Chapter 5: Git and GitHub
 
-> **TL;DR:** Git is an infinite undo button for your project. GitHub is where your project lives online. Together, they let you save your work, go back to any previous version, and collaborate with others. Your agent handles most of the mechanics — but you need to understand what's happening.
+> **TL;DR:** Git is an infinite undo button for your project. GitHub is where your code lives — the canonical location that gives you backup, version history, and portability. Together, they let you save your work, go back to any previous version, and move between machines or tools without losing anything. Your agent handles most of the mechanics — but you need to understand what's happening.
 
 ---
 
@@ -10,7 +10,7 @@ Imagine writing a 20-page document with no undo button. Every change is permanen
 
 That's what building anything with an agent is like without **version control** — a system that tracks every change you make, lets you undo any of them, and keeps a complete history of your project.
 
-**GitHub** is the easiest way to think about this. It's like Google Drive for code — a free website where you upload your project files, keep track of every version, and share or collaborate with others. Most IDEs (including VS Code) connect to it natively, so uploading and downloading projects is built right in.
+**GitHub** is the easiest way to think about this. It's like Google Drive for code — a free website where your code lives as the canonical copy. You upload your project files, keep track of every version, and share or collaborate with others. Most IDEs (including VS Code) connect to it natively, so uploading and downloading projects is built right in.
 
 Behind GitHub is **Git** — the version control engine that actually tracks your changes. Git runs on your computer and records every save point. GitHub stores those save points online where they're safe, shareable, and accessible from any machine. You'll mostly interact with GitHub through your agent or your IDE — Git does the work under the hood.
 
@@ -20,7 +20,7 @@ You might think Git and GitHub are only for software projects. They're not. Any 
 
 A blog, a research archive, a collection of marketing materials, a set of instruction files for your agent — all of these are folders full of files that change over time. A repository gives you:
 
-- **Backup.** Your project lives on GitHub, not just on your laptop. If your machine dies, everything is safe.
+- **Backup.** Your code lives on GitHub, not just on your laptop. If your machine dies, everything is safe.
 - **History.** You can see what changed, when, and why. When an agent rewrites a section and you prefer the old version — go back.
 - **Portability.** Clone the repo onto any machine and keep working. Move between a desktop and a laptop. Share the project with a collaborator.
 
