@@ -66,7 +66,7 @@ Understanding what to avoid is more useful than a list of aspirational qualities
 
 When writing guides or educational material, these additional patterns apply:
 
-**Chapter structure.** Open every chapter with a TL;DR blockquote (2-3 sentences). End every chapter with a "Practical tips" section — a horizontal rule, then `### Practical tips`, then each tip as a blockquote with a bold lead sentence. This gives readers both a quick summary and actionable takeaways.
+**Chapter structure.** Open every chapter with a TL;DR blockquote (2-3 sentences). End every chapter with a "Practical tips" section — a horizontal rule, then `### Practical tips`, then each tip as a blockquote with a bold lead sentence. After Practical tips, optionally include a "For more reading" section with 2-5 linked articles, each with a one-sentence description of what the reader gets. This gives readers a quick summary, actionable takeaways, and a path to go deeper.
 
 **Explain terms inline, once.** On first use, bold the term and define it in plain language right there: "a **context window** — a fixed-size container that holds roughly 100,000-200,000 **tokens** (a token is about ¾ of a word)." After that, use the term without explanation.
 

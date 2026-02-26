@@ -2,6 +2,8 @@
 
 > **TL;DR:** Everything so far has been about agents inside a code editor. OpenClaw is something different — a personal AI agent that runs on your own hardware, communicates through messaging apps, and operates 24/7 without waiting for your commands. This chapter covers what that world looks like, what it can do, and why you should be careful.
 
+![Ava from Ex Machina (2014) — an autonomous AI that doesn't wait for your commands](diagrams/ex-machina-ava.jpg)
+
 ---
 
 ### Beyond the code editor

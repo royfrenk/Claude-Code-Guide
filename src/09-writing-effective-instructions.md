@@ -2,6 +2,8 @@
 
 > **TL;DR:** Skills, agents, and commands are just markdown files — but how you write them matters. This chapter covers the craft: conditional logic, sub-agent dispatching, orchestration, blocking gates, skill sizing, skill composition, and using files as external memory.
 
+![An architect drafting plans by hand — precise instructions that become real structures](diagrams/blueprint-instructions.jpg)
+
 ---
 
 Chapters 5 through 7 introduced the building blocks and showed a working system. This chapter covers the craft of writing instruction files that actually work — the wording patterns, structural techniques, and sizing guidance that make the difference between instructions that produce useful output and instructions that produce generic mush.

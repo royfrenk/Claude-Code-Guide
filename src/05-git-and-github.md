@@ -2,6 +2,8 @@
 
 > **TL;DR:** Git is an infinite undo button for your project. GitHub is where your code lives — the canonical location that gives you backup, version history, and portability. Together, they let you save your work, go back to any previous version, and move between machines or tools without losing anything. Your agent handles most of the mechanics — but you need to understand what's happening.
 
+![Groundhog Day (1993) — Bill Murray reliving the same day, over and over, until he gets it right](diagrams/groundhog-day.jpg)
+
 ---
 
 ### Why version control matters
