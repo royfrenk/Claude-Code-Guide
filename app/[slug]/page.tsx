@@ -28,9 +28,18 @@ export async function generateMetadata({ params }: PageProps) {
     return { title: "Chapter Not Found" };
   }
 
+  const description =
+    chapter.description ||
+    `${chapter.title} - A Guide for Non-Technical People`;
+
   return {
     title: `${chapter.title} | Working With AI Agents`,
-    description: `${chapter.title} - A Guide for Non-Technical People`,
+    description,
+    openGraph: {
+      title: `${chapter.title} | Working With AI Agents`,
+      description,
+      type: "article",
+    },
   };
 }
 

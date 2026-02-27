@@ -6,6 +6,7 @@ export interface Chapter {
   number: number | null;
   title: string;
   shortTitle: string;
+  description: string;
   content: string;
   sections: { id: string; title: string }[];
 }
@@ -60,7 +61,7 @@ const chapterFiles = [
     shortTitle: "The Meta-Process",
   },
   {
-    file: "08-building-your-agent-system.md",
+    file: "08-content-writing-example.md",
     number: 8,
     title: "Content Writing Example",
     shortTitle: "Content Writing Example",
@@ -84,13 +85,13 @@ const chapterFiles = [
     shortTitle: "Building Software with Agents",
   },
   {
-    file: "12-building-your-software-system.md",
+    file: "12-claude-built-in-capabilities.md",
     number: 12,
     title: "Claude Built-in Capabilities",
     shortTitle: "Claude Built-in Capabilities",
   },
   {
-    file: "13-a-more-complicated-system.md",
+    file: "13-roys-claude-config.md",
     number: 13,
     title: "Roy's Claude Config",
     shortTitle: "Roy's Claude Config",
@@ -108,6 +109,16 @@ const chapterFiles = [
     shortTitle: "Glossary",
   },
 ];
+
+function extractTldr(content: string): string {
+  const match = content.match(/^> \*\*TL;DR:\*\*\s*(.+?)(?=\n\n)/m);
+  if (!match) return "";
+  return match[1]
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\*(.+?)\*/g, "$1")
+    .replace(/\n> /g, " ")
+    .trim();
+}
 
 function extractSections(content: string): { id: string; title: string }[] {
   const sections: { id: string; title: string }[] = [];
@@ -147,6 +158,7 @@ export function getAllChapters(): Chapter[] {
       number,
       title,
       shortTitle,
+      description: extractTldr(content),
       content,
       sections,
     };
