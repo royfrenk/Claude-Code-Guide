@@ -1,8 +1,6 @@
-## Chapter 10: Personal AI Agents
+## Chapter 10: OpenClaw
 
 > **TL;DR:** Everything so far has been about agents inside a code editor. OpenClaw is something different — a personal AI agent that runs on your own hardware, communicates through messaging apps, and operates 24/7 without waiting for your commands. This chapter covers what that world looks like, what it can do, and why you should be careful.
-
-![Ava from Ex Machina (2014) — an autonomous AI that doesn't wait for your commands](diagrams/ex-machina-ava.jpg)
 
 ---
 
@@ -26,13 +24,23 @@ Steinberger announced in February 2026 that he's joining OpenAI, and the project
 
 Instead of a terminal interface, you interact through messaging apps. You text it on Telegram. It responds on Telegram. The conversation feels like chatting with a person, not using a tool.
 
-Three things make it different from a chatbot:
+The system has a heartbeat but not a brain. That distinction matters. Claire Vo wrote the clearest explanation of why OpenClaw feels alive even though it isn't: the answer is architecture, not intelligence.
+
+**The Gateway** is the always-on intake layer. It sits on your machine, accepting events from every connected channel — Telegram messages, Slack pings, email webhooks, scheduled timers — and routing each one to the right agent session. The Gateway doesn't think or reason. It receives, routes, and executes. That's it. But because it never stops listening, it creates the impression of an attentive system.
+
+**Heartbeats** are what make it proactive. A heartbeat is a scheduled timer that fires on an interval — say, every morning at 8 AM. When it fires, the Gateway treats it like any other event: route it to an agent, run the agent, send the output. Nothing is "thinking overnight." Time produces events, events kick off agents. The morning briefing that lands in your Telegram at 8:01 AM isn't the result of an AI that was awake all night planning — it's a timer that triggered a function.
+
+**Queues** keep it coherent. Every event goes into a serial queue. One thing runs at a time. No parallel chaos, no race conditions, no interleaved conversations. This is the boring infrastructure that makes the whole thing work — air traffic control, not autopilot.
+
+Four things make it different from a chatbot:
 
 **Persistent memory.** It remembers everything across conversations, stored as local markdown files on your machine. Tell it your preferences once — it remembers next time.
 
 **Tool access.** It can execute shell commands, read and write files, control your browser (with your existing logins and credentials), and integrate with 50+ third-party services. It has over 100 preconfigured skills — and it can write new ones.
 
-**Proactive operation.** You can set it up with cron jobs (scheduled tasks), webhooks (triggered by events), and heartbeats (periodic check-ins). It doesn't just respond — it initiates.
+**Proactive operation.** Cron jobs (scheduled tasks), webhooks (triggered by events), and heartbeats (periodic check-ins) mean it doesn't just respond — it initiates. But "initiates" is generous. It reacts to timers. The timers just happen to fire when you're not looking.
+
+**Event-driven execution.** Work happens because events arrive, not because the assistant decides to be proactive. Every action traces back to a trigger. No trigger, no action. This is reactive compute dressed up as autonomy.
 
 ### What people use it for
 
@@ -121,6 +129,7 @@ The safety recommendations from both OpenClaw's community and security researche
 
 ### More reading
 
+- [Why OpenClaw Feels Alive Even Though It's Not (Claire Vo)](https://x.com/clairevo/status/2017741569521271175) — The clearest explanation of OpenClaw's architecture: Gateway, heartbeats, queues, and why "a heartbeat but not a brain" is the right mental model. Start here if you want to understand how the system actually works.
 - [OpenClaw Is the Bad Boy of AI Agents. Here's Why Security Experts Are Worried (Fortune)](https://fortune.com/2026/02/12/openclaw-ai-agents-security-risks-beware/) — A balanced overview of OpenClaw's rapid growth, what people are building with it, and the security concerns that come with giving an AI agent full access to your machine.
 - [The Lethal Trifecta for AI Agents (Simon Willison)](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — Why combining private data, untrusted content, and external communication creates a structural vulnerability in autonomous agents that no one has solved yet.
 - [Personal AI Agents Like OpenClaw Are a Security Nightmare (Cisco)](https://blogs.cisco.com/ai/personal-ai-agents-like-openclaw-are-a-security-nightmare) — Cisco's security team breaks down the specific risks of personal AI agents: credential theft, prompt injection, and runaway actions. (Technical deep-dive — worth reading for the risk awareness, even if you skip the technical details.)

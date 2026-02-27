@@ -73,10 +73,10 @@ const chapterFiles = [
     shortTitle: "Writing Effective Instructions",
   },
   {
-    file: "10-personal-ai-agents.md",
+    file: "10-openclaw.md",
     number: 10,
-    title: "Personal AI Agents",
-    shortTitle: "Personal AI Agents",
+    title: "OpenClaw",
+    shortTitle: "OpenClaw",
   },
   {
     file: "11-building-software.md",

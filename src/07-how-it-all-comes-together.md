@@ -2,8 +2,6 @@
 
 > **TL;DR:** Every agent project follows the same shape: user input, orchestrator, explorer, actor, reviewer, iterate. Add a post-mortem and a change process, and the system gets better every time you use it. This chapter defines the framework. Chapter 8 shows it in action.
 
-![Leonard Bernstein conducting the New York Philharmonic at the United Nations (1965)](diagrams/bernstein-conducting.jpg)
-
 ---
 
 Chapter 6 introduced the building blocks: CLAUDE.md, rules, skills, agents, commands. Each one does one thing. This chapter defines the process that ties them together — the recommended structure for any agent work, regardless of domain.

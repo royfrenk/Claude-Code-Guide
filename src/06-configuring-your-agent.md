@@ -2,7 +2,7 @@
 
 > **TL;DR:** Claude Code reads configuration files to know how to behave. The instruction file (CLAUDE.md) is where you start. Rules, memory, and skills give it context. Agents, commands, hooks, and MCP servers give it capabilities. You don't have to create any of these files by hand — just ask Claude to set them up for you.
 
-![NASA Mission Control during Apollo 13 (1970) — every console has a role, every role has procedures](diagrams/apollo-13-mission-control.jpg)
+![The .claude folder — where your agent's configuration lives](diagrams/claude-folder-structure.png)
 
 ---
 

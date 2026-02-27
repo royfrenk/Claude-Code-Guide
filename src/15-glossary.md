@@ -62,9 +62,3 @@ Quick reference for terms used in this guide, listed alphabetically.
 
 **VS Code (Visual Studio Code)** — A free, widely-used IDE made by Microsoft. Claude Code runs inside it as an extension.
 
----
-
-### More reading
-
-- [The 2026 Guide to Prompt Engineering (IBM)](https://www.ibm.com/think/prompt-engineering) — A clear reference covering AI and software terminology, with practical explanations of how each concept works.
-- [Prompt Engineering Guide (promptingguide.ai)](https://www.promptingguide.ai/) — An open-source reference covering AI concepts, techniques, and terminology, maintained by the community and regularly updated.

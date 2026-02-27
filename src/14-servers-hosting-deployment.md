@@ -2,8 +2,6 @@
 
 > **TL;DR:** Building something is half the job. The other half is putting it somewhere people can access it. This chapter explains what servers are, where your project can live, and how to get it from your computer to the internet.
 
-![Liftoff of the Apollo 11 Saturn V rocket, July 16, 1969 (NASA)](diagrams/apollo-11-launch.jpg)
-
 ---
 
 ### What is a server?

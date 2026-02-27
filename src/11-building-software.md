@@ -2,8 +2,6 @@
 
 > **TL;DR:** The same process from Chapter 7 — orchestrator, explorer, actor, reviewer, iterate — scales to building software. The blog used two agents (researcher and writer). Software adds more: a manager dispatches, an explorer researches the codebase, a developer writes code, and a reviewer checks quality. Gates pause the process for your approval.
 
-![A construction site — specialized workers, each with a defined role, building something together](diagrams/construction-crew.jpg)
-
 ---
 
 Chapters 7 and 8 showed the recommended process and how to build a system for it — using a blog as the example. This chapter shows what happens when the same process scales up to building software. The shape is the same. The number of agents changes.
